@@ -112,3 +112,4 @@ insert into Diem values('21136331','EEEN231780', '1','4', '4.5', '5')
 insert into Diem values('21136374','MATH132401', '1','4.5', '6', '3')
 insert into Diem values('20110569','INIT130185', '3','5.5', '6.5', '4.5')
 	select * from  Diem
+--zzz---
