@@ -16,5 +16,10 @@ namespace QLSV
         {
             InitializeComponent();
         }
+        public event EventHandler clickbtnSinhvien; 
+        private void btnSinhvien_Click(object sender, EventArgs e)
+        {
+            clickbtnSinhvien(this, new EventArgs());
+        }
     }
 }

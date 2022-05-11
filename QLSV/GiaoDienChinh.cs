@@ -31,11 +31,12 @@ namespace QLSV
             panel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Trangchu());
+            Trangchu Form = new Trangchu();
+            OpenChildForm(Form);
+            Form.clickbtnSinhvien += btnSinhvien_Click;
         }
 
         private void btnSinhvien_Click(object sender, EventArgs e)

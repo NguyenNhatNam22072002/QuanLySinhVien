@@ -30,10 +30,10 @@ namespace QLSV
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trangchu));
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnMonhoc = new System.Windows.Forms.Button();
+            this.btnLop = new System.Windows.Forms.Button();
+            this.btnSinhvien = new System.Windows.Forms.Button();
+            this.btnKhoa = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,57 +69,58 @@ namespace QLSV
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // button13
+            // btnMonhoc
             // 
-            this.button13.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(690, 701);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(355, 34);
-            this.button13.TabIndex = 68;
-            this.button13.Text = "Xem thêm ➡";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btnMonhoc.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnMonhoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonhoc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMonhoc.Location = new System.Drawing.Point(690, 701);
+            this.btnMonhoc.Name = "btnMonhoc";
+            this.btnMonhoc.Size = new System.Drawing.Size(355, 34);
+            this.btnMonhoc.TabIndex = 68;
+            this.btnMonhoc.Text = "Xem thêm ➡";
+            this.btnMonhoc.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btnLop
             // 
-            this.button12.BackColor = System.Drawing.Color.Green;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(690, 440);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(355, 34);
-            this.button12.TabIndex = 67;
-            this.button12.Text = "Xem thêm ➡";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btnLop.BackColor = System.Drawing.Color.Green;
+            this.btnLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLop.Location = new System.Drawing.Point(690, 440);
+            this.btnLop.Name = "btnLop";
+            this.btnLop.Size = new System.Drawing.Size(355, 34);
+            this.btnLop.TabIndex = 67;
+            this.btnLop.Text = "Xem thêm ➡";
+            this.btnLop.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btnSinhvien
             // 
-            this.button11.BackColor = System.Drawing.Color.IndianRed;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(156, 701);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(355, 34);
-            this.button11.TabIndex = 66;
-            this.button11.Text = "Xem thêm ➡";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnSinhvien.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSinhvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSinhvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSinhvien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSinhvien.Location = new System.Drawing.Point(156, 701);
+            this.btnSinhvien.Name = "btnSinhvien";
+            this.btnSinhvien.Size = new System.Drawing.Size(355, 34);
+            this.btnSinhvien.TabIndex = 66;
+            this.btnSinhvien.Text = "Xem thêm ➡";
+            this.btnSinhvien.UseVisualStyleBackColor = false;
+            this.btnSinhvien.Click += new System.EventHandler(this.btnSinhvien_Click);
             // 
-            // button10
+            // btnKhoa
             // 
-            this.button10.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(156, 440);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(355, 34);
-            this.button10.TabIndex = 65;
-            this.button10.Text = "Xem thêm ➡";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnKhoa.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnKhoa.Location = new System.Drawing.Point(156, 440);
+            this.btnKhoa.Name = "btnKhoa";
+            this.btnKhoa.Size = new System.Drawing.Size(355, 34);
+            this.btnKhoa.TabIndex = 65;
+            this.btnKhoa.Text = "Xem thêm ➡";
+            this.btnKhoa.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -361,10 +362,10 @@ namespace QLSV
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.btnMonhoc);
+            this.Controls.Add(this.btnLop);
+            this.Controls.Add(this.btnSinhvien);
+            this.Controls.Add(this.btnKhoa);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -402,10 +403,10 @@ namespace QLSV
 
         #endregion
 
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnMonhoc;
+        private System.Windows.Forms.Button btnLop;
+        private System.Windows.Forms.Button btnSinhvien;
+        private System.Windows.Forms.Button btnKhoa;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
