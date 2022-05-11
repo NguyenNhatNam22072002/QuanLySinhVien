@@ -16,7 +16,7 @@ namespace QLSV
         {
             InitializeComponent();
         }
-
+        
         private void LoginGUI_Load(object sender, EventArgs e)
         {
 
@@ -28,6 +28,23 @@ namespace QLSV
             thongbao = (MessageBox.Show("Bạn có chắc chắn muốn thoát", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
             if (thongbao == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (txtPass.PasswordChar == '*')
+            {
+                linkLabel1.BringToFront();
+                txtPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+            }
         }
     }
 }
