@@ -34,11 +34,12 @@ namespace QLSV
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(438, 64);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(299, 129);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 55);
+            this.button1.Size = new System.Drawing.Size(192, 74);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Lolll phá vừa thôiiiiiiii!!!!";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -58,4 +59,3 @@ namespace QLSV
         private System.Windows.Forms.Button button1;
     }
 }
-
