@@ -47,11 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChuongtrinhDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChuongtrinhDT.Designer.cs">
+      <DependentUpon>ChuongtrinhDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diem.Designer.cs">
+      <DependentUpon>Diem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa.Designer.cs">
+      <DependentUpon>Khoa.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginGUI.cs">
       <SubType>Form</SubType>
@@ -59,15 +78,39 @@
     <Compile Include="LoginGUI.Designer.cs">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lop.Designer.cs">
+      <DependentUpon>Lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLMonhoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMonhoc.Designer.cs">
+      <DependentUpon>QLMonhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sinhvien.Designer.cs">
+      <DependentUpon>Sinhvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDataContext.dbml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
@@ -80,7 +123,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +151,42 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201818-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\236981-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_opened_folder_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageQLSV.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_classroom_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_museum_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_01_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-teacher-education-school-classroom-computer-icons-teacher-blue-class-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
