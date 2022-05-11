@@ -1,4 +1,4 @@
-﻿
+
 Create Table MonHoc
  (
    MaMH char(10) primary key,
@@ -112,7 +112,6 @@ insert into Diem values('21136331','EEEN231780', '1','4', '4.5', '5')
 insert into Diem values('21136374','MATH132401', '1','4.5', '6', '3')
 insert into Diem values('20110569','INIT130185', '3','5.5', '6.5', '4.5')
 	select * from  Diem
---zzz---
 		-- TẠO PROCEDURE SINH VIEN--
 -- thủ tục thêm 1 sinh viên mới --
 create procedure ThemMoiSinhVien
@@ -130,6 +129,7 @@ end
 -- kiểm tra --
 ThemMoiSinhVien '20110347', N'Nguyễn Hữu Khánh' , 1, '2002/07/26', N'Hưng Yên', '0898423613', 'IT2'
 ThemMoiSinhVien '19147180', N'Phạm Thu Hương' , 0, '2001/10/25', N'Vĩnh Long', '0374528443', 'CNTP1'
+ThemMoiSinhVien '21136379', N'Phan Văn Thiện' , 1, '2003/12/28', N'Trà Vinh', '0898463214', 'CK1'
 select * from dbo.SinhVien
 --thủ tục xoá 1 sinh viên trong danh sách --
 create procedure XoaSinhVien
@@ -157,5 +157,48 @@ begin
 end
 -- kiểm tra --
 UpdateSinhVien '19147180', N'Phạm Thị Thu Hương' , 0, '2001/10/25', N'Vĩnh Long', '0374528443', 'CNTP1'
+UpdateSinhVien '19147038', N'Huỳnh Thị Hồng', 0, '2001/09/17', N'Quãng Ngãi', '0888404031', 'CNTP1'
 select * from dbo.SinhVien
-
+	-- TẠO PROCEDURE ĐIỂM CHO SINH VIÊN --
+-- thủ tục thêm điểm cho sinh viên --
+create procedure ThemDiemSinhVien
+@MaSV char(15),
+@MaMH char(15),
+@HocKy int,
+@DiemQuaTrinhLan1 real,
+@DiemQuaTrinhLan2 real,
+@DiemCuoiKi real
+as
+begin
+	insert into Diem values (@MaSV, @MaMH, @HocKy, @DiemQuaTrinhLan1, @DiemQuaTrinhLan2, @DiemCuoiKi)
+end
+--kiểm tra--
+ThemDiemSinhVien '20110347','DBMS330284', '2','8', '7.5', '6.5'
+ThemDiemSinhVien '19147180','GCHE130103', '1','6', '4', '3'
+ThemDiemSinhVien '21136379','MATH132401', '2','8', '8', '9'
+select * from dbo.Diem
+-- thủ tục sửa điểm cho sinh viên -- 
+create procedure SuaDiemSinhVien
+@MaSV char(15),
+@MaMH char(15),
+@HocKy int,
+@DiemQuaTrinhLan1 real,
+@DiemQuaTrinhLan2 real,
+@DiemCuoiKi real
+as
+begin
+	update Diem set MaSV = @MaSV, MaMH = @MaMH, HocKy = @HocKy, DiemQuaTrinhLan1 = @DiemQuaTrinhLan1, DiemQuaTrinhLan2 = @DiemQuaTrinhLan2, DiemCuoiKi = @DiemCuoiKi where MaSV = @MaSV
+end
+-- kiểm tra --
+SuaDiemSinhVien '21136379','MATH132401', '2','7', '8', '9'
+select * from dbo.Diem
+-- thủ tục xoá điểm của sinh viên --
+create procedure XoaDiemSinhVien
+@MaSV char(15)
+as
+begin
+	delete from dbo.Diem where MaSV=@MaSV
+end
+-- kiểm tra --
+XoaDiemSinhVien '21136379'
+select *from Diem
