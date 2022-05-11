@@ -1,7 +1,7 @@
 ﻿
 namespace QLSV
 {
-    partial class Lop
+    partial class DiemForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace QLSV
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Lop";
+            this.Text = "DiemForm";
         }
 
         #endregion

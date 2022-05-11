@@ -1,7 +1,7 @@
 ﻿
 namespace QLSV
 {
-    partial class Form1
+    partial class GiaoDienChinh
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@ namespace QLSV
             this.label2 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace QLSV
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -111,6 +111,15 @@ namespace QLSV
             this.label7.Size = new System.Drawing.Size(510, 25);
             this.label7.TabIndex = 23;
             this.label7.Text = "Đại học Sư Phạm Kỹ Thuật Thành Phố Hồ Chí Minh";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::QLSV.Properties.Resources.Yorn;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(285, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1256, 768);
+            this.panel1.TabIndex = 24;
             // 
             // pictureBox7
             // 
@@ -260,14 +269,7 @@ namespace QLSV
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(293, 105);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1371, 928);
-            this.panel1.TabIndex = 24;
-            // 
-            // Form1
+            // GiaoDienChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,7 +291,7 @@ namespace QLSV
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "GiaoDienChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

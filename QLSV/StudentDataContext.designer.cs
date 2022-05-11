@@ -33,15 +33,15 @@ namespace QLSV
     partial void InsertHeDT(HeDT instance);
     partial void UpdateHeDT(HeDT instance);
     partial void DeleteHeDT(HeDT instance);
-    partial void InsertKhoa(Khoa instance);
-    partial void UpdateKhoa(Khoa instance);
-    partial void DeleteKhoa(Khoa instance);
+    partial void InsertKhoa(KhoaForm instance);
+    partial void UpdateKhoa(KhoaForm instance);
+    partial void DeleteKhoa(KhoaForm instance);
     partial void InsertKhoaHoc(KhoaHoc instance);
     partial void UpdateKhoaHoc(KhoaHoc instance);
     partial void DeleteKhoaHoc(KhoaHoc instance);
-    partial void InsertLop(Lop instance);
-    partial void UpdateLop(Lop instance);
-    partial void DeleteLop(Lop instance);
+    partial void InsertLop(LopForm instance);
+    partial void UpdateLop(LopForm instance);
+    partial void DeleteLop(LopForm instance);
     partial void InsertMonHoc(MonHoc instance);
     partial void UpdateMonHoc(MonHoc instance);
     partial void DeleteMonHoc(MonHoc instance);
@@ -80,11 +80,11 @@ namespace QLSV
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Diem> Diems
+		public System.Data.Linq.Table<Diemfewfewf> Diems
 		{
 			get
 			{
-				return this.GetTable<Diem>();
+				return this.GetTable<Diemfewfewf>();
 			}
 		}
 		
@@ -96,11 +96,11 @@ namespace QLSV
 			}
 		}
 		
-		public System.Data.Linq.Table<Khoa> Khoas
+		public System.Data.Linq.Table<KhoaForm> Khoas
 		{
 			get
 			{
-				return this.GetTable<Khoa>();
+				return this.GetTable<KhoaForm>();
 			}
 		}
 		
@@ -112,11 +112,11 @@ namespace QLSV
 			}
 		}
 		
-		public System.Data.Linq.Table<Lop> Lops
+		public System.Data.Linq.Table<LopForm> Lops
 		{
 			get
 			{
-				return this.GetTable<Lop>();
+				return this.GetTable<LopForm>();
 			}
 		}
 		
@@ -138,7 +138,7 @@ namespace QLSV
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Diem")]
-	public partial class Diem
+	public partial class Diemfewfewf
 	{
 		
 		private string _MaSV;
@@ -153,7 +153,7 @@ namespace QLSV
 		
 		private System.Nullable<float> _DiemCuoiKi;
 		
-		public Diem()
+		public Diemfewfewf()
 		{
 		}
 		
@@ -264,7 +264,7 @@ namespace QLSV
 		
 		private string _TenHeDT;
 		
-		private EntitySet<Lop> _Lops;
+		private EntitySet<LopForm> _Lops;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -278,7 +278,7 @@ namespace QLSV
 		
 		public HeDT()
 		{
-			this._Lops = new EntitySet<Lop>(new Action<Lop>(this.attach_Lops), new Action<Lop>(this.detach_Lops));
+			this._Lops = new EntitySet<LopForm>(new Action<LopForm>(this.attach_Lops), new Action<LopForm>(this.detach_Lops));
 			OnCreated();
 		}
 		
@@ -323,7 +323,7 @@ namespace QLSV
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HeDT_Lop", Storage="_Lops", ThisKey="MaHeDT", OtherKey="MaHeDT")]
-		public EntitySet<Lop> Lops
+		public EntitySet<LopForm> Lops
 		{
 			get
 			{
@@ -355,13 +355,13 @@ namespace QLSV
 			}
 		}
 		
-		private void attach_Lops(Lop entity)
+		private void attach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.HeDT = this;
 		}
 		
-		private void detach_Lops(Lop entity)
+		private void detach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.HeDT = null;
@@ -369,7 +369,7 @@ namespace QLSV
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Khoa")]
-	public partial class Khoa : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class KhoaForm : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -382,7 +382,7 @@ namespace QLSV
 		
 		private string _DienThoai;
 		
-		private EntitySet<Lop> _Lops;
+		private EntitySet<LopForm> _Lops;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -398,9 +398,9 @@ namespace QLSV
     partial void OnDienThoaiChanged();
     #endregion
 		
-		public Khoa()
+		public KhoaForm()
 		{
-			this._Lops = new EntitySet<Lop>(new Action<Lop>(this.attach_Lops), new Action<Lop>(this.detach_Lops));
+			this._Lops = new EntitySet<LopForm>(new Action<LopForm>(this.attach_Lops), new Action<LopForm>(this.detach_Lops));
 			OnCreated();
 		}
 		
@@ -485,7 +485,7 @@ namespace QLSV
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khoa_Lop", Storage="_Lops", ThisKey="MaKhoa", OtherKey="MaKhoa")]
-		public EntitySet<Lop> Lops
+		public EntitySet<LopForm> Lops
 		{
 			get
 			{
@@ -517,13 +517,13 @@ namespace QLSV
 			}
 		}
 		
-		private void attach_Lops(Lop entity)
+		private void attach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.Khoa = this;
 		}
 		
-		private void detach_Lops(Lop entity)
+		private void detach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.Khoa = null;
@@ -540,7 +540,7 @@ namespace QLSV
 		
 		private string _TenKhoaHoc;
 		
-		private EntitySet<Lop> _Lops;
+		private EntitySet<LopForm> _Lops;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -554,7 +554,7 @@ namespace QLSV
 		
 		public KhoaHoc()
 		{
-			this._Lops = new EntitySet<Lop>(new Action<Lop>(this.attach_Lops), new Action<Lop>(this.detach_Lops));
+			this._Lops = new EntitySet<LopForm>(new Action<LopForm>(this.attach_Lops), new Action<LopForm>(this.detach_Lops));
 			OnCreated();
 		}
 		
@@ -599,7 +599,7 @@ namespace QLSV
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhoaHoc_Lop", Storage="_Lops", ThisKey="MaKhoaHoc", OtherKey="MaKhoaHoc")]
-		public EntitySet<Lop> Lops
+		public EntitySet<LopForm> Lops
 		{
 			get
 			{
@@ -631,13 +631,13 @@ namespace QLSV
 			}
 		}
 		
-		private void attach_Lops(Lop entity)
+		private void attach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.KhoaHoc = this;
 		}
 		
-		private void detach_Lops(Lop entity)
+		private void detach_Lops(LopForm entity)
 		{
 			this.SendPropertyChanging();
 			entity.KhoaHoc = null;
@@ -645,7 +645,7 @@ namespace QLSV
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Lop")]
-	public partial class Lop : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class LopForm : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -664,7 +664,7 @@ namespace QLSV
 		
 		private EntityRef<HeDT> _HeDT;
 		
-		private EntityRef<Khoa> _Khoa;
+		private EntityRef<KhoaForm> _Khoa;
 		
 		private EntityRef<KhoaHoc> _KhoaHoc;
 		
@@ -684,11 +684,11 @@ namespace QLSV
     partial void OnMaKhoaHocChanged();
     #endregion
 		
-		public Lop()
+		public LopForm()
 		{
 			this._SinhViens = new EntitySet<SinhVien>(new Action<SinhVien>(this.attach_SinhViens), new Action<SinhVien>(this.detach_SinhViens));
 			this._HeDT = default(EntityRef<HeDT>);
-			this._Khoa = default(EntityRef<Khoa>);
+			this._Khoa = default(EntityRef<KhoaForm>);
 			this._KhoaHoc = default(EntityRef<KhoaHoc>);
 			OnCreated();
 		}
@@ -853,7 +853,7 @@ namespace QLSV
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Khoa_Lop", Storage="_Khoa", ThisKey="MaKhoa", OtherKey="MaKhoa", IsForeignKey=true)]
-		public Khoa Khoa
+		public KhoaForm Khoa
 		{
 			get
 			{
@@ -861,7 +861,7 @@ namespace QLSV
 			}
 			set
 			{
-				Khoa previousValue = this._Khoa.Entity;
+				KhoaForm previousValue = this._Khoa.Entity;
 				if (((previousValue != value) 
 							|| (this._Khoa.HasLoadedOrAssignedValue == false)))
 				{
@@ -1083,7 +1083,7 @@ namespace QLSV
 		
 		private string _MaLop;
 		
-		private EntityRef<Lop> _Lop;
+		private EntityRef<LopForm> _Lop;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1107,7 +1107,7 @@ namespace QLSV
 		
 		public SinhVien()
 		{
-			this._Lop = default(EntityRef<Lop>);
+			this._Lop = default(EntityRef<LopForm>);
 			OnCreated();
 		}
 		
@@ -1256,7 +1256,7 @@ namespace QLSV
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Lop_SinhVien", Storage="_Lop", ThisKey="MaLop", OtherKey="MaLop", IsForeignKey=true)]
-		public Lop Lop
+		public LopForm Lop
 		{
 			get
 			{
@@ -1264,7 +1264,7 @@ namespace QLSV
 			}
 			set
 			{
-				Lop previousValue = this._Lop.Entity;
+				LopForm previousValue = this._Lop.Entity;
 				if (((previousValue != value) 
 							|| (this._Lop.HasLoadedOrAssignedValue == false)))
 				{

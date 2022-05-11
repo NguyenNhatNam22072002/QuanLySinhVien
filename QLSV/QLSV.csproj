@@ -53,11 +53,11 @@
     <Compile Include="ChuongtrinhDT.Designer.cs">
       <DependentUpon>ChuongtrinhDT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diem.cs">
+    <Compile Include="DiemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diem.Designer.cs">
-      <DependentUpon>Diem.cs</DependentUpon>
+    <Compile Include="DiemForm.Designer.cs">
+      <DependentUpon>DiemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
@@ -66,23 +66,11 @@
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Khoa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Khoa.Designer.cs">
-      <DependentUpon>Khoa.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginGUI.Designer.cs">
       <DependentUpon>LoginGUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lop.Designer.cs">
-      <DependentUpon>Lop.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-clipart-teacher-education-school-classroom-computer-icons-teacher-blue-class-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cach-choi-arthur4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

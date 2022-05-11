@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLSV
 {
-    public partial class Diem : Form
+    public partial class DiemForm : Form
     {
-        public Diem()
+        public DiemForm()
         {
             InitializeComponent();
         }
