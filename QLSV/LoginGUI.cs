@@ -16,5 +16,18 @@ namespace QLSV
         {
             InitializeComponent();
         }
+
+        private void LoginGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            DialogResult thongbao;
+            thongbao = (MessageBox.Show("Bạn có chắc chắn muốn thoát", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (thongbao == DialogResult.Yes)
+                Application.Exit();
+        }
     }
 }
