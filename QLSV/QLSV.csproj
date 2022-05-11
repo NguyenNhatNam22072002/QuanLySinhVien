@@ -113,6 +113,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sinhvien.resx">
+      <DependentUpon>Sinhvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +184,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cach-choi-arthur4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279060382_418472963057405_3021951542673859220_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279932360_696500634889424_5855359922653468892_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279465008_1030826051183018_1215501575984458270_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male-user-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-user-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emojipng.com-3196466.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279047885_1318635168626008_5796822384666286046_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-537386326-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
