@@ -113,3 +113,49 @@ insert into Diem values('21136374','MATH132401', '1','4.5', '6', '3')
 insert into Diem values('20110569','INIT130185', '3','5.5', '6.5', '4.5')
 	select * from  Diem
 --zzz---
+		-- TẠO PROCEDURE SINH VIEN--
+-- thủ tục thêm 1 sinh viên mới --
+create procedure ThemMoiSinhVien
+@MaSV char(15),
+@TenSV nvarchar(30),
+@GioiTinh bit,
+@NgaySinh date,
+@QueQuan nvarchar(50),
+@SoDienThoai char(20),
+@MaLop char(10)
+as
+begin
+	insert into SinhVien values(@MaSV, @TenSV, @GioiTinh, @NgaySinh, @QueQuan, @SoDienThoai, @MaLop)
+end
+-- kiểm tra --
+ThemMoiSinhVien '20110347', N'Nguyễn Hữu Khánh' , 1, '2002/07/26', N'Hưng Yên', '0898423613', 'IT2'
+ThemMoiSinhVien '19147180', N'Phạm Thu Hương' , 0, '2001/10/25', N'Vĩnh Long', '0374528443', 'CNTP1'
+select * from dbo.SinhVien
+--thủ tục xoá 1 sinh viên trong danh sách --
+create procedure XoaSinhVien
+@MaSV char(15)
+as
+begin
+	delete from dbo.SinhVien where MaSV = @MaSV
+end
+--kiểm tra--
+XoaSinhVien '19147180'
+select * from dbo.SinhVien
+
+-- thủ tục update sinh viên --
+create procedure UpdateSinhVien
+@MaSV char(15),
+@TenSV nvarchar(30),
+@GioiTinh bit,
+@NgaySinh date,
+@QueQuan nvarchar(50),
+@SoDienThoai char(20),
+@MaLop char(10)
+as
+begin
+	update SinhVien set MaSV = @MaSV, TenSV = @TenSV, GioiTinh= @GioiTinh, NgaySinh= @NgaySinh, QueQuan= @QueQuan, SoDienThoai = @SoDienThoai, MaLop = @MaLop where MaSV = @MaSV
+end
+-- kiểm tra --
+UpdateSinhVien '19147180', N'Phạm Thị Thu Hương' , 0, '2001/10/25', N'Vĩnh Long', '0374528443', 'CNTP1'
+select * from dbo.SinhVien
+
