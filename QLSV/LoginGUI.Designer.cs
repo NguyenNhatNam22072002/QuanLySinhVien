@@ -29,116 +29,218 @@ namespace QLSV
         /// </summary>
         private void InitializeComponent()
         {
-            this.btLogin = new System.Windows.Forms.Button();
-            this.btExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbServer = new System.Windows.Forms.ComboBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AnHien = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnHien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btLogin
-            // 
-            this.btLogin.Location = new System.Drawing.Point(176, 216);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(110, 49);
-            this.btLogin.TabIndex = 0;
-            this.btLogin.Text = "Login";
-            this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
-            // 
-            // btExit
-            // 
-            this.btExit.Location = new System.Drawing.Point(338, 216);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(110, 49);
-            this.btExit.TabIndex = 1;
-            this.btExit.Text = "Exit";
-            this.btExit.UseVisualStyleBackColor = true;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 64);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Server";
             // 
-            // label2
+            // cbServer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
+            this.cbServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbServer.FormattingEnabled = true;
+            this.cbServer.Location = new System.Drawing.Point(51, 50);
+            this.cbServer.Name = "cbServer";
+            this.cbServer.Size = new System.Drawing.Size(283, 33);
+            this.cbServer.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbServer);
+            this.groupBox1.Controls.Add(this.AnHien);
+            this.groupBox1.Controls.Add(this.btnDangNhap);
+            this.groupBox1.Controls.Add(this.txtMatKhau);
+            this.groupBox1.Controls.Add(this.txtTaiKhoan);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(26, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(550, 319);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangNhap.Location = new System.Drawing.Point(51, 250);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(113, 41);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(51, 199);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '●';
+            this.txtMatKhau.Size = new System.Drawing.Size(468, 34);
+            this.txtMatKhau.TabIndex = 3;
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(51, 125);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(468, 34);
+            this.txtTaiKhoan.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 144);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
+            this.label3.Size = new System.Drawing.Size(99, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Mật khẩu:";
             // 
-            // cbServer
+            // label2
             // 
-            this.cbServer.FormattingEnabled = true;
-            this.cbServer.Location = new System.Drawing.Point(176, 61);
-            this.cbServer.Name = "cbServer";
-            this.cbServer.Size = new System.Drawing.Size(283, 24);
-            this.cbServer.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tài khoản:";
             // 
-            // txtUsername
+            // label4
             // 
-            this.txtUsername.Location = new System.Drawing.Point(176, 104);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(283, 22);
-            this.txtUsername.TabIndex = 6;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(239, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 46);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Sign in";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtPass
+            // pictureBox2
             // 
-            this.txtPass.Location = new System.Drawing.Point(176, 141);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(283, 22);
-            this.txtPass.TabIndex = 7;
+            this.pictureBox2.BackgroundImage = global::QLSV.Properties.Resources.MatKhau;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 199);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QLSV.Properties.Resources.TaiKhoan;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // AnHien
+            // 
+            this.AnHien.BackgroundImage = global::QLSV.Properties.Resources.An;
+            this.AnHien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AnHien.Location = new System.Drawing.Point(483, 202);
+            this.AnHien.Name = "AnHien";
+            this.AnHien.Size = new System.Drawing.Size(34, 28);
+            this.AnHien.TabIndex = 7;
+            this.AnHien.TabStop = false;
+            this.AnHien.Click += new System.EventHandler(this.AnHien_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::QLSV.Properties.Resources.Server;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 49);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(406, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 41);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // LoginGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 305);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.cbServer);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btExit);
-            this.Controls.Add(this.btLogin);
+            this.ClientSize = new System.Drawing.Size(601, 404);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label4);
             this.Name = "LoginGUI";
             this.Text = "LoginGUI";
             this.Load += new System.EventHandler(this.LoginGUI_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnHien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btLogin;
-        private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbServer;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox AnHien;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button1;
     }
 }

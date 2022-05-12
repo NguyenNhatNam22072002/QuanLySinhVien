@@ -21,17 +21,22 @@ namespace QLSV
 
         }
 
-        private void btExit_Click(object sender, EventArgs e)
+        int an_hien = 0;
+        private void AnHien_Click(object sender, EventArgs e)
         {
-            DialogResult thongbao;
-            thongbao = (MessageBox.Show("Bạn có chắc chắn muốn thoát", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
-            if (thongbao == DialogResult.Yes)
-                Application.Exit();
-        }
-
-        private void btLogin_Click(object sender, EventArgs e)
-        {
-
+            if (an_hien == 0)
+            {
+                an_hien = 1;
+                //Hiện mật khẩu người dùng
+                AnHien.BackgroundImage = Properties.Resources.Hien;
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+            {
+                an_hien = 0;
+                AnHien.BackgroundImage = Properties.Resources.An;
+                txtMatKhau.PasswordChar = '●';
+            }
         }
     }
 }
