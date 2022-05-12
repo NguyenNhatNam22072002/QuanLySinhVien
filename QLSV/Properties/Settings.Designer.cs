@@ -44,5 +44,16 @@ namespace QLSV.Properties {
                 return ((string)(this["DBMS_QLSVConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=Tr" +
+            "ue")]
+        public string QuanLySinhVienConnectionString1 {
+            get {
+                return ((string)(this["QuanLySinhVienConnectionString1"]));
+            }
+        }
     }
 }

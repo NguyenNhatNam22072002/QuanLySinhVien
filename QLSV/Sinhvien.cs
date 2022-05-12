@@ -40,41 +40,43 @@ namespace QLSV
             cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
             cbMaLop.DataSource = db.Show_DSlop();
-            cbMaLop.Enabled = false;
+            cbMaLop.DataBindings.Clear();
+            cbMaLop.Text = "";
             // Combobox Khoa
             cbKhoa.DisplayMember = "TenKhoa";
             cbKhoa.ValueMember = "MaKhoa";
             cbKhoa.DataSource = db.DSKhoa();
-            cbKhoa.Enabled = false;
+            cbMaLop.DataBindings.Clear();
+            cbMaLop.Text = "";
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
             
             dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
-            
-            dataGridView1.Columns["MSSV"].HeaderText = "MSSV";
-            txtMSSV.DataBindings.Clear();
-            txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MSSV");
+
+            dataGridView1.Columns["MaSV"].HeaderText = "MaSV";
+            //txtMSSV.DataBindings.Clear();
+            //txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");
 
             dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
-            txtHoTen.DataBindings.Clear();
-            txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
+            //txtHoTen.DataBindings.Clear();
+            //txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
 
-            //dataGridView1.Columns["GioiTinh"].HeaderText = "Gioi Tinh";
-            //txtMSSV.DataBindings.Clear();
-            //txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "GioiTinh");
+            dataGridView1.Columns["GioiTinh"].HeaderText = "Gioi Tinh";
+            //rbtnNam.DataBindings.Clear();
+            //rbtnNam.DataBindings.Add("Checked", dataGridView1.DataSource, "GioiTinh");
 
             dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
-            NgaySinh.DataBindings.Clear();
-            NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
+            //NgaySinh.DataBindings.Clear();
+            //NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
 
             dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
-            cbQueQuan.DataBindings.Clear();
-            cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
+            //cbQueQuan.DataBindings.Clear();
+            //cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
 
             dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
-            txtPhone.DataBindings.Clear();
-            txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
+            //txtPhone.DataBindings.Clear();
+            //txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
 
             dataGridView1.Columns["MaLop"].HeaderText = "Ma Lop";
         }
@@ -105,6 +107,7 @@ namespace QLSV
             cbMaLop.Enabled = true;
             txtMSSV.Focus();
             adSinhvien = true;
+            rbtnNam.Checked = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -128,11 +131,7 @@ namespace QLSV
                         MessageBox.Show("Bạn chưa nhập số điện thoại ");
                         txtPhone.Focus();
                     }
-                    //if (gioitinh.Text == "")
-                    //{
-                    //    MessageBox.Show("Bạn chưa nhập gioi tinh ");
-                    //    gioitinh.Focus();
-                    //}
+                   
                     if (cbQueQuan.Text =="")
                     {
                         MessageBox.Show("Bạn chưa nhập quê quán ");
@@ -143,7 +142,7 @@ namespace QLSV
                         MessageBox.Show("Bạn chưa nhập ngày sinh ");
                         NgaySinh.Focus();
                     }
-                    //db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, cbMaLop.Text);
+                    db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, cbMaLop.Text);
                 }
                 catch
                 {
@@ -167,6 +166,19 @@ namespace QLSV
             cbQueQuan.Enabled = true;
             cbMaLop.Enabled = true;
             cbKhoa.Enabled = true;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dataGridView1.CurrentCell.RowIndex;
+            // Chuyển thông tin từ Gridview lên các textbox ở panel
+            txtMSSV.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
+            txtHoTen.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();
+            if (Convert.ToBoolean(dataGridView1.Rows[r].Cells[2].Value.ToString())) rbtnNam.Checked = true;
+            else rbtnNu.Checked = true;
+            NgaySinh.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
+            cbQueQuan.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            txtPhone.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
         }
     }
     
