@@ -33,5 +33,16 @@ namespace QLSV.Properties {
                 return ((string)(this["QuanLySinhVienConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TAYNGUYEN\\TAYNGUYEN;Initial Catalog=DBMS_QLSV;Persist Security Info=T" +
+            "rue;User ID=sa;Password=000000")]
+        public string DBMS_QLSVConnectionString {
+            get {
+                return ((string)(this["DBMS_QLSVConnectionString"]));
+            }
+        }
     }
 }

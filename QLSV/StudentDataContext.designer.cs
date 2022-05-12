@@ -22,7 +22,7 @@ namespace QLSV
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLySinhVien")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DBMS_QLSV")]
 	public partial class StudentDataContextDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -51,7 +51,7 @@ namespace QLSV
     #endregion
 		
 		public StudentDataContextDataContext() : 
-				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString, mappingSource)
+				base(global::QLSV.Properties.Settings.Default.DBMS_QLSVConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -162,6 +162,69 @@ namespace QLSV
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ChonTatCaSinhVienResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaDiemSinhVien")]
+		public int SuaDiemSinhVien([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="Char(15)")] string maSV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMH", DbType="Char(15)")] string maMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HocKy", DbType="Int")] System.Nullable<int> hocKy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemQuaTrinhLan1", DbType="Real")] System.Nullable<float> diemQuaTrinhLan1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemQuaTrinhLan2", DbType="Real")] System.Nullable<float> diemQuaTrinhLan2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemCuoiKi", DbType="Real")] System.Nullable<float> diemCuoiKi)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, maMH, hocKy, diemQuaTrinhLan1, diemQuaTrinhLan2, diemCuoiKi);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaKhoa")]
+		public int SuaKhoa([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenKhoa", DbType="NVarChar(30)")] string tenKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(100)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DienThoai", DbType="NVarChar(20)")] string dienThoai)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKhoa, tenKhoa, diaChi, dienThoai);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaThongTinLop")]
+		public int SuaThongTinLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenLop", DbType="NVarChar(30)")] string tenLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoaHoc", DbType="Char(10)")] string maKhoaHoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, tenLop, maKhoa, maHeDT, maKhoaHoc);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemDiemSinhVien")]
+		public int ThemDiemSinhVien([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="Char(15)")] string maSV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMH", DbType="Char(15)")] string maMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HocKy", DbType="Int")] System.Nullable<int> hocKy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemQuaTrinhLan1", DbType="Real")] System.Nullable<float> diemQuaTrinhLan1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemQuaTrinhLan2", DbType="Real")] System.Nullable<float> diemQuaTrinhLan2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiemCuoiKi", DbType="Real")] System.Nullable<float> diemCuoiKi)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, maMH, hocKy, diemQuaTrinhLan1, diemQuaTrinhLan2, diemCuoiKi);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemKhoa")]
+		public int ThemKhoa([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenKhoa", DbType="NVarChar(30)")] string tenKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DiaChi", DbType="NVarChar(100)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DienThoai", DbType="NVarChar(20)")] string dienThoai)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKhoa, tenKhoa, diaChi, dienThoai);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemLop")]
+		public int ThemLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenLop", DbType="NVarChar(30)")] string tenLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoaHoc", DbType="Char(10)")] string maKhoaHoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, tenLop, maKhoa, maHeDT, maKhoaHoc);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaDiemSinhVien")]
+		public int XoaDiemSinhVien([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="Char(15)")] string maSV)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaKhoa")]
+		public int XoaKhoa([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKhoa);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaLop")]
+		public int XoaLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
