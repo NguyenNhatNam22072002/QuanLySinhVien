@@ -37,7 +37,6 @@ namespace QLSV
             this.cbServer = new System.Windows.Forms.ComboBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btLogin
@@ -110,23 +109,11 @@ namespace QLSV
             this.txtPass.Size = new System.Drawing.Size(283, 22);
             this.txtPass.TabIndex = 7;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(349, 178);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(99, 17);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Hiện mật khẩu";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // LoginGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 305);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.cbServer);
@@ -153,6 +140,5 @@ namespace QLSV
         private System.Windows.Forms.ComboBox cbServer;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -16,5 +16,8 @@ namespace QLSV
         {
             InitializeComponent();
         }
+        StudentDataContextDataContext db = new StudentDataContextDataContext();
+
     }
+    
 }
