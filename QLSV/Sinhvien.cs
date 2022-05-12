@@ -46,7 +46,6 @@ namespace QLSV
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
             dataGridView1.Columns["MaSV"].HeaderText = "Mã SV";
             dataGridView1.Columns["TenSV"].HeaderText = "Họ và Tên";
