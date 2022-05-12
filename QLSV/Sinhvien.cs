@@ -49,14 +49,42 @@ namespace QLSV
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
+            
+            dataGridView1.Columns["MSSV"].HeaderText = "MSSV";
+            txtMSSV.DataBindings.Clear();
+            txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MSSV");
 
+            dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
+            txtHoTen.DataBindings.Clear();
+            txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
+
+            //dataGridView1.Columns["GioiTinh"].HeaderText = "Gioi Tinh";
+            //txtMSSV.DataBindings.Clear();
+            //txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "GioiTinh");
+
+            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
+            NgaySinh.DataBindings.Clear();
+            NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
+
+            dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
+            cbQueQuan.DataBindings.Clear();
+            cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
+
+            dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
+            txtPhone.DataBindings.Clear();
+            txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
+
+            dataGridView1.Columns["MaLop"].HeaderText = "Ma Lop";
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
             if (xoa == DialogResult.Yes)
             {
-                //db.XoaSinhVien(txtMSSV.Text);
+                db.XoaSinhVien(txtMSSV.Text);
+                cbMaLop_SelectedIndexChanged(sender, e);
             }
         }
         Boolean adSinhvien = false;
