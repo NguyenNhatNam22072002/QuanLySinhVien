@@ -47,7 +47,7 @@ namespace QLSV
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -231,14 +231,14 @@ namespace QLSV
             this.cbMaLop.Size = new System.Drawing.Size(218, 33);
             this.cbMaLop.TabIndex = 16;
             // 
-            // cbKhoa
+            // comboBox3
             // 
-            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(934, 223);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(291, 33);
-            this.cbKhoa.TabIndex = 18;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(934, 223);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(291, 33);
+            this.comboBox3.TabIndex = 18;
             // 
             // label9
             // 
@@ -380,7 +380,7 @@ namespace QLSV
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.cbKhoa);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbMaLop);
             this.Controls.Add(this.label8);
@@ -428,7 +428,7 @@ namespace QLSV
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbMaLop;
-        private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
