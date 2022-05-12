@@ -374,6 +374,7 @@ namespace QLSV
             this.Controls.Add(this.NgaySinh);
             this.Name = "Sinhvien";
             this.Text = "Sinhvien";
+            this.Load += new System.EventHandler(this.Sinhvien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

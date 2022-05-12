@@ -69,4 +69,39 @@
       <Association Name="Lop_SinhVien" Member="Lop" ThisKey="MaLop" OtherKey="MaLop" Type="Lop" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.ThemMoiSinhVien" Method="ThemMoiSinhVien">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="TenSV" Parameter="tenSV" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="GioiTinh" Parameter="gioiTinh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NgaySinh" Parameter="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="QueQuan" Parameter="queQuan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSinhVien" Method="UpdateSinhVien">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="TenSV" Parameter="tenSV" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="GioiTinh" Parameter="gioiTinh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NgaySinh" Parameter="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="QueQuan" Parameter="queQuan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.XoaSinhVien" Method="XoaSinhVien">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChonTatCaSinhVien" Method="ChonTatCaSinhVien">
+    <ElementType Name="ChonTatCaSinhVienResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

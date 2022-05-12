@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace QLSV
 {
@@ -18,6 +19,10 @@ namespace QLSV
         }
         StudentDataContextDataContext db = new StudentDataContextDataContext();
 
+        private void Sinhvien_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.ChonTatCaSinhVien();
+        }
     }
     
 }
