@@ -535,3 +535,10 @@ end
 -- kiểm tra --
 XoaKhoa 'OTO'
 select * from dbo.Khoa
+-- cập nhật lại procedure Chọn Sinh Viên --
+Create proc Show_DSSinhVien
+as 
+begin 
+select * from SinhVien 
+end
+go

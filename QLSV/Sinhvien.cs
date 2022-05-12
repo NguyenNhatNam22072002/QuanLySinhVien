@@ -21,7 +21,7 @@ namespace QLSV
 
         private void Sinhvien_Load(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = db.ChonTatCaSinhVien();
+            dataGridView1.DataSource = db.Show_DSSinhVien();
             //an hien button sinh vien
             txtMSSV.Enabled = false;
             txtHoTen.Enabled = false;
@@ -34,7 +34,7 @@ namespace QLSV
             //Combox QueQuan 
             cbQueQuan.DisplayMember = "QueQuan";
             cbQueQuan.ValueMember = "QueQuan";
-            //cbQueQuan.DataSource = db.ChonTatCaSinhVien();
+            cbQueQuan.DataSource = db.Show_DSSinhVien();
             cbQueQuan.Enabled = false;
             //Combobox Lop
             cbMaLop.DisplayMember = "TenLop";
