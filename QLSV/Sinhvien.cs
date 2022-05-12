@@ -39,6 +39,11 @@ namespace QLSV
             //Combobox Lop
             cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
+            cbMaLop.DataSource = db.Show_DSlop();
+            // Combobox Khoa
+            cbKhoa.DisplayMember = "TenKhoa";
+            cbKhoa.ValueMember = "MaKhoa";
+            cbKhoa.DataSource = db.DSKhoa();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
