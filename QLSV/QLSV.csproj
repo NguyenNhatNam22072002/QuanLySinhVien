@@ -72,6 +72,12 @@
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KhoaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoaForm.Designer.cs">
+      <DependentUpon>KhoaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoaForm.resx">
+      <DependentUpon>KhoaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
@@ -229,6 +238,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_search_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\275498352_2127873167388059_1784147960944002545_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\275771031_487120539469371_6802428670173351543_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\272563215_330518015705748_245981836543445422_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\274606648_4494016890704777_3427265911334070166_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_26px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

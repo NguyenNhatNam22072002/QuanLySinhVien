@@ -110,6 +110,11 @@ namespace QLSV
                 }
             }
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
