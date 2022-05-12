@@ -120,6 +120,7 @@ namespace QLSV
                     }
                     db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, txtMaLop.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Mo cac button chinh sua 
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
@@ -191,6 +192,32 @@ namespace QLSV
             NgaySinh.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
             cbQueQuan.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
             txtPhone.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.SinhViens.Where(x => x.TenSV.Contains(txtTimKiem.Text)).ToList();
+            dataGridView1.Columns["MaSV"].HeaderText = "Mã SV";
+            txtMSSV.DataBindings.Clear();
+            txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");
+
+            dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
+            txtHoTen.DataBindings.Clear();
+            txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
+
+            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
+            NgaySinh.DataBindings.Clear();
+            NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
+
+            dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
+            cbQueQuan.DataBindings.Clear();
+            cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
+
+            dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
+            txtPhone.DataBindings.Clear();
+            txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
+
+
         }
     }
 }
