@@ -228,3 +228,41 @@ CREATE TABLE [dbo].[DangNhap](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+
+-- tạo procedure cho bảng khoa --
+create proc ThemKhoa
+@MaKhoa char(10),
+@TenKhoa nvarchar(30),
+@DiaChi nvarchar(100),
+@DienThoai nvarchar(20)
+as
+begin
+	insert into Khoa values (@MaKhoa, @TenKhoa, @DiaChi, @DienThoai)
+end
+-- kiểm tra --
+ThemKhoa 'OTO',N'Công nghệ ô tô', N'Tầng 3- Khu B', '03474944216'
+select * from Khoa
+--tạo procedure sửa thông tin cho khoa --
+create proc SuaKhoa
+@MaKhoa char(10),
+@TenKhoa nvarchar(30),
+@DiaChi nvarchar(100),
+@DienThoai nvarchar(20)
+as
+begin 
+	update dbo.Khoa set MaKhoa = @MaKhoa, TenKhoa= @TenKhoa, DiaChi = @DiaChi, @DienThoai = @DienThoai where MaKhoa = @MaKhoa
+end
+-- kiểm tra --
+SuaKhoa 'OTO',N'Công nghệ ô tô', N'Tầng 1 - Khu E', '03474944216'
+select * from Khoa
+-- tạo procedure xoá khoa cho bảng khoa --
+create procedure XoaKhoa
+@MaKhoa char(10)
+as
+begin
+	delete from dbo.Khoa where MaKhoa = @MaKhoa
+end
+-- kiểm tra --
+XoaKhoa 'OTO'
+select * from dbo.Khoa
