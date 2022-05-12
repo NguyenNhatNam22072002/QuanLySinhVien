@@ -202,3 +202,29 @@ end
 -- kiểm tra --
 XoaDiemSinhVien '21136379'
 select *from Diem
+-- Chọn tất cả sinh viên  --
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC  [dbo].[ChonTatCaSinhVien]
+AS
+BEGIN
+	SELECT * FROM SinhVien
+END
+GO
+		-- TẠO BẢNG ĐĂNG NHẬP --
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DangNhap](
+	[userName] [nvarchar](100) NOT NULL,
+	[passWord] [nvarchar](100) NULL,
+	[Quyen] [nvarchar](50) NULL,
+ CONSTRAINT [PK_DangNhap] PRIMARY KEY CLUSTERED 
+(
+	[userName] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
