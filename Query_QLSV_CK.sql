@@ -580,4 +580,12 @@ end
 -- kiểm tra --
 SuaThongTinMonHoc 'STMA240121', N'Sức bền vật liệu', '3'
 select * from MonHoc
+-- thêm procedure Lấy thông tin bảng lớp--
+create proc Show_DSlop
+as
+begin 
+select * from Lop
+end 
+go
+
 
