@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySinhVien" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-G8GJO4A2;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Diem" Member="Diems">
     <Type Name="Diem">
       <Column Name="MaSV" Type="System.String" DbType="Char(15)" CanBeNull="true" />
@@ -84,17 +84,6 @@
       <Column Name="MaKhoa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MaHeDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Show_DSSinhVien" Method="Show_DSSinhVien">
-    <ElementType Name="Show_DSSinhVienResult">
-      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
-      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
-      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SuaDiemSinhVien" Method="SuaDiemSinhVien">
@@ -187,6 +176,27 @@
       <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Show_DSSinhVien" Method="Show_DSSinhVien">
+    <ElementType Name="Show_DSSinhVienResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Lop_SelectKhoa" Method="Lop_SelectKhoa">
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="Lop_SelectKhoaResult">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaHeDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

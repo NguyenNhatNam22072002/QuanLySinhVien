@@ -40,14 +40,9 @@ namespace QLSV
             cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
             cbMaLop.DataSource = db.Show_DSlop();
-            cbMaLop.DataBindings.Clear();
-            cbMaLop.Text = "";
-            // Combobox Khoa
-            cbKhoa.DisplayMember = "TenKhoa";
-            cbKhoa.ValueMember = "MaKhoa";
-            cbKhoa.DataSource = db.DSKhoa();
-            cbMaLop.DataBindings.Clear();
-            cbMaLop.Text = "";
+            txtMaLop.DataBindings.Clear();
+            txtMaLop.DataBindings.Add("Text", cbMaLop.DataSource, "maLop");
+
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -86,7 +81,7 @@ namespace QLSV
             if (xoa == DialogResult.Yes)
             {
                 db.XoaSinhVien(txtMSSV.Text);
-                cbMaLop_SelectedIndexChanged(sender, e);
+                Sinhvien_Load(sender, e);
             }
         }
         Boolean adSinhvien = false;
@@ -103,7 +98,7 @@ namespace QLSV
             txtPhone.Enabled = true;
             groupBox1.Enabled = true;
             cbQueQuan.Enabled = true;
-            cbKhoa.Enabled = true;
+            txtMaLop.Enabled = true;
             cbMaLop.Enabled = true;
             txtMSSV.Focus();
             adSinhvien = true;
@@ -142,13 +137,49 @@ namespace QLSV
                         MessageBox.Show("Bạn chưa nhập ngày sinh ");
                         NgaySinh.Focus();
                     }
-                    db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, cbMaLop.Text);
+                    db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, txtMaLop.Text);
+                    MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Enabled = true;
+
+                    //an thong tin sinh vien
+                    txtMSSV.Enabled = false;
+                    txtHoTen.Enabled = false;
+                    NgaySinh.Enabled = false;
+                    txtPhone.Enabled = false;
+                    groupBox1.Enabled = false;
                 }
                 catch
                 {
-
+                    MessageBox.Show("Mã sinh viên bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else
+            {
+                try
+                {
+                    db.UpdateSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, txtMaLop.Text);
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                    //Mo button them xoa sua
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Enabled = true;
+
+                    //an thong tin sinh vien
+                    txtMSSV.Enabled = false;
+                    txtHoTen.Enabled = false;
+                    NgaySinh.Enabled = false;
+                    txtPhone.Enabled = false;
+                    groupBox1.Enabled = false;
+                }
+                catch
+                {
+                    MessageBox.Show("Sửa dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            Sinhvien_Load(sender, e);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -165,7 +196,7 @@ namespace QLSV
             groupBox1.Enabled = true;
             cbQueQuan.Enabled = true;
             cbMaLop.Enabled = true;
-            cbKhoa.Enabled = true;
+            txtMaLop.Enabled = true;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

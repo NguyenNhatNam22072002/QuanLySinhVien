@@ -46,7 +46,6 @@ namespace QLSV
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -58,6 +57,7 @@ namespace QLSV
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -222,24 +222,15 @@ namespace QLSV
             this.label8.TabIndex = 15;
             this.label8.Text = "Chọn lớp:";
             // 
-            // cbKhoa
-            // 
-            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(934, 223);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(291, 33);
-            this.cbKhoa.TabIndex = 18;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(814, 226);
+            this.label9.Location = new System.Drawing.Point(835, 226);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 25);
+            this.label9.Size = new System.Drawing.Size(84, 25);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Chọn khoa:";
+            this.label9.Text = "Mã Lớp:";
             // 
             // groupBox2
             // 
@@ -366,12 +357,23 @@ namespace QLSV
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(231, 33);
             this.cbMaLop.TabIndex = 28;
+            this.cbMaLop.SelectedIndexChanged += new System.EventHandler(this.cbMaLop_SelectedIndexChanged);
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(925, 224);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(249, 30);
+            this.txtMaLop.TabIndex = 29;
             // 
             // Sinhvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
+            this.Controls.Add(this.txtMaLop);
             this.Controls.Add(this.cbMaLop);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label10);
@@ -382,7 +384,6 @@ namespace QLSV
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.cbKhoa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
@@ -429,7 +430,6 @@ namespace QLSV
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbKhoacbMaLop;
-        private System.Windows.Forms.ComboBox cbKhoa;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -441,5 +441,6 @@ namespace QLSV
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ComboBox cbMaLop;
+        private System.Windows.Forms.TextBox txtMaLop;
     }
 }
