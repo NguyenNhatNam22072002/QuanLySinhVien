@@ -22,7 +22,7 @@ namespace QLSV
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLySinhVien")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DBMS_QLSV")]
 	public partial class StudentDataContextDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -51,7 +51,7 @@ namespace QLSV
     #endregion
 		
 		public StudentDataContextDataContext() : 
-				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString, mappingSource)
+				base(global::QLSV.Properties.Settings.Default.DBMS_QLSVConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -225,6 +225,27 @@ namespace QLSV
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<Show_DSSinhVienResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaThongTinMonHoc")]
+		public int SuaThongTinMonHoc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMH", DbType="Char(10)")] string maMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenMH", DbType="NVarChar(30)")] string tenMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoTinChi", DbType="Int")] System.Nullable<int> soTinChi)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMH, tenMH, soTinChi);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemMonHoc")]
+		public int ThemMonHoc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMH", DbType="Char(10)")] string maMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenMH", DbType="NVarChar(30)")] string tenMH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoTinChi", DbType="Int")] System.Nullable<int> soTinChi)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMH, tenMH, soTinChi);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaMonHoc")]
+		public int XoaMonHoc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMH", DbType="Char(10)")] string maMH)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMH);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
