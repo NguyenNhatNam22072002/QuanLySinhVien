@@ -37,11 +37,17 @@ namespace QLSV
             Trangchu Form = new Trangchu();
             OpenChildForm(Form);
             Form.clickbtnSinhvien += btnSinhvien_Click;
+            Form.clickbtnKhoa += btnKhoa_Click;
         }
 
         private void btnSinhvien_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Sinhvien());
+        }
+
+        private void btnKhoa_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new KhoaForm());
         }
     }
 }

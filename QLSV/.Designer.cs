@@ -226,6 +226,7 @@ namespace QLSV
             this.btnKhoa.Text = "        Khoa";
             this.btnKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhoa.UseVisualStyleBackColor = false;
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
             // 
             // btnTrangchu
             // 
