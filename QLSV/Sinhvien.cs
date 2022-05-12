@@ -22,7 +22,7 @@ namespace QLSV
         {
             dataGridView1.DataSource = db.Show_DSSinhVien();
 
-            //an hien button sinh vien
+            //an button sinh vien
             txtMSSV.Enabled = false;
             txtHoTen.Enabled = false;
             NgaySinh.Enabled = false;
@@ -216,8 +216,6 @@ namespace QLSV
             dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
             txtPhone.DataBindings.Clear();
             txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
-
-
         }
     }
 }
