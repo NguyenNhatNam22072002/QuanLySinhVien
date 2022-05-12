@@ -542,3 +542,41 @@ begin
 select * from SinhVien 
 end
 go
+
+-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO CÁC LỚP --
+create proc ThemMonHoc
+@MaMH char(10),
+@TenMH nvarchar(30),
+@SoTinChi int
+as
+begin 
+	insert into dbo.MonHoc values(@MaMH, @TenMH, @SoTinChi)
+end
+-- kiểm tra --
+ThemMonHoc 'STMA240121', N'Sức bền vật liệu', '4'
+select * from Khoa
+select * from MonHoc
+
+-- procedure xoá môn học --
+create proc XoaMonHoc
+@MaMH char(10)
+as
+begin
+	delete from dbo.MonHoc where MaMh = @MaMH
+end
+XoaMonHoc 'STMA240121'
+select * from MonHoc
+
+-- procedure sửa thông tin môn học --
+create proc SuaThongTinMonHoc
+@MaMH char(10),
+@TenMH nvarchar(30),
+@SoTinChi int
+as
+begin
+	update MonHoc set MaMH = @MaMH, TenMH = @TenMH, SoTinChi = @SoTinChi where MaMH = @MaMH
+end
+-- kiểm tra --
+SuaThongTinMonHoc 'STMA240121', N'Sức bền vật liệu', '3'
+select * from MonHoc
+
