@@ -48,13 +48,13 @@ namespace QLSV
         {
             
             dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
-            dataGridView1.Columns["MaSV"].HeaderText = "MaSV";
-            dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
-            dataGridView1.Columns["GioiTinh"].HeaderText = "Gioi Tinh";
-            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
-            dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
-            dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
-            dataGridView1.Columns["MaLop"].HeaderText = "Ma Lop";
+            dataGridView1.Columns["MaSV"].HeaderText = "Mã SV";
+            dataGridView1.Columns["TenSV"].HeaderText = "Họ và Tên";
+            dataGridView1.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
+            dataGridView1.Columns["QueQuan"].HeaderText = "Quê quán";
+            dataGridView1.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+            dataGridView1.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -201,19 +201,19 @@ namespace QLSV
             txtMSSV.DataBindings.Clear();
             txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");
 
-            dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
+            dataGridView1.Columns["TenSV"].HeaderText = "Họ và Tên";
             txtHoTen.DataBindings.Clear();
             txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
 
-            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
+            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
             NgaySinh.DataBindings.Clear();
             NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
 
-            dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
+            dataGridView1.Columns["QueQuan"].HeaderText = "Quê Quán";
             cbQueQuan.DataBindings.Clear();
             cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
 
-            dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
+            dataGridView1.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
             txtPhone.DataBindings.Clear();
             txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
         }
