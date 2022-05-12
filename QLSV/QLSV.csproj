@@ -84,6 +84,12 @@
     <Compile Include="LoginGUI.Designer.cs">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="LopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LopForm.Designer.cs">
+      <DependentUpon>LopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLMonhoc.cs">
@@ -109,6 +115,12 @@
     <Compile Include="Trangchu.Designer.cs">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChuongtrinhDT.resx">
+      <DependentUpon>ChuongtrinhDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiemForm.resx">
+      <DependentUpon>DiemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +133,9 @@
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LopForm.resx">
+      <DependentUpon>LopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +146,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLMonhoc.resx">
+      <DependentUpon>QLMonhoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sinhvien.resx">
       <DependentUpon>Sinhvien.cs</DependentUpon>
     </EmbeddedResource>

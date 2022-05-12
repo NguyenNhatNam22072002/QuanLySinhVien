@@ -38,6 +38,8 @@ namespace QLSV
             OpenChildForm(Form);
             Form.clickbtnSinhvien += btnSinhvien_Click;
             Form.clickbtnKhoa += btnKhoa_Click;
+            Form.clickbtnLop += btnLop_Click;
+            Form.clickbtnMonhoc += btnQLMonHoc_Click;
         }
 
         private void btnSinhvien_Click(object sender, EventArgs e)
@@ -48,6 +50,26 @@ namespace QLSV
         private void btnKhoa_Click(object sender, EventArgs e)
         {
             OpenChildForm(new KhoaForm());
+        }
+
+        private void btnCTDT_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChuongtrinhDT());
+        }
+
+        private void btnLop_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new LopForm());
+        }
+
+        private void btnQLMonHoc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QLMonhoc());
+        }
+
+        private void btnDiem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DiemForm());
         }
     }
 }

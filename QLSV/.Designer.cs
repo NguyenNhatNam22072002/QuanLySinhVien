@@ -145,6 +145,7 @@ namespace QLSV
             this.btnDiem.Text = "       Điểm";
             this.btnDiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiem.UseVisualStyleBackColor = false;
+            this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
             // 
             // btnSinhvien
             // 
@@ -178,6 +179,7 @@ namespace QLSV
             this.btnCTDT.Text = "        Chương trình đào tạo";
             this.btnCTDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCTDT.UseVisualStyleBackColor = false;
+            this.btnCTDT.Click += new System.EventHandler(this.btnCTDT_Click);
             // 
             // btnQLMonHoc
             // 
@@ -194,6 +196,7 @@ namespace QLSV
             this.btnQLMonHoc.Text = "       Quản Lý Môn Học";
             this.btnQLMonHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLMonHoc.UseVisualStyleBackColor = false;
+            this.btnQLMonHoc.Click += new System.EventHandler(this.btnQLMonHoc_Click);
             // 
             // btnLop
             // 
@@ -210,6 +213,7 @@ namespace QLSV
             this.btnLop.Text = "       Lớp";
             this.btnLop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLop.UseVisualStyleBackColor = false;
+            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
             // 
             // btnKhoa
             // 
