@@ -230,6 +230,7 @@ namespace QLSV
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(218, 33);
             this.cbMaLop.TabIndex = 16;
+            this.cbMaLop.SelectedIndexChanged += new System.EventHandler(this.cbMaLop_SelectedIndexChanged);
             // 
             // cbKhoa
             // 

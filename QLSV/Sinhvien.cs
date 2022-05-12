@@ -29,8 +29,8 @@ namespace QLSV
             txtPhone.Enabled = false;
             btnThem.Enabled = true;
             groupBox1.Enabled = false;
-            //btnLuu.Enabled = false;
-            
+            btnLuu.Enabled = false;
+
             //Combox QueQuan 
             cbQueQuan.DisplayMember = "QueQuan";
             cbQueQuan.ValueMember = "QueQuan";
@@ -40,12 +40,17 @@ namespace QLSV
             cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
             cbMaLop.DataSource = db.Show_DSlop();
+            cbMaLop.Enabled = false;
             // Combobox Khoa
             cbKhoa.DisplayMember = "TenKhoa";
             cbKhoa.ValueMember = "MaKhoa";
             cbKhoa.DataSource = db.DSKhoa();
+            cbKhoa.Enabled = false;
         }
+        private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
@@ -59,14 +64,17 @@ namespace QLSV
         {
             btnThem.Enabled = true;
             btnXoa.Enabled = false;
-            //btnLuu.Enabled = true;
-
+            btnLuu.Enabled = true;
+            btnSua.Enabled = false;
+            //Hien thong tin sv de them vao
             txtMSSV.Enabled = true;
             txtHoTen.Enabled = true;
             NgaySinh.Enabled = true;
             txtPhone.Enabled = true;
             groupBox1.Enabled = true;
             cbQueQuan.Enabled = true;
+            cbKhoa.Enabled = true;
+            cbMaLop.Enabled = true;
             txtMSSV.Focus();
             adSinhvien = true;
         }
@@ -118,7 +126,19 @@ namespace QLSV
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            btnLuu.Enabled = true;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+            btnThem.Enabled = false;
+            //an thong tin sv
+            txtMSSV.Enabled = false;
+            txtHoTen.Enabled = true;
+            NgaySinh.Enabled = true;
+            txtPhone.Enabled = true;
+            groupBox1.Enabled = true;
+            cbQueQuan.Enabled = true;
+            cbMaLop.Enabled = true;
+            cbKhoa.Enabled = true;
         }
     }
     

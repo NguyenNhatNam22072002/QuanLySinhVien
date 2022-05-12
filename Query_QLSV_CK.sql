@@ -595,4 +595,16 @@ begin
 select * from Khoa
 end 
 go
-
+--Procedure lay sinh vien theo ma lop--
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[SinhVien_SelectMaLop](
+@MaLop char(10)
+)
+AS
+BEGIN
+	SELECT *FROM SinhVien WHERE MaLop=@MaLop
+END
+GO
