@@ -36,6 +36,9 @@ namespace QLSV
             cbQueQuan.ValueMember = "QueQuan";
             cbQueQuan.DataSource = db.ChonTatCaSinhVien();
             cbQueQuan.Enabled = false;
+            //Combobox Lop
+            cbMaLop.DisplayMember = "TenLop";
+            cbMaLop.ValueMember = "MaLop";
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
