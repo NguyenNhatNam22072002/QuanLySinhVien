@@ -93,17 +93,6 @@
     <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ChonTatCaSinhVien" Method="ChonTatCaSinhVien">
-    <ElementType Name="ChonTatCaSinhVienResult">
-      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
-      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
-      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.SuaDiemSinhVien" Method="SuaDiemSinhVien">
     <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
     <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(15)" />
