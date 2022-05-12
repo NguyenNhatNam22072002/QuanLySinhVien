@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBMS_QLSV" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=TAYNGUYEN\TAYNGUYEN;Initial Catalog=DBMS_QLSV;Persist Security Info=True;User ID=sa" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="DBMS_QLSVConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySinhVien" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-G8GJO4A2;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Diem" Member="Diems">
     <Type Name="Diem">
       <Column Name="MaSV" Type="System.String" DbType="Char(15)" CanBeNull="true" />
@@ -179,5 +179,22 @@
   <Function Name="dbo.XoaMonHoc" Method="XoaMonHoc">
     <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DSKhoa" Method="DSKhoa">
+    <ElementType Name="DSKhoaResult">
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Show_DSlop" Method="Show_DSlop">
+    <ElementType Name="Show_DSlopResult">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaHeDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>
