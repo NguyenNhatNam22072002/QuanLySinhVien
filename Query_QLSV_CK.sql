@@ -542,3 +542,10 @@ begin
 select * from SinhVien 
 end
 go
+-- Thêm procedure Chọn tất cả của bảng lớp --
+Create proc Show_DSLop
+as 
+begin
+select * from Lop
+end 
+go
