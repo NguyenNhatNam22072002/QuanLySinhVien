@@ -18,10 +18,10 @@ namespace QLSV
             InitializeComponent();
         }
         StudentDataContextDataContext db = new StudentDataContextDataContext();
-
         private void Sinhvien_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.Show_DSSinhVien();
+
             //an hien button sinh vien
             txtMSSV.Enabled = false;
             txtHoTen.Enabled = false;
@@ -48,31 +48,12 @@ namespace QLSV
         {
             
             dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
-
             dataGridView1.Columns["MaSV"].HeaderText = "MaSV";
-            //txtMSSV.DataBindings.Clear();
-            //txtMSSV.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");
-
             dataGridView1.Columns["TenSV"].HeaderText = "Ho va Ten";
-            //txtHoTen.DataBindings.Clear();
-            //txtHoTen.DataBindings.Add("Text", dataGridView1.DataSource, "TenSV");
-
             dataGridView1.Columns["GioiTinh"].HeaderText = "Gioi Tinh";
-            //rbtnNam.DataBindings.Clear();
-            //rbtnNam.DataBindings.Add("Checked", dataGridView1.DataSource, "GioiTinh");
-
             dataGridView1.Columns["NgaySinh"].HeaderText = "Ngay Sinh";
-            //NgaySinh.DataBindings.Clear();
-            //NgaySinh.DataBindings.Add("Text", dataGridView1.DataSource, "NgaySinh");
-
             dataGridView1.Columns["QueQuan"].HeaderText = "Que Quan";
-            //cbQueQuan.DataBindings.Clear();
-            //cbQueQuan.DataBindings.Add("Text", dataGridView1.DataSource, "QueQuan");
-
             dataGridView1.Columns["SoDienThoai"].HeaderText = "So Dien Thoai";
-            //txtPhone.DataBindings.Clear();
-            //txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "SoDienThoai");
-
             dataGridView1.Columns["MaLop"].HeaderText = "Ma Lop";
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -212,5 +193,4 @@ namespace QLSV
             txtPhone.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
         }
     }
-    
 }
