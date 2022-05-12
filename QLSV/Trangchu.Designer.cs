@@ -81,6 +81,7 @@ namespace QLSV
             this.btnMonhoc.TabIndex = 68;
             this.btnMonhoc.Text = "Xem thêm ➡";
             this.btnMonhoc.UseVisualStyleBackColor = false;
+            this.btnMonhoc.Click += new System.EventHandler(this.btnMonhoc_Click);
             // 
             // btnLop
             // 
@@ -94,6 +95,7 @@ namespace QLSV
             this.btnLop.TabIndex = 67;
             this.btnLop.Text = "Xem thêm ➡";
             this.btnLop.UseVisualStyleBackColor = false;
+            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
             // 
             // btnSinhvien
             // 
@@ -121,6 +123,7 @@ namespace QLSV
             this.btnKhoa.TabIndex = 65;
             this.btnKhoa.Text = "Xem thêm ➡";
             this.btnKhoa.UseVisualStyleBackColor = false;
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
             // 
             // label14
             // 

@@ -370,7 +370,7 @@ namespace QLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 759);
+            this.ClientSize = new System.Drawing.Size(1238, 721);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox4);
