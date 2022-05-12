@@ -586,5 +586,12 @@ begin
 select * from Lop
 end 
 go
+-- them procedure lay thong tin bang khoa--
+Create proc DSKhoa
+as 
+begin
+select * from Khoa
+End
+go
 
 

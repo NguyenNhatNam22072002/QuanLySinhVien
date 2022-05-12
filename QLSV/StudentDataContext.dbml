@@ -164,4 +164,21 @@
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.Show_DSlop" Method="Show_DSlop">
+    <ElementType Name="Show_DSlopResult">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaHeDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DSKhoa" Method="DSKhoa">
+    <ElementType Name="DSKhoaResult">
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>
