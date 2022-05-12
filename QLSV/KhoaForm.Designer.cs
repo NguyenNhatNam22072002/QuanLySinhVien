@@ -32,7 +32,6 @@ namespace QLSV
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhoaForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
@@ -70,18 +69,6 @@ namespace QLSV
             this.label1.Size = new System.Drawing.Size(201, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách Khoa";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label10.Location = new System.Drawing.Point(39, 243);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 20);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Nhập khoa...";
             // 
             // textBox4
             // 
@@ -271,7 +258,6 @@ namespace QLSV
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTenKhoa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -290,7 +276,6 @@ namespace QLSV
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtMaKhoa;

@@ -15,6 +15,7 @@ namespace QLSV
         public KhoaForm()
         {
             InitializeComponent();
+            
         }
         StudentDataContextDataContext db = new StudentDataContextDataContext();
         private void KhoaForm_Load(object sender, EventArgs e)
@@ -27,7 +28,8 @@ namespace QLSV
             txtPhone.Enabled = false;
             //Mo button Them
             btnThem.Enabled = true;
-
+            for (int i = 0; i < 4; i++)
+                dataGridView1.Columns[i].Width = 180;
         }
         bool adKhoa;
         private void btnThem_Click(object sender, EventArgs e)

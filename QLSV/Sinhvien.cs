@@ -16,8 +16,10 @@ namespace QLSV
         public Sinhvien()
         {
             InitializeComponent();
+            
         }
         StudentDataContextDataContext db = new StudentDataContextDataContext();
+
         private void Sinhvien_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.Show_DSSinhVien();
