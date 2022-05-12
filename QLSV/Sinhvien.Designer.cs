@@ -46,7 +46,7 @@ namespace QLSV
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -57,6 +57,7 @@ namespace QLSV
             this.btnThem = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -221,14 +222,14 @@ namespace QLSV
             this.label8.TabIndex = 15;
             this.label8.Text = "Chọn lớp:";
             // 
-            // comboBox2
+            // cbMaLop
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(561, 223);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(218, 33);
-            this.comboBox2.TabIndex = 16;
+            this.cbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaLop.FormattingEnabled = true;
+            this.cbMaLop.Location = new System.Drawing.Point(561, 223);
+            this.cbMaLop.Name = "cbMaLop";
+            this.cbMaLop.Size = new System.Drawing.Size(218, 33);
+            this.cbMaLop.TabIndex = 16;
             // 
             // comboBox3
             // 
@@ -291,7 +292,7 @@ namespace QLSV
             this.btnSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(1077, 403);
+            this.btnSua.Location = new System.Drawing.Point(1077, 438);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(148, 53);
             this.btnSua.TabIndex = 23;
@@ -349,11 +350,27 @@ namespace QLSV
             this.label10.TabIndex = 26;
             this.label10.Text = "Nhập tên...";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(1077, 356);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(148, 53);
+            this.btnLuu.TabIndex = 27;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // Sinhvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button1);
@@ -364,7 +381,7 @@ namespace QLSV
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbMaLop);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label7);
@@ -409,7 +426,7 @@ namespace QLSV
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbMaLop;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -420,5 +437,6 @@ namespace QLSV
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnLuu;
     }
 }
