@@ -284,9 +284,9 @@ namespace QLSV
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::QLSV.Properties.Resources.TimKiem;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(31, 224);
+            this.button1.Location = new System.Drawing.Point(31, 219);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 33);
+            this.button1.Size = new System.Drawing.Size(131, 43);
             this.button1.TabIndex = 24;
             this.button1.Text = "Tìm kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -329,7 +329,7 @@ namespace QLSV
             this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(1077, 284);
+            this.btnThem.Location = new System.Drawing.Point(1077, 283);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(148, 53);
             this.btnThem.TabIndex = 21;
