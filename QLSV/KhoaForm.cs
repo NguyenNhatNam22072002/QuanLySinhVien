@@ -114,5 +114,15 @@ namespace QLSV
                 KhoaForm_Load(sender, e);
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult xoa = MessageBox.Show("Bạn có muốn xóa khoa này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+            if (xoa == DialogResult.Yes)
+            {
+                db.XoaSinhVien(txtMaKhoa.Text);
+                KhoaForm_Load(sender, e);
+            }
+        }
     }
 }
