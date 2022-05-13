@@ -380,3 +380,4 @@ BEGIN
 	SELECT *FROM SinhVien WHERE MaLop=@MaLop
 END
 GO
+-------trigger---
