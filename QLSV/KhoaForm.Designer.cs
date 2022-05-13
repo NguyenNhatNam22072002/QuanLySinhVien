@@ -32,7 +32,7 @@ namespace QLSV
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhoaForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,14 +70,15 @@ namespace QLSV
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách Khoa";
             // 
-            // textBox4
+            // txtTimKiem
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(29, 237);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 28;
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(29, 237);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(258, 30);
+            this.txtTimKiem.TabIndex = 28;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // button1
             // 
@@ -259,7 +260,7 @@ namespace QLSV
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTenKhoa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Name = "KhoaForm";
@@ -277,7 +278,7 @@ namespace QLSV
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtMaKhoa;
         private System.Windows.Forms.Label label4;

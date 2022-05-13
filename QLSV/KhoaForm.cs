@@ -130,7 +130,44 @@ namespace QLSV
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            //An hien cac button
+            btnLuu.Enabled = true;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+            btnThem.Enabled = false;
+            //an hien textbox Khoa
+            txtMaKhoa.Enabled = false;
+            txtTenKhoa.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtPhone.Enabled = true;
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dataGridView1.CurrentCell.RowIndex;
+            // Chuyển thông tin từ Gridview lên các textbox ở panel
+            txtMaKhoa.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
+            txtTenKhoa.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();;
+            txtDiaChi.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
+            txtPhone.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
+        }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.Khoas.Where(x => x.TenKhoa.Contains(txtTimKiem.Text)).ToList();
+            dataGridView1.Columns["MaKhoa"].HeaderText = "Mã Khoa";
+            txtMaKhoa.DataBindings.Clear();
+            txtMaKhoa.DataBindings.Add("Text", dataGridView1.DataSource, "MaKhoa");
 
+            dataGridView1.Columns["TenKhoa"].HeaderText = "Tên Khoa";
+            txtTenKhoa.DataBindings.Clear();
+            txtTenKhoa.DataBindings.Add("Text", dataGridView1.DataSource, "TenKhoa");
+
+            dataGridView1.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+            txtDiaChi.DataBindings.Clear();
+            txtDiaChi.DataBindings.Add("Text", dataGridView1.DataSource, "DiaChi");
+
+            dataGridView1.Columns["DienThoai"].HeaderText = "Số điện thoại";
+            txtPhone.DataBindings.Clear();
+            txtPhone.DataBindings.Add("Text", dataGridView1.DataSource, "DienThoai");
         }
     }
 }

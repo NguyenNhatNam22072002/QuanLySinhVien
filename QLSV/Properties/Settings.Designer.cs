@@ -55,5 +55,16 @@ namespace QLSV.Properties {
                 return ((string)(this["QuanLySinhVienConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-G8GJO4A2;Initial Catalog=QuanLySinhVien;Integrated Security=Tr" +
+            "ue")]
+        public string QuanLySinhVienConnectionString2 {
+            get {
+                return ((string)(this["QuanLySinhVienConnectionString2"]));
+            }
+        }
     }
 }
