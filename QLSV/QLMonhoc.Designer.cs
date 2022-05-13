@@ -33,10 +33,10 @@ namespace QLSV
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtMaKhoa = new System.Windows.Forms.TextBox();
-            this.txtTenKhoa = new System.Windows.Forms.TextBox();
+            this.txtMaMonhoc = new System.Windows.Forms.TextBox();
+            this.txtTenMonhoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTinChi = new System.Windows.Forms.TextBox();
@@ -79,23 +79,23 @@ namespace QLSV
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 72;
             // 
-            // txtMaKhoa
+            // txtMaMonhoc
             // 
-            this.txtMaKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Location = new System.Drawing.Point(168, 107);
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(193, 30);
-            this.txtMaKhoa.TabIndex = 71;
+            this.txtMaMonhoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaMonhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMonhoc.Location = new System.Drawing.Point(168, 107);
+            this.txtMaMonhoc.Name = "txtMaMonhoc";
+            this.txtMaMonhoc.Size = new System.Drawing.Size(193, 30);
+            this.txtMaMonhoc.TabIndex = 71;
             // 
-            // txtTenKhoa
+            // txtTenMonhoc
             // 
-            this.txtTenKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhoa.Location = new System.Drawing.Point(176, 163);
-            this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(312, 30);
-            this.txtTenKhoa.TabIndex = 69;
+            this.txtTenMonhoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenMonhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenMonhoc.Location = new System.Drawing.Point(176, 163);
+            this.txtTenMonhoc.Name = "txtTenMonhoc";
+            this.txtTenMonhoc.Size = new System.Drawing.Size(312, 30);
+            this.txtTenMonhoc.TabIndex = 69;
             // 
             // label3
             // 
@@ -107,14 +107,14 @@ namespace QLSV
             this.label3.TabIndex = 68;
             this.label3.Text = "Tên môn học:";
             // 
-            // textBox4
+            // txtTimKiem
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(27, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 67;
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(27, 229);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(258, 30);
+            this.txtTimKiem.TabIndex = 67;
             // 
             // groupBox2
             // 
@@ -229,10 +229,10 @@ namespace QLSV
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtMaKhoa);
-            this.Controls.Add(this.txtTenKhoa);
+            this.Controls.Add(this.txtMaMonhoc);
+            this.Controls.Add(this.txtTenMonhoc);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Name = "QLMonhoc";
@@ -253,10 +253,10 @@ namespace QLSV
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtMaKhoa;
-        private System.Windows.Forms.TextBox txtTenKhoa;
+        private System.Windows.Forms.TextBox txtMaMonhoc;
+        private System.Windows.Forms.TextBox txtTenMonhoc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;

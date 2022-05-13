@@ -15,6 +15,7 @@ namespace QLSV
         public ChuongtrinhDT()
         {
             InitializeComponent();
+
         }
     }
 }
