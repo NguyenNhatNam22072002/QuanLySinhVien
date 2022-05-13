@@ -51,7 +51,7 @@ namespace QLSV
     #endregion
 		
 		public StudentDataContextDataContext() : 
-				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString1, mappingSource)
+				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -157,13 +157,6 @@ namespace QLSV
 			return ((ISingleResult<Show_DSlopResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Show_DSSinhVien")]
-		public ISingleResult<Show_DSSinhVienResult> Show_DSSinhVien()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<Show_DSSinhVienResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SinhVien_SelectMaLop")]
 		public ISingleResult<SinhVien_SelectMaLopResult> SinhVien_SelectMaLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop)
 		{
@@ -253,6 +246,13 @@ namespace QLSV
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Show_DSSinhVien")]
+		public ISingleResult<Show_DSSinhVienResult> Show_DSSinhVien()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<Show_DSSinhVienResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1741,7 +1741,7 @@ namespace QLSV
 		}
 	}
 	
-	public partial class Show_DSSinhVienResult
+	public partial class SinhVien_SelectMaLopResult
 	{
 		
 		private string _MaSV;
@@ -1758,7 +1758,7 @@ namespace QLSV
 		
 		private string _MaLop;
 		
-		public Show_DSSinhVienResult()
+		public SinhVien_SelectMaLopResult()
 		{
 		}
 		
@@ -1875,7 +1875,7 @@ namespace QLSV
 		}
 	}
 	
-	public partial class SinhVien_SelectMaLopResult
+	public partial class Show_DSSinhVienResult
 	{
 		
 		private string _MaSV;
@@ -1892,7 +1892,7 @@ namespace QLSV
 		
 		private string _MaLop;
 		
-		public SinhVien_SelectMaLopResult()
+		public Show_DSSinhVienResult()
 		{
 		}
 		

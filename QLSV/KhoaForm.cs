@@ -28,6 +28,7 @@ namespace QLSV
             txtPhone.Enabled = false;
             //Mo button Them
             btnThem.Enabled = true;
+            // Tang do dai hien thi dgv
             for (int i = 0; i < 4; i++)
                 dataGridView1.Columns[i].Width = 180;
         }
@@ -125,6 +126,11 @@ namespace QLSV
                 db.XoaSinhVien(txtMaKhoa.Text);
                 KhoaForm_Load(sender, e);
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
