@@ -18,7 +18,8 @@ namespace QLSV
         }
         private void LoginGUI_Load(object sender, EventArgs e)
         {
-
+            cbServer.Items.Add(SystemInformation.UserDomainName.ToString() + "\\SQLServer");
+            cbServer.Text = cbServer.Items[0].ToString();
         }
 
         int an_hien = 0;
@@ -36,6 +37,35 @@ namespace QLSV
                 an_hien = 0;
                 AnHien.BackgroundImage = Properties.Resources.An;
                 txtMatKhau.PasswordChar = '●';
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult thongbao;
+            thongbao = (MessageBox.Show("Bạn có chắc chắn muốn thoát", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (thongbao == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            StudentDataContextDataContext db = new StudentDataContextDataContext();
+
+            var query = from LoginList in db.DangNhaps
+                        where LoginList.userName == txtTaiKhoan.Text && LoginList.passWord == txtMatKhau.Text
+                        select LoginList;
+            if (query.Count() == 0)
+            {
+                DialogResult thongbao;
+                thongbao = (MessageBox.Show("Đăng nhập không thành công", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                Application.Exit();
+            }
+            else
+            {
+                GiaoDienChinh chinh = new GiaoDienChinh();
+                this.Hide();
+                chinh.ShowDialog();
             }
         }
     }

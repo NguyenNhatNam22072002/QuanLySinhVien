@@ -44,7 +44,7 @@
         <elementListCompartment Id="7fd0bb99-75d5-4962-86aa-b5ecf8b32633" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/StudentDataContextDataContext/HeDT/HeDT_Lop" />
       <nodes>
         <classShapeMoniker Id="fda1e78b-275c-4fbe-a9bf-38dc6b5bb10a" />
@@ -86,5 +86,11 @@
         <classShapeMoniker Id="0d1e7150-c3c7-4e98-a1be-9003d5f2174b" />
       </nodes>
     </associationConnector>
+    <classShape Id="a09b3069-188c-4281-81e3-b2ccad4b1978" absoluteBounds="6, 3.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/StudentDataContextDataContext/DangNhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="394bf554-f2e8-4489-93b0-faa3eb6eb54e" absoluteBounds="6.015, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

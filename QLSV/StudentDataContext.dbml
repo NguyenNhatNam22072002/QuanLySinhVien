@@ -69,6 +69,13 @@
       <Association Name="Lop_SinhVien" Member="Lop" ThisKey="MaLop" OtherKey="MaLop" Type="Lop" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.DangNhap" Member="DangNhaps">
+    <Type Name="DangNhap">
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="passWord" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.ChonTatCaSinhVien" Method="ChonTatCaSinhVien">
     <ElementType Name="ChonTatCaSinhVienResult">
       <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
