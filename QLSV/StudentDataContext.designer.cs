@@ -51,7 +51,7 @@ namespace QLSV
     #endregion
 		
 		public StudentDataContextDataContext() : 
-				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString, mappingSource)
+				base(global::QLSV.Properties.Settings.Default.QuanLySinhVienConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

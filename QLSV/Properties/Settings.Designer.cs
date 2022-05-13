@@ -26,7 +26,7 @@ namespace QLSV.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-G8GJO4A2;Initial Catalog=QuanLySinhVien;Integrated Security=Tr" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=Tr" +
             "ue")]
         public string QuanLySinhVienConnectionString {
             get {

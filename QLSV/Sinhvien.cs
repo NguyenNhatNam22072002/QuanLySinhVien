@@ -22,7 +22,6 @@ namespace QLSV
 
         private void Sinhvien_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.Show_DSSinhVien();
 
             //an button sinh vien
             txtMSSV.Enabled = false;
@@ -42,8 +41,12 @@ namespace QLSV
             cbMaLop.DisplayMember = "TenLop";
             cbMaLop.ValueMember = "MaLop";
             cbMaLop.DataSource = db.Show_DSlop();
+            cbMaLop.Enabled = false;
+
             txtMaLop.DataBindings.Clear();
             txtMaLop.DataBindings.Add("Text", cbMaLop.DataSource, "maLop");
+            txtMaLop.Enabled = false;
+            dataGridView1.DataSource = db.Show_DSSinhVien();
 
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
