@@ -42,7 +42,7 @@ Create Table SinhVien
  )
 Create Table Diem
  (
-   MaSV char(15) foreign key references SinhVien(MaSV),
+   MaSV char(15) foreign key references SinhVien(MaSV) on delete cascade,
    MaMH char(10) foreign key references MonHoc (MaMH),
    HocKy int check((HocKy>0) and (HocKy<4)) not null,
    DiemQuaTrinhLan1 real ,
