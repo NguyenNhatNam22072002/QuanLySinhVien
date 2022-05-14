@@ -300,6 +300,27 @@ namespace QLSV
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaHeDT")]
+		public int XoaHeDT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHeDT);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemHeDT")]
+		public int ThemHeDT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenHeDT", DbType="NVarChar(40)")] string tenHeDT)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHeDT, tenHeDT);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaThongTinHeDT")]
+		public int SuaThongTinHeDT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenHeDT", DbType="NVarChar(40)")] string tenHeDT)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHeDT, tenHeDT);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Diem")]

@@ -239,4 +239,18 @@
     <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.XoaHeDT" Method="XoaHeDT">
+    <Parameter Name="MaHeDT" Parameter="maHeDT" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThemHeDT" Method="ThemHeDT">
+    <Parameter Name="MaHeDT" Parameter="maHeDT" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="TenHeDT" Parameter="tenHeDT" Type="System.String" DbType="NVarChar(40)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SuaThongTinHeDT" Method="SuaThongTinHeDT">
+    <Parameter Name="MaHeDT" Parameter="maHeDT" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="TenHeDT" Parameter="tenHeDT" Type="System.String" DbType="NVarChar(40)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

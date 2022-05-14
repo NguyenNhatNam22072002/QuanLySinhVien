@@ -33,10 +33,10 @@ namespace QLSV
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtMaKhoa = new System.Windows.Forms.TextBox();
-            this.txtTenKhoa = new System.Windows.Forms.TextBox();
+            this.txtMaHeDT = new System.Windows.Forms.TextBox();
+            this.txtTenHeDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -76,24 +76,25 @@ namespace QLSV
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 86;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtMaKhoa
+            // txtMaHeDT
             // 
-            this.txtMaKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Location = new System.Drawing.Point(194, 107);
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(217, 30);
-            this.txtMaKhoa.TabIndex = 85;
+            this.txtMaHeDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaHeDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHeDT.Location = new System.Drawing.Point(194, 107);
+            this.txtMaHeDT.Name = "txtMaHeDT";
+            this.txtMaHeDT.Size = new System.Drawing.Size(217, 30);
+            this.txtMaHeDT.TabIndex = 85;
             // 
-            // txtTenKhoa
+            // txtTenHeDT
             // 
-            this.txtTenKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhoa.Location = new System.Drawing.Point(194, 166);
-            this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(295, 30);
-            this.txtTenKhoa.TabIndex = 83;
+            this.txtTenHeDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenHeDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHeDT.Location = new System.Drawing.Point(194, 166);
+            this.txtTenHeDT.Name = "txtTenHeDT";
+            this.txtTenHeDT.Size = new System.Drawing.Size(295, 30);
+            this.txtTenHeDT.TabIndex = 83;
             // 
             // label3
             // 
@@ -105,14 +106,15 @@ namespace QLSV
             this.label3.TabIndex = 82;
             this.label3.Text = "Tên hệ đào tạo:";
             // 
-            // textBox4
+            // txtTimkiem
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(28, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 81;
+            this.txtTimkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Location = new System.Drawing.Point(28, 229);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(258, 30);
+            this.txtTimkiem.TabIndex = 81;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // groupBox2
             // 
@@ -136,6 +138,7 @@ namespace QLSV
             this.btnLuu.TabIndex = 90;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -150,6 +153,7 @@ namespace QLSV
             this.btnSua.TabIndex = 89;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -164,6 +168,7 @@ namespace QLSV
             this.btnXoa.TabIndex = 88;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -178,6 +183,7 @@ namespace QLSV
             this.btnThem.TabIndex = 87;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button1
             // 
@@ -206,14 +212,15 @@ namespace QLSV
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtMaKhoa);
-            this.Controls.Add(this.txtTenKhoa);
+            this.Controls.Add(this.txtMaHeDT);
+            this.Controls.Add(this.txtTenHeDT);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Name = "ChuongtrinhDT";
             this.Text = "ChuongtrinhDT";
+            this.Load += new System.EventHandler(this.ChuongtrinhDT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -231,10 +238,10 @@ namespace QLSV
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtMaKhoa;
-        private System.Windows.Forms.TextBox txtTenKhoa;
+        private System.Windows.Forms.TextBox txtMaHeDT;
+        private System.Windows.Forms.TextBox txtTenHeDT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
     }
