@@ -160,7 +160,7 @@ namespace QLSV
             cbMSSV.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
             cbMaMH.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();
             txtHocky.Text = dataGridView1.Rows[r].Cells[2].Value.ToString();
-            txtQT1.Text = dataGridView1.Rows[r].Cells[3].Value.ToString(); 
+            txtQT1.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
             txtQT2.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
             txtCuoiKy.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
         }
