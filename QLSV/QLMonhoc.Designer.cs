@@ -78,6 +78,7 @@ namespace QLSV
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 72;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtMaMonhoc
             // 
@@ -115,6 +116,8 @@ namespace QLSV
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(258, 30);
             this.txtTimKiem.TabIndex = 67;
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // groupBox2
             // 
@@ -157,6 +160,7 @@ namespace QLSV
             this.btnLuu.TabIndex = 76;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -171,6 +175,7 @@ namespace QLSV
             this.btnSua.TabIndex = 75;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -185,6 +190,7 @@ namespace QLSV
             this.btnXoa.TabIndex = 74;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -199,6 +205,7 @@ namespace QLSV
             this.btnThem.TabIndex = 73;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button1
             // 
@@ -237,6 +244,7 @@ namespace QLSV
             this.Controls.Add(this.groupBox2);
             this.Name = "QLMonhoc";
             this.Text = "QLMonhoc";
+            this.Load += new System.EventHandler(this.Monhoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

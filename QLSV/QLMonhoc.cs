@@ -27,8 +27,8 @@ namespace QLSV
             //Mo button Them
             btnThem.Enabled = true;
             // Tang do dai hien thi dgv
-            for (int i = 0; i < 4; i++)
-                dataGridView1.Columns[i].Width = 180;
+            for (int i = 0; i < 3; i++)
+                dataGridView1.Columns[i].Width = 200;
         }
         bool adKhoa;
         private void btnThem_Click(object sender, EventArgs e)
@@ -136,7 +136,7 @@ namespace QLSV
             // Chuyển thông tin từ Gridview lên các textbox ở panel
             txtMaMonhoc.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
             txtTenMonhoc.Text = dataGridView1.Rows[r].Cells[1].Value.ToString(); ;
-            txtTinChi.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
+            txtTinChi.Text = dataGridView1.Rows[r].Cells[2].Value.ToString();
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {

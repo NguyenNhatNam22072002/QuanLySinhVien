@@ -31,27 +31,26 @@ namespace QLSV
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiemForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtQT2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtCuoiKy = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMaKhoa = new System.Windows.Forms.TextBox();
+            this.txtHocky = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenKhoa = new System.Windows.Forms.TextBox();
+            this.txtQT1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbMaKhoa = new System.Windows.Forms.ComboBox();
+            this.cbMSSV = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMaMH = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTimkiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -65,15 +64,16 @@ namespace QLSV
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtDiaChi
+            // txtQT2
             // 
-            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(606, 173);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(63, 30);
-            this.txtDiaChi.TabIndex = 53;
+            this.txtQT2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQT2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQT2.Location = new System.Drawing.Point(606, 173);
+            this.txtQT2.Name = "txtQT2";
+            this.txtQT2.Size = new System.Drawing.Size(63, 30);
+            this.txtQT2.TabIndex = 53;
             // 
             // label2
             // 
@@ -85,14 +85,14 @@ namespace QLSV
             this.label2.TabIndex = 52;
             this.label2.Text = "Điểm quá trình lần 2:";
             // 
-            // txtPhone
+            // txtCuoiKy
             // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(902, 173);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(62, 30);
-            this.txtPhone.TabIndex = 51;
+            this.txtCuoiKy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCuoiKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuoiKy.Location = new System.Drawing.Point(902, 173);
+            this.txtCuoiKy.Name = "txtCuoiKy";
+            this.txtCuoiKy.Size = new System.Drawing.Size(62, 30);
+            this.txtCuoiKy.TabIndex = 51;
             // 
             // label5
             // 
@@ -104,14 +104,14 @@ namespace QLSV
             this.label5.TabIndex = 50;
             this.label5.Text = "Điểm cuối kỳ:";
             // 
-            // txtMaKhoa
+            // txtHocky
             // 
-            this.txtMaKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Location = new System.Drawing.Point(870, 115);
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(94, 30);
-            this.txtMaKhoa.TabIndex = 49;
+            this.txtHocky.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHocky.Location = new System.Drawing.Point(870, 115);
+            this.txtHocky.Name = "txtHocky";
+            this.txtHocky.Size = new System.Drawing.Size(94, 30);
+            this.txtHocky.TabIndex = 49;
             // 
             // label4
             // 
@@ -123,14 +123,14 @@ namespace QLSV
             this.label4.TabIndex = 48;
             this.label4.Text = "Học kỳ:";
             // 
-            // txtTenKhoa
+            // txtQT1
             // 
-            this.txtTenKhoa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhoa.Location = new System.Drawing.Point(234, 173);
-            this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(69, 30);
-            this.txtTenKhoa.TabIndex = 47;
+            this.txtQT1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQT1.Location = new System.Drawing.Point(234, 173);
+            this.txtQT1.Name = "txtQT1";
+            this.txtQT1.Size = new System.Drawing.Size(69, 30);
+            this.txtQT1.TabIndex = 47;
             // 
             // label3
             // 
@@ -142,14 +142,15 @@ namespace QLSV
             this.label3.TabIndex = 46;
             this.label3.Text = "Điểm quá trình lần 1:";
             // 
-            // textBox4
+            // txtTimkiem
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(30, 239);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 45;
+            this.txtTimkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Location = new System.Drawing.Point(30, 239);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(258, 30);
+            this.txtTimkiem.TabIndex = 45;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // groupBox2
             // 
@@ -170,14 +171,14 @@ namespace QLSV
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách quản lý điểm";
             // 
-            // cbMaKhoa
+            // cbMSSV
             // 
-            this.cbMaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaKhoa.FormattingEnabled = true;
-            this.cbMaKhoa.Location = new System.Drawing.Point(112, 114);
-            this.cbMaKhoa.Name = "cbMaKhoa";
-            this.cbMaKhoa.Size = new System.Drawing.Size(151, 33);
-            this.cbMaKhoa.TabIndex = 62;
+            this.cbMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMSSV.FormattingEnabled = true;
+            this.cbMSSV.Location = new System.Drawing.Point(112, 114);
+            this.cbMSSV.Name = "cbMSSV";
+            this.cbMSSV.Size = new System.Drawing.Size(151, 33);
+            this.cbMSSV.TabIndex = 62;
             // 
             // label8
             // 
@@ -189,14 +190,14 @@ namespace QLSV
             this.label8.TabIndex = 61;
             this.label8.Text = "MSSV:";
             // 
-            // comboBox1
+            // cbMaMH
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(480, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 33);
-            this.comboBox1.TabIndex = 64;
+            this.cbMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaMH.FormattingEnabled = true;
+            this.cbMaMH.Location = new System.Drawing.Point(480, 114);
+            this.cbMaMH.Name = "cbMaMH";
+            this.cbMaMH.Size = new System.Drawing.Size(229, 33);
+            this.cbMaMH.TabIndex = 64;
             // 
             // label6
             // 
@@ -207,15 +208,6 @@ namespace QLSV
             this.label6.Size = new System.Drawing.Size(126, 25);
             this.label6.TabIndex = 63;
             this.label6.Text = "Mã môn học:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 248);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 17);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Theo môn học";
             // 
             // btnLuu
             // 
@@ -230,6 +222,7 @@ namespace QLSV
             this.btnLuu.TabIndex = 58;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -244,6 +237,7 @@ namespace QLSV
             this.btnSua.TabIndex = 57;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -258,6 +252,7 @@ namespace QLSV
             this.btnXoa.TabIndex = 56;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -272,51 +267,52 @@ namespace QLSV
             this.btnThem.TabIndex = 55;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button1
+            // btnTimkiem
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::QLSV.Properties.Resources.TimKiem;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(294, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 43);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTimkiem.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnTimkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimkiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTimkiem.Image = global::QLSV.Properties.Resources.TimKiem;
+            this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimkiem.Location = new System.Drawing.Point(294, 234);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(141, 43);
+            this.btnTimkiem.TabIndex = 44;
+            this.btnTimkiem.Text = "Tìm kiếm";
+            this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimkiem.UseVisualStyleBackColor = false;
             // 
             // DiemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbMaMH);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbMaKhoa);
+            this.Controls.Add(this.cbMSSV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtQT2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtCuoiKy);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMaKhoa);
+            this.Controls.Add(this.txtHocky);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtTenKhoa);
+            this.Controls.Add(this.txtQT1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtTimkiem);
+            this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.groupBox2);
             this.Name = "DiemForm";
             this.Text = "DiemForm";
+            this.Load += new System.EventHandler(this.DiemForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -332,22 +328,21 @@ namespace QLSV
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtQT2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtCuoiKy;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMaKhoa;
+        private System.Windows.Forms.TextBox txtHocky;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTenKhoa;
+        private System.Windows.Forms.TextBox txtQT1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbMaKhoa;
+        private System.Windows.Forms.ComboBox cbMSSV;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMaMH;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
     }
 }

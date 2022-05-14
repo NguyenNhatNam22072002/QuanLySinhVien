@@ -209,4 +209,14 @@
       <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.Show_DSDiem" Method="Show_DSDiem">
+    <ElementType Name="Show_DSDiemResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="MaMH" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiemQuaTrinhLan1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemQuaTrinhLan2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemCuoiKi" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
