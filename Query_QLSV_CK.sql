@@ -380,4 +380,119 @@ BEGIN
 	SELECT *FROM SinhVien WHERE MaLop=@MaLop
 END
 GO
--------trigger---
+
+-------------------------------------TRIGGER------------------------
+-- trigger thêm điểm sinh viên --
+create trigger trigger_insertDiem
+on Diem for insert
+as
+declare @DiemQuaTrinhLan1 float
+declare @DiemQuaTrinhLan2 float
+declare @DiemCuoiKi float
+select @DiemQuaTrinhLan1 = DiemQuaTrinhLan1, @DiemQuaTrinhLan2 = DiemQuaTrinhLan2, @DiemCuoiKi = DiemCuoiKi 
+from inserted
+if (@DiemQuaTrinhLan1 < 0) or (@DiemQuaTrinhLan1 > 10) or (@DiemQuaTrinhLan2 < 0) or (@DiemQuaTrinhLan2 > 10) or (@DiemCuoiKi < 0) or (@DiemCuoiKi > 10)
+begin 
+print N'Điểm phải < 0 hoặc > 10. Vui lòng nhập lại!'
+Rollback tran
+end
+else
+begin
+print N'Nhập điểm sinh viên thành công!'
+end
+go
+---->DONE
+--select * from SinhVien
+--select * from Diem
+--ThemDiemSinhVien '21136777','EEEN231780', '2','8', '8', '9'
+--SuaDiemSinhVien '21136777','EEEN231780', '2','7', '8', '9'
+--XoaDiemSinhVien '21136777'
+
+-- trigger kiểm tra thông tin điểm khi sửa --
+create trigger trigger_updateDiem
+on Diem for update
+as
+declare @DiemQuaTrinhLan1 float
+declare @DiemQuaTrinhLan2 float
+declare @DiemCuoiKi float
+select @DiemQuaTrinhLan1 = DiemQuaTrinhLan1, @DiemQuaTrinhLan2 = DiemQuaTrinhLan2, @DiemCuoiKi = DiemCuoiKi 
+from inserted
+if (@DiemQuaTrinhLan1 < 0) or (@DiemQuaTrinhLan1 > 10) or (@DiemQuaTrinhLan2 < 0) or (@DiemQuaTrinhLan2 > 10) or (@DiemCuoiKi < 0) or (@DiemCuoiKi > 10)
+begin 
+print N'Điểm phải < 0 hoặc > 10. Vui lòng nhập lại!'
+Rollback tran
+end
+else
+begin
+print N'Sửa điểm của sinh viên thành công!'
+end
+go
+---->DONE
+
+-----trigger insert thêm tuổi sinh viên ----
+create trigger trigger_insertTuoi_SinhVien on SinhVien for insert
+as
+begin
+declare @count int = 0
+select @count = count (*) from inserted where YEAR(getdate()) - YEAR(inserted.NgaySinh) < 18
+	if(@count > 0)
+		begin
+			print N'Tuổi sinh viên phải trên 18. Vui lòng nhập lại ngày tháng năm sinh!'
+			rollback tran
+		end
+	else
+		begin
+			print N'Thêm tuổi sinh viên thành công!'
+		end
+end
+go
+--->DONE
+--ThemMoiSinhVien '20110593', N'Nguyễn Nhật Nam' , 1, '2003/12/28', N'Bình Định', '0898463214', 'IT1'
+--UpdateSinhVien '20110593', N'Nguyễn Nhật Nam' , 1, '2004/12/28', N'Bình Định', '0898463214', 'IT1'
+--XoaSinhVien '20110593'
+--select * from SinhVien
+--trigger sửa tuổi sinh viên --
+create trigger trigger_UpdateTuoiSinhVien on SinhVien for update
+as
+begin
+declare @count int = 0
+select @count = count (*) from inserted where YEAR(getdate()) - YEAR(inserted.NgaySinh) < 18
+	if(@count > 0)
+		begin
+			print N'Tuổi sinh viên phải trên 18. Vui lòng nhập lại ngày tháng năm sinh!'
+			rollback tran
+		end
+	else
+		begin
+			print N'Sửa tuổi sinh viên thành công!!'
+		end
+end
+go
+--> DONE
+
+
+create trigger Null_insertSV on SinhVien for insert
+as
+begin
+  Declare @TenSV nvarchar(20)
+  Declare @GioiTinh bit
+  Declare @NgaySinh date
+  Declare @QueQuan nvarchar(20)
+  Declare @SoDienThoai nvarchar(20)
+ select @TenSV = TenSV,
+		@GioiTinh = GioiTinh,
+		@NgaySinh = NgaySinh,
+		@QueQuan = QueQuan,
+		@SoDienThoai = SoDienThoai from inserted
+	if(@TenSV is null) or (@GioiTinh is null) or (@NgaySinh is null) or (@QueQuan is null) or (@SoDienThoai is null)
+	begin
+		print N'Không được để trống thông tin!'
+		rollback tran
+	end
+	else
+	begin
+		print N'Nhập dữ liệu thành công!'
+	end
+end
+---> DONE
+
