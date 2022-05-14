@@ -279,6 +279,27 @@ namespace QLSV
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<Show_DSDiemResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SuaThongTinLop")]
+		public int SuaThongTinLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenLop", DbType="NVarChar(30)")] string tenLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoaHoc", DbType="Char(10)")] string maKhoaHoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, tenLop, maKhoa, maHeDT, maKhoaHoc);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThemThongTinLop")]
+		public int ThemThongTinLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenLop", DbType="NVarChar(30)")] string tenLop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="Char(10)")] string maKhoa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHeDT", DbType="Char(10)")] string maHeDT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoaHoc", DbType="Char(10)")] string maKhoaHoc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, tenLop, maKhoa, maHeDT, maKhoaHoc);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaLop")]
+		public int XoaLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="Char(10)")] string maLop)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Diem")]

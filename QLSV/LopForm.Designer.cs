@@ -34,7 +34,7 @@ namespace QLSV
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -62,6 +62,7 @@ namespace QLSV
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtMaLop
             // 
@@ -91,14 +92,15 @@ namespace QLSV
             this.label3.TabIndex = 46;
             this.label3.Text = "Tên lớp:";
             // 
-            // textBox4
+            // txtTimkiem
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(28, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 45;
+            this.txtTimkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Location = new System.Drawing.Point(28, 233);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(258, 30);
+            this.txtTimkiem.TabIndex = 45;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -199,6 +201,7 @@ namespace QLSV
             this.btnLuu.TabIndex = 58;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -213,6 +216,7 @@ namespace QLSV
             this.btnSua.TabIndex = 57;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnXoa
             // 
@@ -227,6 +231,7 @@ namespace QLSV
             this.btnXoa.TabIndex = 56;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -241,6 +246,7 @@ namespace QLSV
             this.btnThem.TabIndex = 55;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button1
             // 
@@ -277,12 +283,13 @@ namespace QLSV
             this.Controls.Add(this.txtMaLop);
             this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Name = "LopForm";
             this.Text = "LopForm";
+            this.Load += new System.EventHandler(this.LopForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -301,7 +308,7 @@ namespace QLSV
         private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

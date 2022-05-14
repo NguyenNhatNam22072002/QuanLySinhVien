@@ -21,7 +21,7 @@ namespace QLSV
         private void DiemForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.Show_DSDiem();
-            //tat cac textbox Khoa
+            //tat cac textbox diemform
             cbMSSV.Enabled = false;
             cbMaMH.Enabled = false;
             txtHocky.Enabled = false;
@@ -41,7 +41,7 @@ namespace QLSV
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
-            // hien cac textbox Khoa
+            // hien cac textbox diemform
             txtHocky.Enabled = true;
             txtQT1.Enabled = true;
             txtQT2.Enabled = true;
@@ -93,7 +93,7 @@ namespace QLSV
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
 
-                    //an textbox Khoa
+                    //an textbox diemform
                     txtHocky.Enabled = false;
                     txtQT1.Enabled = false;
                     txtQT2.Enabled = false;
@@ -101,7 +101,7 @@ namespace QLSV
                 }
                 catch
                 {
-                    MessageBox.Show("Mã khoa bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -116,7 +116,7 @@ namespace QLSV
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
 
-                    //an textbox Khoa
+                    //an textbox diemform
                     txtHocky.Enabled = false;
                     txtQT1.Enabled = false;
                     txtQT2.Enabled = false;
@@ -147,7 +147,7 @@ namespace QLSV
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
             btnThem.Enabled = false;
-            //an hien textbox Khoa
+            //an hien textbox diemform
             txtHocky.Enabled = false;
             txtQT1.Enabled = true;
             txtQT2.Enabled = true;
@@ -166,7 +166,7 @@ namespace QLSV
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.Diems.Where(x => x.MaMH.Contains(cbMaMH.Text)).ToList();
+            dataGridView1.DataSource = db.Diems.Where(x => x.MaMH.Contains(txtTimkiem.Text)).ToList();
             dataGridView1.Columns["MaSV"].HeaderText = "MSSV";
             txtHocky.DataBindings.Clear();
             txtHocky.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");

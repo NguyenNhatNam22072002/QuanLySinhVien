@@ -219,4 +219,24 @@
       <Column Name="DiemCuoiKi" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.SuaThongTinLop" Method="SuaThongTinLop">
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="TenLop" Parameter="tenLop" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaHeDT" Parameter="maHeDT" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaKhoaHoc" Parameter="maKhoaHoc" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThemThongTinLop" Method="ThemThongTinLop">
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="TenLop" Parameter="tenLop" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaHeDT" Parameter="maHeDT" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaKhoaHoc" Parameter="maKhoaHoc" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.XoaLop" Method="XoaLop">
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
