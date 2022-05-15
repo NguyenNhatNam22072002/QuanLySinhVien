@@ -512,6 +512,13 @@ BEGIN
 	UPDATE MonHoc SET MaMH = @MaMH, TenMH = @TenMH, SoTinChi = @SoTinChi WHERE MaMH = @MaMH
 END 
 GO
+--- show danh sách môn học
+create proc Show_DSMonhoc
+as
+begin
+	select * from dbo.MonHoc
+end
+go
 				-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO HE DAO TAO --
 -- thu tuc lay danh sach he dao tao--
 SET ANSI_NULLS ON
