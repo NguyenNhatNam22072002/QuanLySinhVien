@@ -731,3 +731,34 @@ begin
 	end
 end
 
+-------------------------------------FUNCTION-------------------------------------
+--function xem all thông tin sinh viên --
+create function Show_ThongTinSinhVien(@MaSSV char(10))
+returns table as 
+return(
+select dbo.SinhVien.MaSV,  TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 'GioiTinh', NgaySinh, QueQuan, SoDienThoai, MaLop, dbo.MonHoc.MaMH, TenMH, SoTinChi, HocKy, DiemQuaTrinhLan1, DiemQuaTrinhLan2, DiemCuoiKi from dbo.SinhVien, dbo.Diem, dbo.MonHoc
+where dbo.SinhVien.MaSV = dbo.Diem.MaSV and dbo.Diem.MaMH = dbo.MonHoc.MaMH and @MaSSV = dbo.SinhVien.MaSV
+)
+---> DONE
+--select * from Show_ThongTinSinhVien(20110743)
+--drop function Show_ThongTinSinhVien
+--select * from SinhVien
+--select * from Diem
+--select * from MonHoc
+-- fucntion tính điểm trung bình của sinh viên--
+create function Tinh_DTB(@MaSV nvarchar(15))
+returns nvarchar(20)
+as
+begin
+	declare @QT1 real
+	declare @QT2 real
+	declare @CK real
+	declare @DTB real
+	select @QT1= DiemQuaTrinhLan1, @QT2 = DiemQuaTrinhLan2 , @CK = DiemCuoiKi from dbo.Diem where @MaSV = MaSV
+	set @DTB = (((@QT1 + @QT2) /2) +@CK) /2
+	return @DTB
+end
+--> DONE
+--> câu lệnh xem DiemTongKet với bảng điểm
+select *, dbo.Tinh_DTB(MaSV) as DiemTongKet from Diem
+select * from Diem
