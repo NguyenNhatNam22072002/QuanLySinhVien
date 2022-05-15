@@ -71,5 +71,12 @@ namespace QLSV
         {
             OpenChildForm(new DiemForm());
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginGUI logout = new LoginGUI();
+            this.Hide();
+            logout.ShowDialog();
+        }
     }
 }

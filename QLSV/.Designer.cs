@@ -99,6 +99,7 @@ namespace QLSV
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label7
             // 
