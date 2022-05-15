@@ -350,7 +350,18 @@ BEGIN
 	DELETE FROM dbo.Diem WHERE MaSV=@MaSV
 END 
 GO
-	-- TẠO PROCEDURE CHO KHOA --
+--thu tuc hien danh sach diem sv--
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[Show_DSDiem]
+AS
+BEGIN
+	SELECT * FROM Diem
+END 
+GO
+				-- TẠO PROCEDURE CHO KHOA --
 --thu tuc them khoa--
 SET ANSI_NULLS ON
 GO
@@ -500,6 +511,56 @@ AS
 BEGIN
 	UPDATE MonHoc SET MaMH = @MaMH, TenMH = @TenMH, SoTinChi = @SoTinChi WHERE MaMH = @MaMH
 END 
+GO
+				-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO HE DAO TAO --
+-- thu tuc lay danh sach he dao tao--
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[DSChuongtrinhDT]
+AS
+BEGIN
+	SELECT * FROM HeDT
+END 
+GO
+-- thu tuc them he dao tao
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[ThemHeDT]
+   @MaHeDT char(10),
+   @TenHeDT nvarchar(40) 
+AS
+BEGIN
+	INSERT INTO HeDT VALUES (@MaHeDT, @TenHeDT)
+END 
+GO
+-- thu tuc xoa he dao tao--
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[XoaHeDT]
+@MaHeDT char(10)
+AS
+BEGIN
+	DELETE FROM dbo.HeDT WHERE MaHeDT = @MaHeDT
+END
+GO
+--thu tuc sua he dao tao--
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[SuaThongTinHeDT]
+   @MaHeDT char(10),
+   @TenHeDT nvarchar(40) 
+AS
+BEGIN
+	UPDATE HeDT SET MaHeDT = @MaHeDT, TenHeDT = @TenHeDT WHERE MaHeDT = @MaHeDT
+END
 GO
 				-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO DANG NHAP --
 -- thu tuc cap nhat cho bang dang nhap--
