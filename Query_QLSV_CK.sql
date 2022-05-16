@@ -822,3 +822,9 @@ FROM SinhVien INNER JOIN Lop ON SinhVien.MaLop=Lop.MaLop INNER JOIN Khoa ON Lop.
 WITH CHECK OPTION
 GO
 SELECT * FROM SinhVien_Khoa
+--Tạo view bảng diem tong ket--
+CREATE VIEW TinhDiemTongKet AS 
+SELECT * ,dbo.Tinh_DTB(MaSV) AS [DiemTongKet]
+FROM dbo.Diem AS D
+WITH CHECK OPTION
+GO
