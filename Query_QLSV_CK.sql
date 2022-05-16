@@ -532,6 +532,15 @@ begin
 	update dbo.GiangVien set MaGV = @MaGV, TenGV = @TenGV, SoDienThoai = @SoDienThoai, TrinhDo = @TrinhDo, QuocTich = @QuocTich, BoMon = @BoMon, MaKhoa = @MaKhoa where MaGV = @MaGV
 end
 go
+
+-- show danh sách giảng viên --
+create proc Show_DSGiangVien
+as
+begin 
+select * from GiangVien
+end 
+go
+
 			-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO CÁC LỚP --
 --thu tuc them mon hoc--
 SET ANSI_NULLS ON
