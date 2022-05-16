@@ -832,6 +832,15 @@ end
 --> câu lệnh xem DiemTongKet với bảng điểm
 select *, dbo.Tinh_DTB(MaSV) as DiemTongKet from Diem
 select * from Diem
+----------------Quy đổi hệ 10 sang 4-----------------------
+CREATE FUNCTION Quydoihe()
+RETURNS TABLE
+AS
+return(SELECT [dbo].[Diem].MaSV, MaMH, HocKy, DiemQuaTrinhLan1 = DiemQuaTrinhLan1/10 * 4, DiemQuaTrinhLan2 = DiemQuaTrinhLan2/10 * 4, DiemCuoiKi = DiemCuoiKi/10 * 4
+		   FROM [dbo].[Diem])
+GO
+
+Select * from [dbo].Quydoihe()
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
