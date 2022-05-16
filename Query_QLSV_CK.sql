@@ -841,6 +841,15 @@ GO
 
 Select * from [dbo].Quydoihe()
 GO
+---------------Bảng điểm sinh viên--------------
+CREATE FUNCTION BangDiemSinhVien
+(@userName nvarchar (15))
+RETURNS TABLE
+AS 
+RETURN (SELECT [dbo].[Diem].MaMH, [dbo].[MonHoc].TenMH, [dbo].[MonHoc].SoTinChi, [dbo].[Diem].HocKy, [dbo].[Diem].DiemQuaTrinhLan1, [dbo].[Diem].DiemQuaTrinhLan2, [dbo].[Diem].DiemCuoiKi
+		FROM [dbo].[Diem], [dbo].[MonHoc]
+		WHERE [dbo].[Diem].MaMH = [dbo].[MonHoc].MaMH AND [dbo].[Diem].MaSV = @userName)
+GO
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
