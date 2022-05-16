@@ -839,6 +839,15 @@ return(SELECT [dbo].[Diem].MaSV, MaMH, HocKy, DiemQuaTrinhLan1 = DiemQuaTrinhLan
 GO
 
 Select * from [dbo].Quydoihe()
+---------------Bảng điểm sinh viên--------------
+CREATE FUNCTION BangDiemSinhVien
+(@userName nvarchar (15))
+RETURNS TABLE
+AS a
+RETURN (SELECT [dbo].[Diem].MaMH, [dbo].[MonHoc].TenMH, [dbo].[MonHoc].SoTinChi, [dbo].[Diem].HocKy, [dbo].[Diem].DiemQuaTrinhLan1, [dbo].[Diem].DiemQuaTrinhLan2, [dbo].[Diem].DiemCuoiKi
+		FROM [dbo].[Diem], [dbo].[MonHoc]
+		WHERE [dbo].[Diem].MaMH = [dbo].[MonHoc].MaMH AND [dbo].[Diem].MaSV = @userName)
+GO
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
