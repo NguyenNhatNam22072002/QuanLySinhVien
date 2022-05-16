@@ -135,6 +135,28 @@ Create Table [dbo].[Diem]
    DiemCuoiKi [real],
 ) ON [PRIMARY]
 GO
+alter table Diem
+add DiemTrungBinh real
+--> tạo thêm cột DiemTrungBinh
+--- tạo bảng giảng viên --
+create table GiangVien(
+	MaGV nvarchar(15) primary key,
+	TenGV nvarchar(50) not null,
+	SoDienThoai nvarchar(20),
+	TrinhDo nvarchar(20),
+	QuocTich nvarchar(20),
+	BoMon char(10) foreign key references MonHoc(MaMH),
+	MaKhoa char(10) foreign key references Khoa(MaKhoa)
+)
+drop table GiangVien
+-- thêm thôn tin cho bảng giảng viên --
+insert into GiangVien values('GV1',N'Nguyễn Thanh Tùng','0363480483',N'Thạc sĩ',N'Việt Nam','INPR130285','CNTT')
+insert into GiangVien values('GV2',N'Bùi Nhựt Phong','0394132368',N'Thạc sĩ',N'Việt Nam','INIT130185','CNTT')
+insert into GiangVien values('GV3',N'Huỳnh Quốc Tuấn','0379878669',N'Thạc sĩ',N'Việt Nam','MATH132401','CNTP')
+insert into GiangVien values('GV4',N' Huỳnh Lê Anh Huy','0338636347',N'Thạc sĩ',N'Việt Nam','MPRO232103','OTO')
+insert into GiangVien values('GV5',N'Lâm Thị Ánh Quyên','0399590639',N'Tiến sĩ',N'Việt Nam','GCHE130103','CNTP')
+insert into GiangVien values('GV6',N'Trần Thị Thanh Trà','0383277782',N'Thạc sĩ',N'Việt Nam','DBMS330284','CNTT')
+insert into GiangVien values('GV7',N'Lê Minh Tiến','0365199950',N'Tiến sĩ',N'Việt Nam','EEEN231780','CK')
 -- thêm thông tin cho bảng môn học --
 insert into MonHoc values('INPR130285', N'Nhập Môn Lập Trình', 3) 
 insert into MonHoc values('INIT130185', N'Nhập Môn CNTT', 3)
