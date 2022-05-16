@@ -797,7 +797,7 @@ begin
 	begin
 		print N'Nhập dữ liệu thành công!'
 	end
-end
+END 
 
 -------------------------------------FUNCTION-------------------------------------
 --function xem all thông tin sinh viên --
@@ -807,6 +807,7 @@ return(
 select dbo.SinhVien.MaSV,  TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 'GioiTinh', NgaySinh, QueQuan, SoDienThoai, MaLop, dbo.MonHoc.MaMH, TenMH, SoTinChi, HocKy, DiemQuaTrinhLan1, DiemQuaTrinhLan2, DiemCuoiKi from dbo.SinhVien, dbo.Diem, dbo.MonHoc
 where dbo.SinhVien.MaSV = dbo.Diem.MaSV and dbo.Diem.MaMH = dbo.MonHoc.MaMH and @MaSSV = dbo.SinhVien.MaSV
 )
+
 ---> DONE
 --select * from Show_ThongTinSinhVien(20110743)
 --drop function Show_ThongTinSinhVien
@@ -839,6 +840,7 @@ return(SELECT [dbo].[Diem].MaSV, MaMH, HocKy, DiemQuaTrinhLan1 = DiemQuaTrinhLan
 GO
 
 Select * from [dbo].Quydoihe()
+GO
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
@@ -870,7 +872,6 @@ SELECT SinhVien.MaSV, SinhVien.TenSV, Lop.MaLop, Lop.TenLop, Khoa.MaKhoa, Khoa.T
 FROM SinhVien INNER JOIN Lop ON SinhVien.MaLop=Lop.MaLop INNER JOIN Khoa ON Lop.MaKhoa=Khoa.MaKhoa
 WITH CHECK OPTION
 GO
-SELECT * FROM SinhVien_Khoa
 --Tạo view bảng diem tong ket--
 CREATE VIEW TinhDiemTongKet AS 
 SELECT * ,dbo.Tinh_DTB(MaSV) AS [DiemTongKet]
