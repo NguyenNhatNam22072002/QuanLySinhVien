@@ -762,3 +762,35 @@ end
 --> câu lệnh xem DiemTongKet với bảng điểm
 select *, dbo.Tinh_DTB(MaSV) as DiemTongKet from Diem
 select * from Diem
+-------------------------------------VIEW-------------------------------------
+-- Tạo view bảng sinh viên nam--
+CREATE VIEW NamSinhVien AS
+SELECT MaSV, TenSV, GioiTinh FROM [dbo].SinhVien
+WHERE GioiTinh = 1
+WITH CHECK OPTION
+GO
+-- Tạo view bảng điểm sinh viên trên 8--
+CREATE VIEW DiemSVTren8 AS
+SELECT Diem.MaSV, Diem.MaMH, DiemQuaTrinhLan1, DiemQuaTrinhLan2, DiemCuoiKi FROM [dbo].[Diem]
+WHERE DiemCuoiKi >=8
+WITH CHECK OPTION
+GO
+-- Tạo view bảng SV thuộc lớp --
+CREATE VIEW SinhVien_Lop AS
+SELECT SinhVien.MaSV, SinhVien.TenSV, Lop.MaLop, Lop.TenLop
+FROM dbo.SinhVien INNER JOIN dbo.lop ON SinhVien.MaLop=Lop.MaLop
+WITH CHECK OPTION
+GO
+--Tạo view bảng đăng nhập có người dùng là admin--
+CREATE VIEW DangNhap_Admin AS
+SELECT userName,Quyen FROM [dbo].DangNhap
+WHERE Quyen='admin' 
+WITH CHECK OPTION
+GO
+--Tạo view sinh vien thuộc khoa--
+CREATE VIEW SinhVien_Khoa AS
+SELECT SinhVien.MaSV, SinhVien.TenSV, Lop.MaLop, Lop.TenLop, Khoa.MaKhoa, Khoa.TenKhoa
+FROM SinhVien INNER JOIN Lop ON SinhVien.MaLop=Lop.MaLop INNER JOIN Khoa ON Lop.MaKhoa=Khoa.MaKhoa
+WITH CHECK OPTION
+GO
+SELECT * FROM SinhVien_Khoa
