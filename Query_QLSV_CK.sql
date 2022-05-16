@@ -493,6 +493,45 @@ BEGIN
 	SELECT * FROM Lop
 END 
 GO
+			-- TẠO PROCEDURE THÊM XOÁ SỬA GIẢNG VIÊN --
+-- procedure thêm giảng viên --
+create proc ThemGiangVien
+	@MaGV nvarchar(15),
+	@TenGV nvarchar(50),
+	@SoDienThoai nvarchar(20),
+	@TrinhDo nvarchar(20),
+	@QuocTich nvarchar(20),
+	@BoMon char(10),
+	@MaKhoa char(10)
+as
+begin
+	insert into GiangVien values( @MaGV, @TenGV, @SoDienThoai, @TrinhDo, @QuocTich,@BoMon, @MaKhoa) 
+end
+go
+
+--procdure xoá giảng viên --
+create proc XoaGiangVien
+	@MaGV nvarchar(15)
+as
+begin
+	delete from dbo.GiangVien where MaGV = @MaGV 
+end
+go
+
+-- procedure sửa thông tin giảng viên
+create proc UpdateGiangVien
+	@MaGV nvarchar(15),
+	@TenGV nvarchar(50),
+	@SoDienThoai nvarchar(20),
+	@TrinhDo nvarchar(20),
+	@QuocTich nvarchar(20),
+	@BoMon char(10),
+	@MaKhoa char(10)
+as
+begin
+	update dbo.GiangVien set MaGV = @MaGV, TenGV = @TenGV, SoDienThoai = @SoDienThoai, TrinhDo = @TrinhDo, QuocTich = @QuocTich, BoMon = @BoMon, MaKhoa = @MaKhoa where MaGV = @MaGV
+end
+go
 			-- TẠO PROCEDURE THÊM XOÁ SỬA MÔN HỌC CHO CÁC LỚP --
 --thu tuc them mon hoc--
 SET ANSI_NULLS ON
