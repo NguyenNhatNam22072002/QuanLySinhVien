@@ -23,7 +23,7 @@ namespace QLSV
             dataGridView1.DataSource = db.Show_DSDiem();
             //tat cac textbox Khoa
             cbMSSV.Enabled = false;
-            cbMaMH.Enabled = false;
+            cbTenMH.Enabled = false;
             txtHocky.Enabled = false;
             txtQT1.Enabled = false;
             txtQT2.Enabled = false;
@@ -33,6 +33,18 @@ namespace QLSV
             // Tang do dai hien thi dgv
             for (int i = 0; i < 6; i++)
                 dataGridView1.Columns[i].Width = 120;
+            //Truyen du lieu vao cb MSSV
+            cbMSSV.DisplayMember = "MaSV";
+            cbMSSV.ValueMember = "MaSV";
+            cbMSSV.DataSource = db.Show_DSSinhVien();
+            //Truyen du lieu vao cb MaMH
+            cbTenMH.DisplayMember = "TenMH";
+            cbTenMH.ValueMember = "MaMH";
+            cbTenMH.DataSource = db.Show_DSMonhoc();
+            // Lay du lieu tu comboBox MaLop
+            txtMaMH.DataBindings.Clear();
+            txtMaMH.DataBindings.Add("Text", cbTenMH.DataSource, "MaMH");
+
         }
         Boolean adKhoa=false;
         private void btnThem_Click(object sender, EventArgs e)
@@ -41,6 +53,8 @@ namespace QLSV
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
+            cbMSSV.Enabled = true;
+            cbTenMH.Enabled = true;
             // hien cac textbox Khoa
             txtHocky.Enabled = true;
             txtQT1.Enabled = true;
@@ -76,39 +90,40 @@ namespace QLSV
                         MessageBox.Show("Bạn chưa nhập điểm cuối kỳ");
                         txtCuoiKy.Focus();
                     }
-                    if (cbMaMH.Text == "")
+                    if (cbTenMH.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn mã môn học");
-                        cbMaMH.Focus();
+                        cbTenMH.Focus();
                     }
                     if (cbMSSV.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn MSSV");
                         cbMSSV.Focus();
                     }
-                    db.ThemDiemSinhVien(cbMSSV.Text, cbMaMH.Text, Convert.ToInt32(txtHocky.Text), Convert.ToInt32(txtQT1.Text), Convert.ToInt32(txtQT2.Text), Convert.ToInt32(txtCuoiKy.Text));
+                    db.ThemDiemSinhVien(cbMSSV.Text, txtMaMH.Text, Convert.ToInt32(txtHocky.Text), Convert.ToInt32(txtQT1.Text), Convert.ToInt32(txtQT2.Text), Convert.ToInt32(txtCuoiKy.Text));
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Mo cac button chinh sua 
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
 
-                    //an textbox Khoa
+                    //an textbox Mon Hoc
                     txtHocky.Enabled = false;
                     txtQT1.Enabled = false;
                     txtQT2.Enabled = false;
                     txtCuoiKy.Enabled = false;
+                    DiemForm_Load(sender, e);
                 }
                 catch
                 {
-                    MessageBox.Show("Mã khoa bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã môn học bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 try
                 {
-                    db.SuaDiemSinhVien(cbMSSV.Text, cbMaMH.Text, Convert.ToInt32(txtHocky.Text), Convert.ToInt32(txtQT1.Text), Convert.ToInt32(txtQT2.Text), Convert.ToInt32(txtCuoiKy.Text));
+                    db.SuaDiemSinhVien(cbMSSV.Text, txtMaMH.Text, Convert.ToInt32(txtHocky.Text), Convert.ToInt32(txtQT1.Text), Convert.ToInt32(txtQT2.Text), Convert.ToInt32(txtCuoiKy.Text));
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     //Mo button them xoa sua
@@ -158,7 +173,7 @@ namespace QLSV
             int r = dataGridView1.CurrentCell.RowIndex;
             // Chuyển thông tin từ Gridview lên các textbox ở panel
             cbMSSV.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
-            cbMaMH.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();
+            cbTenMH.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();
             txtHocky.Text = dataGridView1.Rows[r].Cells[2].Value.ToString();
             txtQT1.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
             txtQT2.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
@@ -166,7 +181,7 @@ namespace QLSV
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.Diems.Where(x => x.MaMH.Contains(cbMaMH.Text)).ToList();
+            dataGridView1.DataSource = db.Diems.Where(x => x.MaMH.Contains(cbTenMH.Text)).ToList();
             dataGridView1.Columns["MaSV"].HeaderText = "MSSV";
             txtHocky.DataBindings.Clear();
             txtHocky.DataBindings.Add("Text", dataGridView1.DataSource, "MaSV");

@@ -44,13 +44,14 @@ namespace QLSV
             this.label1 = new System.Windows.Forms.Label();
             this.cbMSSV = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbMaMH = new System.Windows.Forms.ComboBox();
+            this.cbTenMH = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTimkiem = new System.Windows.Forms.Button();
+            this.txtMaMH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -190,14 +191,14 @@ namespace QLSV
             this.label8.TabIndex = 61;
             this.label8.Text = "MSSV:";
             // 
-            // cbMaMH
+            // cbTenMH
             // 
-            this.cbMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaMH.FormattingEnabled = true;
-            this.cbMaMH.Location = new System.Drawing.Point(480, 114);
-            this.cbMaMH.Name = "cbMaMH";
-            this.cbMaMH.Size = new System.Drawing.Size(229, 33);
-            this.cbMaMH.TabIndex = 64;
+            this.cbTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenMH.FormattingEnabled = true;
+            this.cbTenMH.Location = new System.Drawing.Point(480, 114);
+            this.cbTenMH.Name = "cbTenMH";
+            this.cbTenMH.Size = new System.Drawing.Size(229, 33);
+            this.cbTenMH.TabIndex = 64;
             // 
             // label6
             // 
@@ -205,9 +206,9 @@ namespace QLSV
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(348, 117);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 25);
+            this.label6.Size = new System.Drawing.Size(133, 25);
             this.label6.TabIndex = 63;
-            this.label6.Text = "Mã môn học:";
+            this.label6.Text = "Tên môn học:";
             // 
             // btnLuu
             // 
@@ -285,12 +286,20 @@ namespace QLSV
             this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimkiem.UseVisualStyleBackColor = false;
             // 
+            // txtMaMH
+            // 
+            this.txtMaMH.Location = new System.Drawing.Point(684, 234);
+            this.txtMaMH.Name = "txtMaMH";
+            this.txtMaMH.Size = new System.Drawing.Size(100, 22);
+            this.txtMaMH.TabIndex = 65;
+            // 
             // DiemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
-            this.Controls.Add(this.cbMaMH);
+            this.Controls.Add(this.txtMaMH);
+            this.Controls.Add(this.cbTenMH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbMSSV);
             this.Controls.Add(this.label8);
@@ -342,7 +351,8 @@ namespace QLSV
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbMSSV;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbMaMH;
+        private System.Windows.Forms.ComboBox cbTenMH;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMaMH;
     }
 }
