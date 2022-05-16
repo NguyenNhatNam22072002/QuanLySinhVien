@@ -836,12 +836,6 @@ SELECT MaSV, TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 
 WHERE GioiTinh = 0
 WITH CHECK OPTION
 GO
--- Tạo view bảng điểm sinh viên trên 8--
-CREATE VIEW DiemSVTren8 AS
-SELECT Diem.MaSV, Diem.MaMH, DiemQuaTrinhLan1, DiemQuaTrinhLan2, DiemCuoiKi FROM [dbo].[Diem]
-WHERE DiemCuoiKi >=8
-WITH CHECK OPTION
-GO
 -- Tạo view bảng SV thuộc lớp --
 CREATE VIEW SinhVien_Lop AS
 SELECT SinhVien.MaSV, SinhVien.TenSV, Lop.MaLop, Lop.TenLop
