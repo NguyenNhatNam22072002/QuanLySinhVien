@@ -787,8 +787,14 @@ select * from Diem
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
-SELECT MaSV, TenSV, GioiTinh FROM [dbo].SinhVien
+SELECT MaSV, TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 'GioiTinh' FROM [dbo].SinhVien
 WHERE GioiTinh = 1
+WITH CHECK OPTION
+GO
+-- tạo view bảng sinh viên nữ
+CREATE VIEW NuSinhVien AS
+SELECT MaSV, TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 'GioiTinh' FROM [dbo].SinhVien
+WHERE GioiTinh = 0
 WITH CHECK OPTION
 GO
 -- Tạo view bảng điểm sinh viên trên 8--
