@@ -830,7 +830,6 @@ begin
 	set @DTB = (((@QT1 + @QT2) /2) +@CK) /2
 	return @DTB
 end
-GO
 ----------------Quy đổi hệ 10 sang 4-----------------------
 CREATE FUNCTION Quydoihe()
 RETURNS TABLE
@@ -840,16 +839,6 @@ return(SELECT [dbo].[Diem].MaSV, MaMH, HocKy, DiemQuaTrinhLan1 = DiemQuaTrinhLan
 GO
 
 Select * from [dbo].Quydoihe()
-GO
----------------Bảng điểm sinh viên--------------
-CREATE FUNCTION BangDiemSinhVien
-(@userName nvarchar (15))
-RETURNS TABLE
-AS 
-RETURN (SELECT [dbo].[Diem].MaMH, [dbo].[MonHoc].TenMH, [dbo].[MonHoc].SoTinChi, [dbo].[Diem].HocKy, [dbo].[Diem].DiemQuaTrinhLan1, [dbo].[Diem].DiemQuaTrinhLan2, [dbo].[Diem].DiemCuoiKi
-		FROM [dbo].[Diem], [dbo].[MonHoc]
-		WHERE [dbo].[Diem].MaMH = [dbo].[MonHoc].MaMH AND [dbo].[Diem].MaSV = @userName)
-GO
 -------------------------------------VIEW-------------------------------------
 -- Tạo view bảng sinh viên nam--
 CREATE VIEW NamSinhVien AS
