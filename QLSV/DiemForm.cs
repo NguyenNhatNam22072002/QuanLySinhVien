@@ -34,7 +34,7 @@ namespace QLSV
             for (int i = 0; i < 6; i++)
                 dataGridView1.Columns[i].Width = 120;
         }
-        bool adKhoa;
+        Boolean adKhoa=false;
         private void btnThem_Click(object sender, EventArgs e)
         {
             btnThem.Enabled = true;
@@ -47,7 +47,7 @@ namespace QLSV
             txtQT2.Enabled = true;
             txtCuoiKy.Enabled = true;
             txtHocky.Focus();
-            bool adKhoa = true;
+            adKhoa = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

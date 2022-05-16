@@ -32,7 +32,7 @@ namespace QLSV
             for (int i = 0; i < 4; i++)
                 dataGridView1.Columns[i].Width = 180;
         }
-        bool adKhoa;
+        Boolean adKhoa=false;
         private void btnThem_Click(object sender, EventArgs e)
         {
             btnThem.Enabled = true;
@@ -45,7 +45,7 @@ namespace QLSV
             txtDiaChi.Enabled = true;
             txtPhone.Enabled = true;
             txtMaKhoa.Focus();
-            bool adKhoa = true;
+            adKhoa = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -86,6 +86,7 @@ namespace QLSV
                     txtTenKhoa.Enabled = false;
                     txtDiaChi.Enabled = false;
                     txtPhone.Enabled = false;
+                    KhoaForm_Load(sender, e);
                 }
                 catch
                 {
@@ -117,7 +118,6 @@ namespace QLSV
                 KhoaForm_Load(sender, e);
             }
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa khoa này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
@@ -144,7 +144,6 @@ namespace QLSV
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dataGridView1.CurrentCell.RowIndex;
-            // Chuyển thông tin từ Gridview lên các textbox ở panel
             txtMaKhoa.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
             txtTenKhoa.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();;
             txtDiaChi.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
