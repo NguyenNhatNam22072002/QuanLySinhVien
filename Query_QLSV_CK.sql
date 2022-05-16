@@ -135,9 +135,7 @@ Create Table [dbo].[Diem]
    DiemCuoiKi [real],
 ) ON [PRIMARY]
 GO
-alter table Diem
-add DiemTrungBinh real
---> tạo thêm cột DiemTrungBinh
+
 --- tạo bảng giảng viên --
 create table GiangVien(
 	MaGV nvarchar(15) primary key,
