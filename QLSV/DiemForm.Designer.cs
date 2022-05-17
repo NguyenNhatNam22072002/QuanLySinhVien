@@ -51,6 +51,7 @@ namespace QLSV
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTimkiem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtMaMH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -109,7 +110,7 @@ namespace QLSV
             // 
             this.txtHocky.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHocky.Location = new System.Drawing.Point(870, 115);
+            this.txtHocky.Location = new System.Drawing.Point(1130, 115);
             this.txtHocky.Name = "txtHocky";
             this.txtHocky.Size = new System.Drawing.Size(94, 30);
             this.txtHocky.TabIndex = 49;
@@ -118,7 +119,7 @@ namespace QLSV
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(786, 117);
+            this.label4.Location = new System.Drawing.Point(1021, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 25);
             this.label4.TabIndex = 48;
@@ -286,12 +287,24 @@ namespace QLSV
             this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimkiem.UseVisualStyleBackColor = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(761, 117);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 25);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Mã môn học:";
+            // 
             // txtMaMH
             // 
-            this.txtMaMH.Location = new System.Drawing.Point(750, 234);
+            this.txtMaMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMH.Location = new System.Drawing.Point(902, 115);
             this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(100, 22);
-            this.txtMaMH.TabIndex = 65;
+            this.txtMaMH.Size = new System.Drawing.Size(113, 30);
+            this.txtMaMH.TabIndex = 67;
             // 
             // DiemForm
             // 
@@ -299,6 +312,7 @@ namespace QLSV
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
             this.Controls.Add(this.txtMaMH);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cbTenMH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbMSSV);
@@ -353,6 +367,7 @@ namespace QLSV
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbTenMH;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMaMH;
     }
 }

@@ -47,7 +47,6 @@ namespace QLSV
             txtMaLop.DataBindings.Add("Text", cbMaLop.DataSource, "maLop");
             txtMaLop.Enabled = false;
             dataGridView1.DataSource = db.Show_DSSinhVien();
-
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
