@@ -74,31 +74,37 @@ namespace QLSV
                     {
                         MessageBox.Show("Bạn chưa nhập học kỳ");
                         txtHocky.Focus();
+                        return;
                     }
                     if (txtQT1.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập điểm QT 1");
                         txtQT1.Focus();
+                        return;
                     }
                     if (txtQT2.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập điểm QT 2");
                         txtQT2.Focus();
+                        return;
                     }
                     if (txtCuoiKy.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập điểm cuối kỳ");
                         txtCuoiKy.Focus();
+                        return;
                     }
                     if (cbTenMH.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn mã môn học");
                         cbTenMH.Focus();
+                        return;
                     }
                     if (cbMSSV.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn MSSV");
                         cbMSSV.Focus();
+                        return;
                     }
                     db.ThemDiemSinhVien(cbMSSV.Text, txtMaMH.Text, Convert.ToInt32(txtHocky.Text), Convert.ToInt32(txtQT1.Text), Convert.ToInt32(txtQT2.Text), Convert.ToInt32(txtCuoiKy.Text));
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

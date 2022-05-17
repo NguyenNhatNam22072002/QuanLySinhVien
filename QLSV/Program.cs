@@ -17,7 +17,8 @@ namespace QLSV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new GiaoDienChinh());
-            Application.Run(new ChuongtrinhDT_Error());
+            //Application.Run(new LoginGUI());
+            Application.Run(new UserForm());
 
         }
     }

@@ -165,6 +165,7 @@ namespace QLSV
             this.txtMatKhau.PasswordChar = '●';
             this.txtMatKhau.Size = new System.Drawing.Size(468, 34);
             this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhau_KeyPress);
             // 
             // txtTaiKhoan
             // 

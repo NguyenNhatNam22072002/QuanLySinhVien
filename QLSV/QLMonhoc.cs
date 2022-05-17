@@ -55,16 +55,19 @@ namespace QLSV
                     {
                         MessageBox.Show("Bạn chưa nhập mã môn học");
                         txtMaMonhoc.Focus();
+                        return;
                     }
                     if (txtTenMonhoc.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập tên môn học");
                         txtTenMonhoc.Focus();
+                        return;
                     }
                     if (txtTinChi.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập tín chỉ");
                         txtTinChi.Focus();
+                        return;
                     }
                     db.ThemMonHoc(txtMaMonhoc.Text, txtTenMonhoc.Text, Convert.ToInt32(txtTinChi.Text));
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

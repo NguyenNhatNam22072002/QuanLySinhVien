@@ -30,7 +30,7 @@ namespace QLSV
             for (int i = 0; i < 2; i++)
                 dataGridView1.Columns[i].Width = 180;
         }
-        bool adKhoa;
+        Boolean adKhoa;
         private void btnThem_Click(object sender, EventArgs e)
         {
             btnThem.Enabled = true;
@@ -41,7 +41,7 @@ namespace QLSV
             txtMaHeDT.Enabled = true;
             txtTenHeDT.Enabled = true;
             txtMaHeDT.Focus();
-            bool adKhoa = true;
+            adKhoa = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -54,11 +54,13 @@ namespace QLSV
                     {
                         MessageBox.Show("Bạn chưa nhập mã hệ đào tạo");
                         txtMaHeDT.Focus();
+                        return;
                     }
                     if (txtTenHeDT.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập tên hệ đào tạo");
                         txtTenHeDT.Focus();
+                        return;
                     }
                     db.ThemHeDT(txtMaHeDT.Text, txtTenHeDT.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -68,5 +68,14 @@ namespace QLSV
                 chinh.ShowDialog();
             }
         }
+
+        private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)13 )
+            {
+                btnDangNhap.Enabled = true;
+                btnDangNhap_Click(sender, e);
+            }
+        }
     }
 }

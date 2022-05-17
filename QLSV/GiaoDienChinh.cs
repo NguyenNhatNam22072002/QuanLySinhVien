@@ -21,10 +21,10 @@ namespace QLSV
             InitializeComponent();
             dangNhap = new DangNhap();
             dangNhap = db.DangNhaps.Single(p => p.userName == user);
-            MessageBox.Show(" Chào mừng "+ dangNhap.userName +" đến với hệ thống ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            MessageBox.Show(" Chào mừng đến với hệ thống ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (dangNhap.Quyen == "Giảng viên")
             {
-                this.btnKhoa.Enabled = false;
+                this.btnKhoa.Visible = false;
                 this.btnCTDT.Enabled = false;
             }
             if (dangNhap.Quyen== "Admin")

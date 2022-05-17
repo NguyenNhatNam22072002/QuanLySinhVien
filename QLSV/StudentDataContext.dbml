@@ -253,4 +253,35 @@
     <Parameter Name="TenHeDT" Parameter="tenHeDT" Type="System.String" DbType="NVarChar(40)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.DangNhap_Delete" Method="DangNhap_Delete">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DangNhap_Insert" Method="DangNhap_Insert">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="passWord" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Quyen" Parameter="quyen" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DangNhap_SelectAll" Method="DangNhap_SelectAll">
+    <ElementType Name="DangNhap_SelectAllResult">
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="passWord" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DangNhap_SelectQuyen" Method="DangNhap_SelectQuyen">
+    <Parameter Name="Quyen" Parameter="quyen" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="DangNhap_SelectQuyenResult">
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="passWord" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DangNhap_Update" Method="DangNhap_Update">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="passWord" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Quyen" Parameter="quyen" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

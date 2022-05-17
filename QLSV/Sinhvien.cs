@@ -100,27 +100,32 @@ namespace QLSV
                     {
                         MessageBox.Show("Bạn chưa nhập MSSV");
                         txtMSSV.Focus();
+                        return;
                     }
                     if (txtHoTen.Text == "") 
                     {
                         MessageBox.Show("Bạn chưa nhập Họ và Tên");
                         txtHoTen.Focus();
+                        return;
                     }
                     if (txtPhone.Text == "") 
                     {
                         MessageBox.Show("Bạn chưa nhập số điện thoại ");
                         txtPhone.Focus();
+                        return;
                     }
                    
                     if (cbQueQuan.Text =="")
                     {
                         MessageBox.Show("Bạn chưa nhập quê quán ");
                         cbQueQuan.Focus();
+                        return;
                     }
                     if (NgaySinh.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập ngày sinh ");
                         NgaySinh.Focus();
+                        return;
                     }
                     db.ThemMoiSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, txtMaLop.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

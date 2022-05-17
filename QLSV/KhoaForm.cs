@@ -57,22 +57,25 @@ namespace QLSV
                     if (txtMaKhoa.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập mã khoa");
-                        txtMaKhoa.Focus();
+                        txtMaKhoa.Focus(); return;
                     }
                     if (txtTenKhoa.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập tên khoa");
                         txtTenKhoa.Focus();
+                        return;
                     }
                     if (txtDiaChi.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập địa chỉ");
                         txtDiaChi.Focus();
+                        return;
                     }
                     if (txtPhone.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập số điện thoại");
                         txtPhone.Focus();
+                        return;
                     }
                     db.ThemKhoa(txtMaKhoa.Text, txtTenKhoa.Text, txtDiaChi.Text, txtPhone.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

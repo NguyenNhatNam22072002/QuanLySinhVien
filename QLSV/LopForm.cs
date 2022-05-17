@@ -60,26 +60,31 @@ namespace QLSV
                     {
                         MessageBox.Show("Bạn chưa nhập mã lớp");
                         txtMaLop.Focus();
+                        return;
                     }
                     if (txtTenLop.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập tên lớp");
                         txtTenLop.Focus();
+                        return;
                     }
                     if (cbMaKhoa.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn mã khoa");
                         cbMaKhoa.Focus();
+                        return;
                     }
                     if (cbHeDT.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn hệ đào tạo");
                         cbHeDT.Focus();
+                        return;
                     }
                     if (cbKhoahoc.Text == "")
                     {
                         MessageBox.Show("Bạn chưa chọn khóa học");
                         cbKhoahoc.Focus();
+                        return;
                     }
                     db.ThemThongTinLop(txtMaLop.Text, txtTenLop.Text, cbMaKhoa.Text, cbHeDT.Text, cbKhoahoc.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -321,6 +321,41 @@ namespace QLSV
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHeDT, tenHeDT);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Delete")]
+		public int DangNhap_Delete([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string userName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Insert")]
+		public int DangNhap_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string passWord, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Quyen", DbType="NVarChar(50)")] string quyen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord, quyen);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_SelectAll")]
+		public ISingleResult<DangNhap_SelectAllResult> DangNhap_SelectAll()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<DangNhap_SelectAllResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_SelectQuyen")]
+		public ISingleResult<DangNhap_SelectQuyenResult> DangNhap_SelectQuyen([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Quyen", DbType="NVarChar(50)")] string quyen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), quyen);
+			return ((ISingleResult<DangNhap_SelectQuyenResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Update")]
+		public int DangNhap_Update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string passWord, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Quyen", DbType="NVarChar(50)")] string quyen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord, quyen);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Diem")]
@@ -2269,6 +2304,130 @@ namespace QLSV
 				if ((this._DiemCuoiKi != value))
 				{
 					this._DiemCuoiKi = value;
+				}
+			}
+		}
+	}
+	
+	public partial class DangNhap_SelectAllResult
+	{
+		
+		private string _userName;
+		
+		private string _passWord;
+		
+		private string _Quyen;
+		
+		public DangNhap_SelectAllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this._userName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(100)")]
+		public string passWord
+		{
+			get
+			{
+				return this._passWord;
+			}
+			set
+			{
+				if ((this._passWord != value))
+				{
+					this._passWord = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quyen", DbType="NVarChar(50)")]
+		public string Quyen
+		{
+			get
+			{
+				return this._Quyen;
+			}
+			set
+			{
+				if ((this._Quyen != value))
+				{
+					this._Quyen = value;
+				}
+			}
+		}
+	}
+	
+	public partial class DangNhap_SelectQuyenResult
+	{
+		
+		private string _userName;
+		
+		private string _passWord;
+		
+		private string _Quyen;
+		
+		public DangNhap_SelectQuyenResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this._userName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(100)")]
+		public string passWord
+		{
+			get
+			{
+				return this._passWord;
+			}
+			set
+			{
+				if ((this._passWord != value))
+				{
+					this._passWord = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quyen", DbType="NVarChar(50)")]
+		public string Quyen
+		{
+			get
+			{
+				return this._Quyen;
+			}
+			set
+			{
+				if ((this._Quyen != value))
+				{
+					this._Quyen = value;
 				}
 			}
 		}
