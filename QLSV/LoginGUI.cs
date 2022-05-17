@@ -63,7 +63,7 @@ namespace QLSV
             }
             else
             {
-                GiaoDienChinh chinh = new GiaoDienChinh();
+                GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
                 this.Hide();
                 chinh.ShowDialog();
             }

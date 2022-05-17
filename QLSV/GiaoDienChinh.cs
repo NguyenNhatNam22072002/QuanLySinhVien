@@ -12,10 +12,29 @@ namespace QLSV
 {
     public partial class GiaoDienChinh : Form
     {
+        public static DangNhap dangNhap { set; get;}
+        StudentDataContextDataContext db = new StudentDataContextDataContext();
+        
         private Form currentFormChild;
-        public GiaoDienChinh()
+        public GiaoDienChinh(string user)
         {
             InitializeComponent();
+            dangNhap = new DangNhap();
+            dangNhap = db.DangNhaps.Single(p => p.userName == user);
+            MessageBox.Show(" Chào mừng "+ dangNhap.userName +" đến với hệ thống ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dangNhap.Quyen == "Giảng viên")
+            {
+                this.btnKhoa.Enabled = false;
+                this.btnCTDT.Enabled = false;
+            }
+            if (dangNhap.Quyen== "Admin")
+            {
+
+            }
+            else
+            {
+
+            }
         }
         private void OpenChildForm(Form childForm)
         {

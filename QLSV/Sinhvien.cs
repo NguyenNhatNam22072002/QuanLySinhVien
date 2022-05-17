@@ -128,7 +128,7 @@ namespace QLSV
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
-
+                    adSinhvien = false;
                     //an thong tin sinh vien
                     txtMSSV.Enabled = false;
                     txtHoTen.Enabled = false;
@@ -145,14 +145,13 @@ namespace QLSV
             {
                 try
                 {
+
                     db.UpdateSinhVien(txtMSSV.Text, txtHoTen.Text, rbtnNam.Checked, NgaySinh.Value, cbQueQuan.Text, txtPhone.Text, txtMaLop.Text);
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
                     //Mo button them xoa sua
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                     btnThem.Enabled = true;
-
                     //an thong tin sinh vien
                     txtMSSV.Enabled = false;
                     txtHoTen.Enabled = false;
