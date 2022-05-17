@@ -53,6 +53,12 @@
     <Compile Include="ChuongtrinhDT.Designer.cs">
       <DependentUpon>ChuongtrinhDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChuongtrinhDT_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuongtrinhDT_Error.Designer.cs">
+      <DependentUpon>ChuongtrinhDT_Error.cs</DependentUpon>
+    </Compile>
     <Compile Include="DiemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     <Compile Include="KhoaForm.Designer.cs">
       <DependentUpon>KhoaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Khoa_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa_Error.Designer.cs">
+      <DependentUpon>Khoa_Error.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,18 @@
     </Compile>
     <Compile Include="LopForm.Designer.cs">
       <DependentUpon>LopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lop_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lop_Error.Designer.cs">
+      <DependentUpon>Lop_Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonHoc_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonHoc_Error.Designer.cs">
+      <DependentUpon>MonHoc_Error.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,8 +139,17 @@
     <Compile Include="Trangchu.Designer.cs">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChuongtrinhDT.resx">
       <DependentUpon>ChuongtrinhDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuongtrinhDT_Error.resx">
+      <DependentUpon>ChuongtrinhDT_Error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DiemForm.resx">
       <DependentUpon>DiemForm.cs</DependentUpon>
@@ -130,11 +163,20 @@
     <EmbeddedResource Include="KhoaForm.resx">
       <DependentUpon>KhoaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Khoa_Error.resx">
+      <DependentUpon>Khoa_Error.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LopForm.resx">
       <DependentUpon>LopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lop_Error.resx">
+      <DependentUpon>Lop_Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonHoc_Error.resx">
+      <DependentUpon>MonHoc_Error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -277,6 +322,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279455816_1149409159226179_3003303122491938829_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\278322460_366636165436267_8327058880162322661_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-icon-warning-icons-5aa8e866e23b01.6256515515210189829267-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_folder_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-Science-la-gi-dizibrand.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

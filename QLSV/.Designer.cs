@@ -34,6 +34,7 @@ namespace QLSV
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnDiem = new System.Windows.Forms.Button();
@@ -113,9 +114,25 @@ namespace QLSV
             this.label7.TabIndex = 23;
             this.label7.Text = "Đại học Sư Phạm Kỹ Thuật Thành Phố Hồ Chí Minh";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::QLSV.Properties.Resources.VaitroUser;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-1, 577);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(288, 71);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "       Vai trò người dùng";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panel
             // 
-            this.panel.BackgroundImage = global::QLSV.Properties.Resources.Yorn;
+            this.panel.BackgroundImage = global::QLSV.Properties.Resources.AnhNen;
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Location = new System.Drawing.Point(285, 106);
             this.panel.Name = "panel";
@@ -282,6 +299,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1547, 873);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
@@ -330,5 +348,6 @@ namespace QLSV
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button button1;
     }
 }

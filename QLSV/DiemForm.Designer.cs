@@ -288,7 +288,7 @@ namespace QLSV
             // 
             // txtMaMH
             // 
-            this.txtMaMH.Location = new System.Drawing.Point(684, 234);
+            this.txtMaMH.Location = new System.Drawing.Point(750, 234);
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.Size = new System.Drawing.Size(100, 22);
             this.txtMaMH.TabIndex = 65;
