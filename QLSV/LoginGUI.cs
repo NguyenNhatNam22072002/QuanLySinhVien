@@ -53,7 +53,7 @@ namespace QLSV
             StudentDataContextDataContext db = new StudentDataContextDataContext();
 
             var query = from LoginList in db.DangNhaps
-                        where LoginList.userName == txtTaiKhoan.Text && LoginList.passWord == txtMatKhau.Text
+                        where LoginList.userName == txtTaiKhoan.Text && LoginList.passWord == txtMatKhau.Text && LoginList.Quyen==cbQuyen.Text
                         select LoginList;
             if (query.Count() == 0)
             {
@@ -63,9 +63,24 @@ namespace QLSV
             }
             else
             {
-                GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
-                this.Hide();
-                chinh.ShowDialog();
+                if (query.LoginList.Quyen == "Giảng Viên");
+                {
+                    GianDienGV gd = new GianDienGV();
+                    this.Hide();
+                    gd.Show();
+                }
+                if (query.LoginList.Quyen == "Admin")
+                {
+                    GiaoDienChinh gdc = new GiaoDienChinh();
+                    this.Hide();
+                    gdc.Show();
+                }
+                else
+                {
+                    GiaoDienSV gdsv = new GiaoDienSV();
+                    this.Hide();
+                    gdsv.Show();
+                }
             }
         }
 
