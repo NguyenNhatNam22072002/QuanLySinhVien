@@ -86,7 +86,7 @@ namespace QLSV
                         cbKhoahoc.Focus();
                         return;
                     }
-                    db.ThemThongTinLop(txtMaLop.Text, txtTenLop.Text, cbMaKhoa.Text, cbHeDT.Text, cbKhoahoc.Text);
+                    db.ThemLop(txtMaLop.Text, txtTenLop.Text, cbMaKhoa.Text, cbHeDT.Text, cbKhoahoc.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Mo cac button chinh sua 
                     btnSua.Enabled = true;

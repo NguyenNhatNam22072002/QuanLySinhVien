@@ -120,9 +120,10 @@ namespace QLSV
                     txtCuoiKy.Enabled = false;
                     DiemForm_Load(sender, e);
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Mã môn học bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Mã môn học bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message);
                 }
             }
             else

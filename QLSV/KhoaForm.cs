@@ -126,7 +126,7 @@ namespace QLSV
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa khoa này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
             if (xoa == DialogResult.Yes)
             {
-                db.XoaSinhVien(txtMaKhoa.Text);
+                db.XoaKhoa(txtMaKhoa.Text);
                 KhoaForm_Load(sender, e);
             }
         }
@@ -149,8 +149,8 @@ namespace QLSV
             int r = dataGridView1.CurrentCell.RowIndex;
             txtMaKhoa.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
             txtTenKhoa.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();;
-            txtDiaChi.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
-            txtPhone.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
+            txtDiaChi.Text = dataGridView1.Rows[r].Cells[2].Value.ToString();
+            txtPhone.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
