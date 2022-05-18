@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBMS_QLSV" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=TAYNGUYEN\TAYNGUYEN;Initial Catalog=DBMS_QLSV;Persist Security Info=True;User ID=sa" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="DBMS_QLSVConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySinhVien" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DangNhap" Member="DangNhaps">
     <Type Name="DangNhap">
       <Column Name="userName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -91,23 +91,12 @@
       <Association Name="MonHoc_GiangVien" Member="GiangViens" ThisKey="MaMH" OtherKey="BoMon" Type="GiangVien" />
     </Type>
   </Table>
-  <Function Name="dbo.ChonTatCaSinhVien" Method="ChonTatCaSinhVien">
-    <ElementType Name="ChonTatCaSinhVienResult">
-      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
-      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
-      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-    </ElementType>
+  <Function Name="dbo.DangNhap_Delete" Method="DangNhap_Delete">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.XoaSinhVien" Method="XoaSinhVien">
     <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.DangNhap_Delete" Method="DangNhap_Delete">
-    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.DangNhap_Insert" Method="DangNhap_Insert">
@@ -185,11 +174,36 @@
     <ElementType Name="Show_DSMonhocResult">
       <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Column Name="TenMH" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.Show_DSSinhVien" Method="Show_DSSinhVien">
     <ElementType Name="Show_DSSinhVienResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SinhVien_Search" Method="SinhVien_Search">
+    <Parameter Name="TenSV" Parameter="tenSV" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="SinhVien_SearchResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SinhVien_SelectID" Method="SinhVien_SelectID">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <ElementType Name="SinhVien_SelectIDResult">
       <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
       <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />

@@ -65,12 +65,36 @@
     <Compile Include="DiemForm.Designer.cs">
       <DependentUpon>DiemForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDiemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiemSV.Designer.cs">
+      <DependentUpon>FormDiemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GianDienGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GianDienGV.Designer.cs">
+      <DependentUpon>GianDienGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVienForm.Designer.cs">
+      <DependentUpon>GiangVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienSV.Designer.cs">
+      <DependentUpon>GiaoDienSV.cs</DependentUpon>
     </Compile>
     <Compile Include="KhoaForm.cs">
       <SubType>Form</SubType>
@@ -148,8 +172,17 @@
     <EmbeddedResource Include="DiemForm.resx">
       <DependentUpon>DiemForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GianDienGV.resx">
+      <DependentUpon>GianDienGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVienForm.resx">
+      <DependentUpon>GiangVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienSV.resx">
+      <DependentUpon>GiaoDienSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhoaForm.resx">
       <DependentUpon>KhoaForm.cs</DependentUpon>
@@ -328,6 +361,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Data-Science-la-gi-dizibrand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_school_director_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

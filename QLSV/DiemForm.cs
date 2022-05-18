@@ -144,7 +144,7 @@ namespace QLSV
                     txtQT2.Enabled = false;
                     txtCuoiKy.Enabled = false;
                 }
-                catch
+                catch(Exception ex)
                 {
                     MessageBox.Show("Sửa dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

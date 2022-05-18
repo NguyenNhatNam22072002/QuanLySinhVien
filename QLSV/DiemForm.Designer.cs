@@ -110,16 +110,16 @@ namespace QLSV
             // 
             this.txtHocky.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHocky.Location = new System.Drawing.Point(1130, 115);
+            this.txtHocky.Location = new System.Drawing.Point(1148, 115);
             this.txtHocky.Name = "txtHocky";
-            this.txtHocky.Size = new System.Drawing.Size(94, 30);
+            this.txtHocky.Size = new System.Drawing.Size(76, 30);
             this.txtHocky.TabIndex = 49;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1021, 117);
+            this.label4.Location = new System.Drawing.Point(1051, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 25);
             this.label4.TabIndex = 48;
@@ -196,16 +196,16 @@ namespace QLSV
             // 
             this.cbTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenMH.FormattingEnabled = true;
-            this.cbTenMH.Location = new System.Drawing.Point(480, 114);
+            this.cbTenMH.Location = new System.Drawing.Point(447, 115);
             this.cbTenMH.Name = "cbTenMH";
-            this.cbTenMH.Size = new System.Drawing.Size(229, 33);
+            this.cbTenMH.Size = new System.Drawing.Size(244, 33);
             this.cbTenMH.TabIndex = 64;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(348, 117);
+            this.label6.Location = new System.Drawing.Point(295, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 25);
             this.label6.TabIndex = 63;
@@ -291,7 +291,7 @@ namespace QLSV
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(761, 117);
+            this.label7.Location = new System.Drawing.Point(720, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 25);
             this.label7.TabIndex = 66;
@@ -301,9 +301,9 @@ namespace QLSV
             // 
             this.txtMaMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMH.Location = new System.Drawing.Point(902, 115);
+            this.txtMaMH.Location = new System.Drawing.Point(852, 115);
             this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(113, 30);
+            this.txtMaMH.Size = new System.Drawing.Size(191, 30);
             this.txtMaMH.TabIndex = 67;
             // 
             // DiemForm

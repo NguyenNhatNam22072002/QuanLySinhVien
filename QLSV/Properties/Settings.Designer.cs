@@ -37,8 +37,8 @@ namespace QLSV.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TAYNGUYEN\\TAYNGUYEN;Initial Catalog=DBMS_QLSV;Persist Security Info=T" +
-            "rue;User ID=sa;Password=000000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=Tr" +
+            "ue")]
         public string DBMS_QLSVConnectionString {
             get {
                 return ((string)(this["DBMS_QLSVConnectionString"]));

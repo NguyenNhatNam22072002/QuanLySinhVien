@@ -97,5 +97,15 @@ namespace QLSV
             this.Hide();
             logout.ShowDialog();
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UserForm());
+        }
+
+        private void btnGiangVien_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new GiangVienForm());
+        }
     }
 }

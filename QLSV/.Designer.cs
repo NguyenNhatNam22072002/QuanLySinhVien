@@ -34,7 +34,8 @@ namespace QLSV
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGiangVien = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnDiem = new System.Windows.Forms.Button();
@@ -114,21 +115,39 @@ namespace QLSV
             this.label7.TabIndex = 23;
             this.label7.Text = "Đại học Sư Phạm Kỹ Thuật Thành Phố Hồ Chí Minh";
             // 
-            // button1
+            // btnGiangVien
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::QLSV.Properties.Resources.VaitroUser;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-1, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(288, 71);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "       Vai trò người dùng";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGiangVien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnGiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiangVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGiangVien.Image = global::QLSV.Properties.Resources.GiangVien;
+            this.btnGiangVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiangVien.Location = new System.Drawing.Point(-3, 443);
+            this.btnGiangVien.Name = "btnGiangVien";
+            this.btnGiangVien.Size = new System.Drawing.Size(288, 71);
+            this.btnGiangVien.TabIndex = 26;
+            this.btnGiangVien.Text = "       Giảng Viên";
+            this.btnGiangVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiangVien.UseVisualStyleBackColor = false;
+            this.btnGiangVien.Click += new System.EventHandler(this.btnGiangVien_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUser.Image = global::QLSV.Properties.Resources.VaitroUser;
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.Location = new System.Drawing.Point(-3, 649);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(288, 71);
+            this.btnUser.TabIndex = 25;
+            this.btnUser.Text = "       Vai trò người dùng";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panel
             // 
@@ -156,7 +175,7 @@ namespace QLSV
             this.btnDiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDiem.Image = global::QLSV.Properties.Resources.iconDiem;
             this.btnDiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDiem.Location = new System.Drawing.Point(0, 509);
+            this.btnDiem.Location = new System.Drawing.Point(-3, 581);
             this.btnDiem.Name = "btnDiem";
             this.btnDiem.Size = new System.Drawing.Size(288, 71);
             this.btnDiem.TabIndex = 10;
@@ -207,7 +226,7 @@ namespace QLSV
             this.btnQLMonHoc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLMonHoc.Image = global::QLSV.Properties.Resources.iconQuanLy;
             this.btnQLMonHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLMonHoc.Location = new System.Drawing.Point(0, 441);
+            this.btnQLMonHoc.Location = new System.Drawing.Point(-3, 513);
             this.btnQLMonHoc.Name = "btnQLMonHoc";
             this.btnQLMonHoc.Size = new System.Drawing.Size(288, 71);
             this.btnQLMonHoc.TabIndex = 7;
@@ -299,7 +318,8 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1547, 873);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGiangVien);
+            this.Controls.Add(this.btnUser);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
@@ -348,6 +368,7 @@ namespace QLSV
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnGiangVien;
     }
 }
