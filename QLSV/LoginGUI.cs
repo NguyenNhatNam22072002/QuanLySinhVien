@@ -64,9 +64,15 @@ namespace QLSV
             else
             {
                 GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
+                chinh.Show();
                 this.Hide();
-                chinh.ShowDialog();
+                chinh.showLogin += Chinh_showLogin;
             }
+        }
+
+        private void Chinh_showLogin(object sender, EventArgs e)
+        {
+            this.Show();
         }
 
         private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)

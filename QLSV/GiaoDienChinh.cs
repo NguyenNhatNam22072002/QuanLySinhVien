@@ -90,12 +90,11 @@ namespace QLSV
         {
             OpenChildForm(new DiemForm());
         }
-
+        public event EventHandler showLogin;
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoginGUI logout = new LoginGUI();
-            this.Hide();
-            logout.ShowDialog();
+            showLogin(sender, new EventArgs());
+            this.Close();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -106,6 +105,11 @@ namespace QLSV
         private void btnGiangVien_Click(object sender, EventArgs e)
         {
             OpenChildForm(new GiangVienForm());
+        }
+
+        private void GiaoDienChinh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            showLogin(sender, new EventArgs());
         }
     }
 }
