@@ -1,4 +1,4 @@
-﻿Create DataBase [QuanLySinhVien]	
+Create DataBase [QuanLySinhVien]	
 Go
 USE [QuanlySinhVien]
 GO
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[SinhVien]
    GioiTinh [bit] ,
    NgaySinh [date] ,
    QueQuan [nvarchar](50) ,
-   SoDienThoai [int],
+   SoDienThoai [nvarchar](20),
    MaLop [char](10),
    PRIMARY KEY CLUSTERED 
 (
@@ -451,6 +451,16 @@ BEGIN
 END 
 GO
 				-- TẠO PROCEDURE CHO KHOA --
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[Show_DSKhoa]
+AS
+BEGIN
+	SELECT * FROM Khoa
+END 
+GO
 --thu tuc them khoa--
 SET ANSI_NULLS ON
 GO
@@ -770,6 +780,29 @@ BEGIN
 	DELETE FROM DangNhap WHERE userName=@userName
 END
 GO
+--Show danh sách hệ đào tạo----
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[Show_DSHeDT]
+AS
+BEGIN
+SELECT * FROM HeDT
+END 
+GO
+--Show danh sách Khóa học----
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[Show_DSKhoahoc]
+AS
+BEGIN
+	SELECT * FROM KhoaHoc
+END 
+GO
+
 -------------------------------------TRIGGER------------------------
 -- trigger thêm điểm sinh viên --
 create trigger trigger_insertDiem
@@ -877,7 +910,6 @@ return(
 select dbo.SinhVien.MaSV,  TenSV, case GioiTinh when 0 then N'Nữ' when 1 then N'Nam' end as 'GioiTinh', NgaySinh, QueQuan, SoDienThoai, MaLop, dbo.MonHoc.MaMH, TenMH, SoTinChi, HocKy, DiemQuaTrinhLan1, DiemQuaTrinhLan2, DiemCuoiKi from dbo.SinhVien, dbo.Diem, dbo.MonHoc
 where dbo.SinhVien.MaSV = dbo.Diem.MaSV and dbo.Diem.MaMH = dbo.MonHoc.MaMH and @MaSSV = dbo.SinhVien.MaSV
 )
-END 
 
 ---> DONE
 --select * from Show_ThongTinSinhVien(20110743)
@@ -913,7 +945,7 @@ Select * from [dbo].Quydoihe()
 CREATE FUNCTION BangDiemSinhVien
 (@userName nvarchar (15))
 RETURNS TABLE
-AS a
+AS 
 RETURN (SELECT [dbo].[Diem].MaMH, [dbo].[MonHoc].TenMH, [dbo].[MonHoc].SoTinChi, [dbo].[Diem].HocKy, [dbo].[Diem].DiemQuaTrinhLan1, [dbo].[Diem].DiemQuaTrinhLan2, [dbo].[Diem].DiemCuoiKi
 		FROM [dbo].[Diem], [dbo].[MonHoc]
 		WHERE [dbo].[Diem].MaMH = [dbo].[MonHoc].MaMH AND [dbo].[Diem].MaSV = @userName)
