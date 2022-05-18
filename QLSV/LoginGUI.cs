@@ -53,7 +53,7 @@ namespace QLSV
             StudentDataContextDataContext db = new StudentDataContextDataContext();
 
             var query = from LoginList in db.DangNhaps
-                        where LoginList.userName == txtTaiKhoan.Text && LoginList.passWord == txtMatKhau.Text
+                        where LoginList.userName == txtTaiKhoan.Text && LoginList.passWord == txtMatKhau.Text && LoginList.Quyen==cbQuyen.Text
                         select LoginList;
             if (query.Count() == 0)
             {
