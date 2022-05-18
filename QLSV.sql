@@ -28,7 +28,7 @@ GO
 CREATE TABLE [dbo].[MonHoc](
 	[MaMH] [char](10) NOT NULL,
 	[TenMH] [nvarchar](30) NOT NULL,
-	[SoTinChi] [int] NULL CHECK ( (SoTinChi>0) AND (SoTinChi<10) ),
+	[SoTinChi] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[MaMH] ASC
@@ -91,9 +91,9 @@ CREATE TABLE [dbo].[Lop]
  (
    MaLop [char](10),
    TenLop [nvarchar](30) not null,
-   MaKhoa [char](10) FOREIGN KEY REFERENCES Khoa (MaKhoa),
-   MaHeDT [char](10) FOREIGN KEY REFERENCES HeDT (MaHeDT),
-   MaKhoaHoc [char](10) FOREIGN KEY REFERENCES KhoaHoc (MaKhoaHoc),
+   MaKhoa [char](10),
+   MaHeDT [char](10),
+   MaKhoaHoc [char](10),
    PRIMARY KEY CLUSTERED 
 (
 	[Malop] ASC
@@ -113,7 +113,7 @@ CREATE TABLE [dbo].[SinhVien]
    NgaySinh [date] ,
    QueQuan [nvarchar](50) ,
    SoDienThoai [int],
-   MaLop [char](10) FOREIGN KEY REFERENCES Lop(MaLop),
+   MaLop [char](10),
    PRIMARY KEY CLUSTERED 
 (
 	[MaSV] ASC
@@ -127,9 +127,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 Create Table [dbo].[Diem]
  (
-   MaSV [char](15) FOREIGN KEY REFERENCES SinhVien(MaSV) on delete cascade,
-   MaMH [char](10) FOREIGN KEY REFERENCES MonHoc (MaMH),
-   HocKy [int] check((HocKy>0) and (HocKy<4)) NOT NULL,
+   MaSV [char](15),
+   MaMH [char](10),
+   HocKy [int] NOT NULL,
    DiemQuaTrinhLan1 [real] ,
    DiemQuaTrinhLan2 [real] ,
    DiemCuoiKi [real],
@@ -137,16 +137,85 @@ Create Table [dbo].[Diem]
 GO
 
 --- tạo bảng giảng viên --
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 create table GiangVien(
 	MaGV nvarchar(15) primary key,
 	TenGV nvarchar(50) not null,
 	SoDienThoai nvarchar(20),
 	TrinhDo nvarchar(20),
 	QuocTich nvarchar(20),
-	BoMon char(10) foreign key references MonHoc(MaMH),
-	MaKhoa char(10) foreign key references Khoa(MaKhoa)
+	BoMon char(10),
+	MaKhoa char(10)
 )
-drop table GiangVien
+GO
+----------RÀNG BUỘC CƠ BẢN-------------
+ALTER TABLE [dbo].[MonHoc] 
+ADD CONSTRAINT Ck_TinChi 
+CHECK( (SoTinChi>0) AND (SoTinChi<10) );
+
+ALTER TABLE [dbo].[Diem] 
+ADD CONSTRAINT CK_HocKi 
+CHECK ((HocKy>0) and (HocKy<4));
+-----RÀNG BUỘC LAN TRUYỀN----------
+ALTER TABLE [dbo].[Lop] 
+WITH CHECK ADD CONSTRAINT fk_MaKhoa_Lop
+FOREIGN KEY (MaKhoa)
+REFERENCES Khoa(MaKhoa)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[Lop] 
+WITH CHECK ADD CONSTRAINT fk_MaHeDT_Lop
+FOREIGN KEY (MaHeDT)
+REFERENCES HeDT(MaHeDT)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[Lop] 
+WITH CHECK ADD CONSTRAINT fk_MaKhoaHoc_Lop
+FOREIGN KEY (MaKhoaHoc)
+REFERENCES KhoaHoc(MaKhoa)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[SinhVien] 
+WITH CHECK ADD CONSTRAINT fk_MaLop_SinhVien
+FOREIGN KEY (MaLop)
+REFERENCES Lop(MaLop)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[GiangVien] 
+WITH CHECK ADD CONSTRAINT fk_MaMH_GiangVien
+FOREIGN KEY (MaMH)
+REFERENCES MonHoc(MaMH)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[GiangVien] 
+WITH CHECK ADD CONSTRAINT fk_MaKhoa_GiangVien
+FOREIGN KEY (MaKhoa)
+REFERENCES Khoa(MaKhoa)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[Diem] 
+WITH CHECK ADD CONSTRAINT fk_SinVien_Diem
+FOREIGN KEY (MaSV)
+REFERENCES SinhVien(MaSV)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
+ALTER TABLE [dbo].[Diem] 
+WITH CHECK ADD CONSTRAINT fk_MaMH_Diem
+FOREIGN KEY (MaMH)
+REFERENCES MonHoc(MaMH)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+GO
 -- thêm thôn tin cho bảng giảng viên --
 insert into GiangVien values('GV1',N'Nguyễn Thanh Tùng','0363480483',N'Thạc sĩ',N'Việt Nam','INPR130285','CNTT')
 insert into GiangVien values('GV2',N'Bùi Nhựt Phong','0394132368',N'Thạc sĩ',N'Việt Nam','INIT130185','CNTT')
