@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLySinhVien" Class="StudentDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UB8AMQ9;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-G8GJO4A2;Initial Catalog=QuanLySinhVien;Integrated Security=True" SettingsObjectName="QLSV.Properties.Settings" SettingsPropertyName="QuanLySinhVienConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DangNhap" Member="DangNhaps">
     <Type Name="DangNhap">
       <Column Name="userName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -91,18 +91,26 @@
       <Association Name="MonHoc_GiangVien" Member="GiangViens" ThisKey="MaMH" OtherKey="BoMon" Type="GiangVien" />
     </Type>
   </Table>
-  <Function Name="dbo.DangNhap_Delete" Method="DangNhap_Delete">
-    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.XoaSinhVien" Method="XoaSinhVien">
-    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.DangNhap_Insert" Method="DangNhap_Insert">
     <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="passWord" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="Quyen" Parameter="quyen" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChonTatCaSinhVien" Method="ChonTatCaSinhVien">
+    <ElementType Name="ChonTatCaSinhVienResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DangNhap_Delete" Method="DangNhap_Delete">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.DangNhap_SelectAll" Method="DangNhap_SelectAll">
@@ -120,10 +128,22 @@
       <Column Name="Quyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.Diem_UpdateLan1" Method="Diem_UpdateLan1">
+    <Parameter Name="DiemQuaTrinhLan1" Parameter="diemQuaTrinhLan1" Type="System.Single" DbType="Real" />
+    <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.DangNhap_Update" Method="DangNhap_Update">
     <Parameter Name="userName" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="passWord" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="Quyen" Parameter="quyen" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Diem_UpdateLan2" Method="Diem_UpdateLan2">
+    <Parameter Name="DiemQuaTrinhLan2" Parameter="diemQuaTrinhLan2" Type="System.Single" DbType="Real" />
+    <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.DSChuongtrinhDT" Method="DSChuongtrinhDT">
@@ -186,6 +206,7 @@
       <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SinhVien_Search" Method="SinhVien_Search">
@@ -199,6 +220,7 @@
       <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SinhVien_SelectID" Method="SinhVien_SelectID">
@@ -211,6 +233,7 @@
       <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SinhVien_SelectMaLop" Method="SinhVien_SelectMaLop">
@@ -223,6 +246,7 @@
       <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
       <Column Name="MaLop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SuaDiemSinhVien" Method="SuaDiemSinhVien">
@@ -299,30 +323,10 @@
     <Parameter Name="MaKhoaHoc" Parameter="maKhoaHoc" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ThemMoiSinhVien" Method="ThemMoiSinhVien">
-    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
-    <Parameter Name="TenSV" Parameter="tenSV" Type="System.String" DbType="NVarChar(30)" />
-    <Parameter Name="GioiTinh" Parameter="gioiTinh" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="NgaySinh" Parameter="ngaySinh" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="QueQuan" Parameter="queQuan" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="Char(20)" />
-    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.ThemMonHoc" Method="ThemMonHoc">
     <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
     <Parameter Name="TenMH" Parameter="tenMH" Type="System.String" DbType="NVarChar(30)" />
     <Parameter Name="SoTinChi" Parameter="soTinChi" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.UpdateGiangVien" Method="UpdateGiangVien">
-    <Parameter Name="MaGV" Parameter="maGV" Type="System.String" DbType="NVarChar(15)" />
-    <Parameter Name="TenGV" Parameter="tenGV" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="TrinhDo" Parameter="trinhDo" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="QuocTich" Parameter="quocTich" Type="System.String" DbType="NVarChar(20)" />
-    <Parameter Name="BoMon" Parameter="boMon" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.UpdateSinhVien" Method="UpdateSinhVien">
@@ -333,6 +337,16 @@
     <Parameter Name="QueQuan" Parameter="queQuan" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="Char(20)" />
     <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGiangVien" Method="UpdateGiangVien">
+    <Parameter Name="MaGV" Parameter="maGV" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="TenGV" Parameter="tenGV" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="TrinhDo" Parameter="trinhDo" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="QuocTich" Parameter="quocTich" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="BoMon" Parameter="boMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.XoaDiemSinhVien" Method="XoaDiemSinhVien">
@@ -358,5 +372,18 @@
   <Function Name="dbo.XoaMonHoc" Method="XoaMonHoc">
     <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.XoaSinhVien" Method="XoaSinhVien">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThemMoiSinhVien" Method="ThemMoiSinhVien">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="TenSV" Parameter="tenSV" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="GioiTinh" Parameter="gioiTinh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NgaySinh" Parameter="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="QueQuan" Parameter="queQuan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SoDienThoai" Parameter="soDienThoai" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="MaLop" Parameter="maLop" Type="System.String" DbType="Char(10)" />
   </Function>
 </Database>

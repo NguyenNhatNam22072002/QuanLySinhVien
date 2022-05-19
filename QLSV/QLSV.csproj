@@ -71,11 +71,11 @@
     <Compile Include="FormDiemSV.Designer.cs">
       <DependentUpon>FormDiemSV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GianDienGV.cs">
+    <Compile Include="GiaodienGV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GianDienGV.Designer.cs">
-      <DependentUpon>GianDienGV.cs</DependentUpon>
+    <Compile Include="GiaodienGV.Designer.cs">
+      <DependentUpon>GiaodienGV.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="DiemForm.resx">
       <DependentUpon>DiemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GianDienGV.resx">
-      <DependentUpon>GianDienGV.cs</DependentUpon>
+    <EmbeddedResource Include="GiaodienGV.resx">
+      <DependentUpon>GiaodienGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
@@ -364,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_school_director_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_admin_filled_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

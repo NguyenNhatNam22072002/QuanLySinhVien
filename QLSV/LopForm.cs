@@ -28,6 +28,21 @@ namespace QLSV
             cbKhoahoc.Enabled = false;
             //Mo button Them
             btnThem.Enabled = true;
+            //Load cbKhoa
+            cbMaKhoa.DisplayMember = "TenKhoa";
+            cbMaKhoa.ValueMember = "MaKhoa";
+            //cbMaKhoa.DataSource = db.Show_DSKhoa();
+            cbMaKhoa.Enabled = false;
+            //Load cbHeDT
+            cbHeDT.DisplayMember = "TenHeDT";
+            cbHeDT.ValueMember = "MaHeDT";
+            //cbHeDT.DataSource = db.Show_DSHeDT();
+            cbHeDT.Enabled = false;
+            //Load cbKhoahoc
+            cbKhoahoc.DisplayMember = "TenKhoaHoc";
+            cbKhoahoc.ValueMember = "MaKhoaHoc";
+            //cbKhoahoc.DataSource = db.Show_DSKhoahoc();
+            cbKhoahoc.Enabled = false;
             // Tang do dai hien thi dgv
             dataGridView1.DataSource = db.Show_DSlop();
             for (int i = 0; i < 5; i++)
