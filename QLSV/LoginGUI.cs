@@ -63,37 +63,26 @@ namespace QLSV
             }
             else
             {
-                //GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
-                //chinh.Show();
-                //this.Hide();
-                //chinh.showLogin += Chinh_showLogin;
-                if (cbQuyen.Text == "Admin")
+                if (query.LoginList.Quyen == "Giảng Viên");
                 {
-                    GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
-                    chinh.Show();
+                    GianDienGV gd = new GianDienGV();
                     this.Hide();
-                    chinh.showLogin += Chinh_showLogin;
+                    gd.Show();
                 }
-                if (cbQuyen.Text == "Giảng Viên")
+                if (query.LoginList.Quyen == "Admin")
                 {
-                    GiaodienGV gv = new GiaodienGV();
-                    gv.Show();
+                    GiaoDienChinh gdc = new GiaoDienChinh();
                     this.Hide();
+                    gdc.Show();
                 }
-                if (cbQuyen.Text == "Sinh Viên")
+                else
                 {
-                    GiaoDienSV sv = new GiaoDienSV();
-                    sv.Show();
+                    GiaoDienSV gdsv = new GiaoDienSV();
                     this.Hide();
+                    gdsv.Show();
                 }
             }
         }
-
-        private void Chinh_showLogin(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
 
         private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {

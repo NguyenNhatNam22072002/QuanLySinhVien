@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLSV
 {
-    public partial class GiaodienGV : Form
+    public partial class GianDienGV : Form
     {
-        public GiaodienGV()
+        public GianDienGV()
         {
             InitializeComponent();
         }

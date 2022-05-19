@@ -74,7 +74,6 @@ namespace QLSV
             this.cbBomon.Name = "cbBomon";
             this.cbBomon.Size = new System.Drawing.Size(231, 33);
             this.cbBomon.TabIndex = 52;
-            this.cbBomon.SelectedIndexChanged += new System.EventHandler(this.cbBomon_SelectedIndexChanged);
             // 
             // txtTimKiem
             // 
@@ -84,7 +83,6 @@ namespace QLSV
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(258, 30);
             this.txtTimKiem.TabIndex = 50;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // dataGridView1
             // 
@@ -95,7 +93,6 @@ namespace QLSV
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 429);
             this.dataGridView1.TabIndex = 45;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox2
             // 
@@ -206,7 +203,6 @@ namespace QLSV
             this.btnLuu.TabIndex = 51;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // button1
             // 
@@ -237,7 +233,6 @@ namespace QLSV
             this.btnSua.TabIndex = 48;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -252,7 +247,6 @@ namespace QLSV
             this.btnXoa.TabIndex = 47;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -267,7 +261,6 @@ namespace QLSV
             this.btnThem.TabIndex = 46;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cbTrinhdo
             // 
@@ -341,7 +334,6 @@ namespace QLSV
             this.Controls.Add(this.label3);
             this.Name = "GiangVienForm";
             this.Text = "GiaoVienForm";
-            this.Load += new System.EventHandler(this.GiangVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

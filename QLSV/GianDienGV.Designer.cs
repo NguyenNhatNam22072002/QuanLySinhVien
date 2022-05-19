@@ -1,7 +1,7 @@
 ﻿
 namespace QLSV
 {
-    partial class GiaodienGV
+    partial class GianDienGV
     {
         /// <summary>
         /// Required designer variable.

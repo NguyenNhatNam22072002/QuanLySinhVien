@@ -15,7 +15,8 @@ namespace QLSV
     {
         public Sinhvien()
         {
-            InitializeComponent();   
+            InitializeComponent();
+            
         }
         StudentDataContextDataContext db = new StudentDataContextDataContext();
 
@@ -70,7 +71,7 @@ namespace QLSV
         Boolean adSinhvien = false;
         private void btnThem_Click(object sender, EventArgs e)
         {
-            btnThem.Enabled = false;
+            btnThem.Enabled = true;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
