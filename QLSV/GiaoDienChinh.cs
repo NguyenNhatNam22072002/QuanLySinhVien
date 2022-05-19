@@ -12,12 +12,29 @@ namespace QLSV
 {
     public partial class GiaoDienChinh : Form
     {
+        public static DangNhap dangNhap { set; get;}
         StudentDataContextDataContext db = new StudentDataContextDataContext();
         
         private Form currentFormChild;
-        public GiaoDienChinh()
+        public GiaoDienChinh(string user)
         {
             InitializeComponent();
+            dangNhap = new DangNhap();
+            dangNhap = db.DangNhaps.Single(p => p.userName == user);
+            MessageBox.Show(" Chào mừng đến với hệ thống ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dangNhap.Quyen == "Giảng viên")
+            {
+                this.btnKhoa.Visible = false;
+                this.btnCTDT.Enabled = false;
+            }
+            if (dangNhap.Quyen== "Admin")
+            {
+
+            }
+            else
+            {
+
+            }
         }
         private void OpenChildForm(Form childForm)
         {
@@ -73,12 +90,11 @@ namespace QLSV
         {
             OpenChildForm(new DiemForm());
         }
-
+        public event EventHandler showLogin;
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoginGUI logout = new LoginGUI();
-            this.Hide();
-            logout.ShowDialog();
+            showLogin(sender, new EventArgs());
+            this.Close();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -89,6 +105,11 @@ namespace QLSV
         private void btnGiangVien_Click(object sender, EventArgs e)
         {
             OpenChildForm(new GiangVienForm());
+        }
+
+        private void GiaoDienChinh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            showLogin(sender, new EventArgs());
         }
     }
 }

@@ -409,6 +409,27 @@ namespace QLSV
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMH);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Show_DSKhoa")]
+		public ISingleResult<Show_DSKhoaResult> Show_DSKhoa()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<Show_DSKhoaResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Show_DSHeDT")]
+		public ISingleResult<Show_DSHeDTResult> Show_DSHeDT()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<Show_DSHeDTResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Show_DSKhoahoc")]
+		public ISingleResult<Show_DSKhoahocResult> Show_DSKhoahoc()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<Show_DSKhoahocResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DangNhap")]
@@ -3227,6 +3248,174 @@ namespace QLSV
 				if ((this._MaLop != value))
 				{
 					this._MaLop = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Show_DSKhoaResult
+	{
+		
+		private string _MaKhoa;
+		
+		private string _TenKhoa;
+		
+		private string _DiaChi;
+		
+		private string _DienThoai;
+		
+		public Show_DSKhoaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhoa", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string MaKhoa
+		{
+			get
+			{
+				return this._MaKhoa;
+			}
+			set
+			{
+				if ((this._MaKhoa != value))
+				{
+					this._MaKhoa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhoa", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string TenKhoa
+		{
+			get
+			{
+				return this._TenKhoa;
+			}
+			set
+			{
+				if ((this._TenKhoa != value))
+				{
+					this._TenKhoa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string DiaChi
+		{
+			get
+			{
+				return this._DiaChi;
+			}
+			set
+			{
+				if ((this._DiaChi != value))
+				{
+					this._DiaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DienThoai", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string DienThoai
+		{
+			get
+			{
+				return this._DienThoai;
+			}
+			set
+			{
+				if ((this._DienThoai != value))
+				{
+					this._DienThoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Show_DSHeDTResult
+	{
+		
+		private string _MaHeDT;
+		
+		private string _TenHeDT;
+		
+		public Show_DSHeDTResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHeDT", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string MaHeDT
+		{
+			get
+			{
+				return this._MaHeDT;
+			}
+			set
+			{
+				if ((this._MaHeDT != value))
+				{
+					this._MaHeDT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenHeDT", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
+		public string TenHeDT
+		{
+			get
+			{
+				return this._TenHeDT;
+			}
+			set
+			{
+				if ((this._TenHeDT != value))
+				{
+					this._TenHeDT = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Show_DSKhoahocResult
+	{
+		
+		private string _MaKhoaHoc;
+		
+		private string _TenKhoaHoc;
+		
+		public Show_DSKhoahocResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhoaHoc", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string MaKhoaHoc
+		{
+			get
+			{
+				return this._MaKhoaHoc;
+			}
+			set
+			{
+				if ((this._MaKhoaHoc != value))
+				{
+					this._MaKhoaHoc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhoaHoc", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string TenKhoaHoc
+		{
+			get
+			{
+				return this._TenKhoaHoc;
+			}
+			set
+			{
+				if ((this._TenKhoaHoc != value))
+				{
+					this._TenKhoaHoc = value;
 				}
 			}
 		}
