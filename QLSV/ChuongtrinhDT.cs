@@ -33,7 +33,7 @@ namespace QLSV
         Boolean adKhoa;
         private void btnThem_Click(object sender, EventArgs e)
         {
-            btnThem.Enabled = true;
+            btnThem.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;

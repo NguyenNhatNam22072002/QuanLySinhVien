@@ -277,7 +277,8 @@ namespace QLSV
             "Giáo sư",
             "PGS.Tiến sĩ",
             "Tiến sĩ",
-            "Thạc sĩ"});
+            "Thạc sĩ",
+            "Cử nhân"});
             this.cbTrinhdo.Location = new System.Drawing.Point(538, 157);
             this.cbTrinhdo.Name = "cbTrinhdo";
             this.cbTrinhdo.Size = new System.Drawing.Size(172, 33);

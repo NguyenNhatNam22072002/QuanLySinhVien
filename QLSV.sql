@@ -981,9 +981,78 @@ SELECT SinhVien.MaSV, SinhVien.TenSV, Lop.MaLop, Lop.TenLop, Khoa.MaKhoa, Khoa.T
 FROM SinhVien INNER JOIN Lop ON SinhVien.MaLop=Lop.MaLop INNER JOIN Khoa ON Lop.MaKhoa=Khoa.MaKhoa
 WITH CHECK OPTION
 GO
+--Tao view bang diem cho sinh vien--
+
+CREATE VIEW SinhVien_Diem AS
+SELECT SinhVien.MaSV, TenSV,DiemQuaTrinhLan1, DiemQuaTrinhLan2,DiemCuoiKi, MonHoc.MaMH
+FROM SinhVien
+JOIN Diem ON SinhVien.MaSV=Diem.MaSV
+JOIN MonHoc ON Diem.MaMH=MonHoc.MaMH
+GO
+--Tao view quan ly diem cho giang vien
+CREATE VIEW GiangVien_QuanLyDiem AS
+SELECT MaGV, TenGV, MonHoc.MaMH, Diem.MaSV,DiemQuaTrinhLan1,DiemQuaTrinhLan2,DiemCuoiKi
+FROM GiangVien
+JOIN MonHoc ON GiangVien.BoMon=MonHoc.MaMH
+JOIN Diem ON Diem.MaMH=MonHoc.MaMH
+GO
+
 --Tạo view bảng diem tong ket--
 CREATE VIEW TinhDiemTongKet AS 
 SELECT * ,dbo.Tinh_DTB(MaSV) AS [DiemTongKet]
 FROM dbo.Diem AS D
 WITH CHECK OPTION
 GO
+--------------Phân quyền----------------
+create login [Admin] with password = 'Admin'
+create user [Admin] for login [Admin]
+exec sp_addrolemember 'db_owner' , 'Admin'
+
+
+
+use QuanLySinhVien
+create login Admin1 with password ='admin1'
+create user Admin1 for login Admin1
+
+
+--Tao role admin--
+exec sp_addrole 'db_Admin1','Admin'  
+grant select,insert,update,delete on DangNhap to db_Admin1
+grant select,insert,update,delete on Diem to db_Admin1
+grant select,insert,update,delete on GiangVien to db_Admin1
+grant select,insert,update,delete on HeDT to db_Admin1
+grant select,insert,update,delete on Khoa to db_Admin1
+grant select,insert,update,delete on KhoaHoc to db_Admin1
+grant select,insert,update,delete on Lop to db_Admin1
+grant select,insert,update,delete on MonHoc to db_Admin1
+grant select,insert,update,delete on SinhVien to db_Admin1
+
+
+exec sp_addrolemember 'db_Admin' , 'Admin1'
+exec sp_addrolemember 'db_datareader','Admin1'
+
+--Tao role SinhVien--
+create login SinhVien1 with password = '1234'
+create user SinhVien1 for login SinhVien1
+
+exec sp_addrole 'db_SinhVien1','Admin' 
+grant select on SinhVien_Diem to db_SinhVien1
+grant select on Khoa to db_SinhVien1
+grant select on HeDT to db_SinhVien1
+grant select on KhoaHoc to db_SinhVien1
+grant select on Lop to db_SinhVien1
+exec sp_addrolemember 'db_SinhVien1','SinhVien1'
+
+
+--tao role GiangVien--
+create login GiangVien1 with password = '1234'
+create user GiangVien1 for login GiangVien1
+
+exec sp_addrole 'db_GiangVien1','Admin' 
+grant select,update,delete on GiangVien_QuanLyDiem to db_GiangVien1
+grant select on Khoa to db_SinhVien1
+grant select on HeDT to db_SinhVien1
+grant select on KhoaHoc to db_SinVien1
+grant select on Lop to db_GiangVien1
+exec sp_addrolemember 'db_GiangVien1','GiangVien1'
+

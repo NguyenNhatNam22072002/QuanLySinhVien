@@ -44,17 +44,6 @@ namespace QLSV
 
             dataGridView1.DataSource = db.Show_DSGiangVien();
         }
-        //private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    dataGridView1.DataSource = db.SinhVien_SelectMaLop(cbMaLop.SelectedValue.ToString());
-        //    dataGridView1.Columns["MaSV"].HeaderText = "Mã SV";
-        //    dataGridView1.Columns["TenSV"].HeaderText = "Họ và Tên";
-        //    dataGridView1.Columns["GioiTinh"].HeaderText = "Giới Tính";
-        //    dataGridView1.Columns["cbTrinhdo"].HeaderText = "Ngày Sinh";
-        //    dataGridView1.Columns["QueQuan"].HeaderText = "Quê quán";
-        //    dataGridView1.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
-        //    dataGridView1.Columns["MaLop"].HeaderText = "Mã Lớp";
-        //}
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
@@ -79,11 +68,98 @@ namespace QLSV
             txtQuoctich.Enabled = true;
             cbBomon.Enabled = true;
             cbMakhoa.Enabled = true;
+            adGiangvien = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (adGiangvien)
+            {
+                try
+                {
+                    if (txtMaGV.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập mã giáo viên");
+                        txtMaGV.Focus();
+                        return;
+                    }
+                    if (txtTenGV.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập tên giáo viên");
+                        txtTenGV.Focus();
+                        return;
+                    }
+                    if (txtPhone.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa nhập số điện thoại");
+                        txtPhone.Focus();
+                        return;
+                    }
+                    if (cbTrinhdo.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa chọn trình độ");
+                        cbTrinhdo.Focus();
+                        return;
+                    }
+                    if (cbBomon.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa chọn bộ môn");
+                        cbBomon.Focus();
+                        return;
+                    }
+                    if (cbMakhoa.Text == "")
+                    {
+                        MessageBox.Show("Bạn chưa chọn mã khoa");
+                        cbMakhoa.Focus();
+                        return;
+                    }
+                    db.ThemGiangVien(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
+                    MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Mo cac button chinh sua 
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Enabled = true;
 
+                    //an textbox Lop
+                    txtMaGV.Enabled = false;
+                    txtTenGV.Enabled = false;
+                    cbMakhoa.Enabled = false;
+                    cbTrinhdo.Enabled = false;
+                    cbBomon.Enabled = false;
+                    txtPhone.Enabled = false;
+                }
+                catch
+                {
+                    MessageBox.Show("Mã giảng viên bị trùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                try
+                {
+                    db.SuaThongTinLop(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                    //Mo button them xoa sua
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Enabled = true;
+
+                    //an textbox Khoa
+                    txtMaGV.Enabled = false;
+                    txtTenGV.Enabled = false;
+                    cbMakhoa.Enabled = false;
+                    cbTrinhdo.Enabled = false;
+                    cbBomon.Enabled = false;
+                    txtPhone.Enabled = false;
+
+                }
+                catch
+                {
+                    MessageBox.Show("Sửa dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                GiangVien_Load(sender, e);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)

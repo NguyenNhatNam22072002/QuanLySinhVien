@@ -61,12 +61,28 @@ namespace QLSV
                 thongbao = (MessageBox.Show("Đăng nhập không thành công", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning));
                 Application.Exit();
             }
+            //Phan quyen
             else
             {
-                GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
-                chinh.Show();
-                this.Hide();
-                chinh.showLogin += Chinh_showLogin;
+                if (cbQuyen.Text=="Admin")
+                {
+                    GiaoDienChinh chinh = new GiaoDienChinh(txtTaiKhoan.Text);
+                    chinh.Show();
+                    this.Hide();
+                    chinh.showLogin += Chinh_showLogin;
+                }
+                if (cbQuyen.Text=="Sinh Viên")
+                {
+                    GiaoDienSV sv = new GiaoDienSV();
+                    sv.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    GiaodienGV gv = new GiaodienGV();
+                    gv.Show();
+                    this.Hide();
+                }
             }
         }
 
@@ -74,7 +90,6 @@ namespace QLSV
         {
             this.Show();
         }
-
         private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar==(char)13 )
