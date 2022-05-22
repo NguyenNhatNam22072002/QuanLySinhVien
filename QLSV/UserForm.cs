@@ -110,7 +110,6 @@ namespace QLSV
             {
                 try
                 {
-
                     db.DangNhap_Update(txtUser.Text, txtPassword.Text, cbQuyen.Text);
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     //Mo button them xoa sua

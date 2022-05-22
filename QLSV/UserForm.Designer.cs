@@ -227,6 +227,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 759);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.cbQuyen);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtTimKiem);
@@ -235,7 +236,6 @@ namespace QLSV
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label4);

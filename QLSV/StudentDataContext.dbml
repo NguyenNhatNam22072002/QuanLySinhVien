@@ -161,6 +161,26 @@
       <Column Name="MaKhoa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.Show_DSHeDT" Method="Show_DSHeDT">
+    <ElementType Name="Show_DSHeDTResult">
+      <Column Name="MaHeDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHeDT" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Show_DSKhoa" Method="Show_DSKhoa">
+    <ElementType Name="Show_DSKhoaResult">
+      <Column Name="MaKhoa" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Show_DSKhoahoc" Method="Show_DSKhoahoc">
+    <ElementType Name="Show_DSKhoahocResult">
+      <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoaHoc" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.Show_DSlop" Method="Show_DSlop">
     <ElementType Name="Show_DSlopResult">
       <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
@@ -359,24 +379,35 @@
     <Parameter Name="MaMH" Parameter="maMH" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Show_DSKhoa" Method="Show_DSKhoa">
-    <ElementType Name="Show_DSKhoaResult">
-      <Column Name="MaKhoa" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+  <Function Name="dbo.DiemOfSV" Method="DiemOfSV">
+    <ElementType Name="DiemOfSVResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemQuaTrinhLan1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemQuaTrinhLan2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemCuoiKi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Show_DSHeDT" Method="Show_DSHeDT">
-    <ElementType Name="Show_DSHeDTResult">
-      <Column Name="MaHeDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TenHeDT" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+  <Function Name="dbo.GiangVienQLDiem" Method="GiangVienQLDiem">
+    <ElementType Name="GiangVienQLDiemResult">
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaSV" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="DiemQuaTrinhLan1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemQuaTrinhLan2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DiemCuoiKi" Type="System.Single" DbType="Real" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Show_DSKhoahoc" Method="Show_DSKhoahoc">
-    <ElementType Name="Show_DSKhoahocResult">
-      <Column Name="MaKhoaHoc" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TenKhoaHoc" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+  <Function Name="dbo.Show_SV" Method="Show_SV">
+    <ElementType Name="Show_SVResult">
+      <Column Name="MaSV" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="Char(20)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

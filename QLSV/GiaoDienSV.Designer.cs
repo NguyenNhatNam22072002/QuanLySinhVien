@@ -29,35 +29,26 @@ namespace QLSV
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCTDT = new System.Windows.Forms.Button();
+            this.btnGiangVien = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnDiem = new System.Windows.Forms.Button();
             this.btnSinhvien = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnGiangVien = new System.Windows.Forms.Button();
-            this.btnCTDT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel
-            // 
-            this.panel.BackgroundImage = global::QLSV.Properties.Resources.AnhNen;
-            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel.Location = new System.Drawing.Point(285, 107);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1260, 768);
-            this.panel.TabIndex = 58;
             // 
             // label7
             // 
@@ -71,15 +62,6 @@ namespace QLSV
             this.label7.TabIndex = 57;
             this.label7.Text = "Đại học Sư Phạm Kỹ Thuật Thành Phố Hồ Chí Minh";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox7.Location = new System.Drawing.Point(285, 57);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(1385, 49);
-            this.pictureBox7.TabIndex = 56;
-            this.pictureBox7.TabStop = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -91,6 +73,7 @@ namespace QLSV
             this.btnLogout.TabIndex = 55;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -115,6 +98,71 @@ namespace QLSV
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(44, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 29);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Trang của bạn";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCTDT
+            // 
+            this.btnCTDT.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnCTDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTDT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCTDT.Image = global::QLSV.Properties.Resources.iconCTDT;
+            this.btnCTDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCTDT.Location = new System.Drawing.Point(-1, 381);
+            this.btnCTDT.Name = "btnCTDT";
+            this.btnCTDT.Size = new System.Drawing.Size(288, 71);
+            this.btnCTDT.TabIndex = 60;
+            this.btnCTDT.Text = "        Chương trình đào tạo";
+            this.btnCTDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCTDT.UseVisualStyleBackColor = false;
+            this.btnCTDT.Click += new System.EventHandler(this.btnCTDT_Click);
+            // 
+            // btnGiangVien
+            // 
+            this.btnGiangVien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnGiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiangVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGiangVien.Image = global::QLSV.Properties.Resources.GiangVien;
+            this.btnGiangVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiangVien.Location = new System.Drawing.Point(-1, 245);
+            this.btnGiangVien.Name = "btnGiangVien";
+            this.btnGiangVien.Size = new System.Drawing.Size(288, 71);
+            this.btnGiangVien.TabIndex = 59;
+            this.btnGiangVien.Text = "       Giảng Viên";
+            this.btnGiangVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiangVien.UseVisualStyleBackColor = false;
+            this.btnGiangVien.Click += new System.EventHandler(this.btnGiangVien_Click);
+            // 
+            // panel
+            // 
+            this.panel.BackgroundImage = global::QLSV.Properties.Resources.AnhNen;
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel.Location = new System.Drawing.Point(285, 107);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1260, 768);
+            this.panel.TabIndex = 58;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox7.Location = new System.Drawing.Point(285, 57);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(1385, 49);
+            this.pictureBox7.TabIndex = 56;
+            this.pictureBox7.TabStop = false;
+            // 
             // btnDiem
             // 
             this.btnDiem.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -130,6 +178,7 @@ namespace QLSV
             this.btnDiem.Text = "       Điểm";
             this.btnDiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiem.UseVisualStyleBackColor = false;
+            this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
             // 
             // btnSinhvien
             // 
@@ -143,9 +192,10 @@ namespace QLSV
             this.btnSinhvien.Name = "btnSinhvien";
             this.btnSinhvien.Size = new System.Drawing.Size(287, 71);
             this.btnSinhvien.TabIndex = 51;
-            this.btnSinhvien.Text = "       Thông tin của bạn";
+            this.btnSinhvien.Text = "       Thông tin sinh viên";
             this.btnSinhvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSinhvien.UseVisualStyleBackColor = false;
+            this.btnSinhvien.Click += new System.EventHandler(this.btnSinhvien_Click);
             // 
             // btnTrangchu
             // 
@@ -162,6 +212,7 @@ namespace QLSV
             this.btnTrangchu.Text = "        Trang chủ";
             this.btnTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrangchu.UseVisualStyleBackColor = false;
+            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
             // pictureBox3
             // 
@@ -171,19 +222,6 @@ namespace QLSV
             this.pictureBox3.Size = new System.Drawing.Size(287, 990);
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(44, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 29);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Trang của bạn";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -202,38 +240,6 @@ namespace QLSV
             this.pictureBox1.Size = new System.Drawing.Size(287, 57);
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnGiangVien
-            // 
-            this.btnGiangVien.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnGiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiangVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGiangVien.Image = global::QLSV.Properties.Resources.GiangVien;
-            this.btnGiangVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiangVien.Location = new System.Drawing.Point(-1, 245);
-            this.btnGiangVien.Name = "btnGiangVien";
-            this.btnGiangVien.Size = new System.Drawing.Size(288, 71);
-            this.btnGiangVien.TabIndex = 59;
-            this.btnGiangVien.Text = "       Giảng Viên";
-            this.btnGiangVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiangVien.UseVisualStyleBackColor = false;
-            // 
-            // btnCTDT
-            // 
-            this.btnCTDT.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnCTDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTDT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCTDT.Image = global::QLSV.Properties.Resources.iconCTDT;
-            this.btnCTDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCTDT.Location = new System.Drawing.Point(-1, 381);
-            this.btnCTDT.Name = "btnCTDT";
-            this.btnCTDT.Size = new System.Drawing.Size(288, 71);
-            this.btnCTDT.TabIndex = 60;
-            this.btnCTDT.Text = "        Chương trình đào tạo";
-            this.btnCTDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCTDT.UseVisualStyleBackColor = false;
             // 
             // GiaoDienSV
             // 
@@ -256,6 +262,7 @@ namespace QLSV
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GiaoDienSV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GiaoDienSV";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

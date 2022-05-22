@@ -45,7 +45,7 @@ namespace QLSV
             txtMaLop.DataBindings.Clear();
             txtMaLop.DataBindings.Add("Text", cbMaLop.DataSource, "maLop");
             txtMaLop.Enabled = false;
-            dataGridView1.DataSource = db.Show_DSSinhVien();
+            dataGridView1.DataSource = db.Show_SV();
         }
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -193,7 +193,7 @@ namespace QLSV
             // Chuyển thông tin từ Gridview lên các textbox ở panel
             txtMSSV.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
             txtHoTen.Text = dataGridView1.Rows[r].Cells[1].Value.ToString();
-            if (Convert.ToBoolean(dataGridView1.Rows[r].Cells[2].Value.ToString())) rbtnNam.Checked = true;
+            if (dataGridView1.Rows[r].Cells[2].Value.ToString() == "Nam") rbtnNam.Checked = true;
             else rbtnNu.Checked = true;
             NgaySinh.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
             cbQueQuan.Text = dataGridView1.Rows[r].Cells[4].Value.ToString();
