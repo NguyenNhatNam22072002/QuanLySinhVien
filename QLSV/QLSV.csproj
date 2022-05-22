@@ -59,6 +59,12 @@
     <Compile Include="ChuongtrinhDT_Error.Designer.cs">
       <DependentUpon>ChuongtrinhDT_Error.cs</DependentUpon>
     </Compile>
+    <Compile Include="CTDT_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTDT_SV.Designer.cs">
+      <DependentUpon>CTDT_SV.cs</DependentUpon>
+    </Compile>
     <Compile Include="DiemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,18 @@
     </Compile>
     <Compile Include="FormDiemSV.Designer.cs">
       <DependentUpon>FormDiemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGV_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGV_SV.Designer.cs">
+      <DependentUpon>FormGV_SV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChuSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChuSV.Designer.cs">
+      <DependentUpon>FormTrangChuSV.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaodienGV.cs">
       <SubType>Form</SubType>
@@ -151,6 +169,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDataContext.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinSV_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinSV_SV.Designer.cs">
+      <DependentUpon>ThongTinSV_SV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,8 +193,20 @@
     <EmbeddedResource Include="ChuongtrinhDT_Error.resx">
       <DependentUpon>ChuongtrinhDT_Error.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CTDT_SV.resx">
+      <DependentUpon>CTDT_SV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiemForm.resx">
       <DependentUpon>DiemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiemSV.resx">
+      <DependentUpon>FormDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGV_SV.resx">
+      <DependentUpon>FormGV_SV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChuSV.resx">
+      <DependentUpon>FormTrangChuSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaodienGV.resx">
       <DependentUpon>GiaodienGV.cs</DependentUpon>
@@ -217,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sinhvien.resx">
       <DependentUpon>Sinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinSV_SV.resx">
+      <DependentUpon>ThongTinSV_SV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>

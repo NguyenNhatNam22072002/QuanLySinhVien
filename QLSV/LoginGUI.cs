@@ -71,17 +71,20 @@ namespace QLSV
                     this.Hide();
                     chinh.showLogin += Chinh_showLogin;
                 }
-                if (cbQuyen.Text=="Sinh Viên")
+                else if (cbQuyen.Text=="Sinh Viên")
                 {
                     GiaoDienSV sv = new GiaoDienSV();
                     sv.Show();
                     this.Hide();
+                    sv.showLogin += Chinh_showLogin;
+
                 }
                 else
                 {
                     GiaodienGV gv = new GiaodienGV();
                     gv.Show();
                     this.Hide();
+                    gv.showLogin += Chinh_showLogin;
                 }
             }
         }

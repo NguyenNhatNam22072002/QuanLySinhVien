@@ -113,7 +113,7 @@ namespace QLSV
                         cbMakhoa.Focus();
                         return;
                     }
-                    db.ThemGiangVien(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
+                    db.ThemGiangVien(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtQuoctich.Text, txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
                     MessageBox.Show("Lưu lại thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Mo cac button chinh sua 
                     btnSua.Enabled = true;
@@ -137,7 +137,7 @@ namespace QLSV
             {
                 try
                 {
-                    db.SuaThongTinLop(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
+                    db.UpdateGiangVien(txtMaGV.Text, txtTenGV.Text, cbTrinhdo.Text, txtQuoctich.Text,txtPhone.Text, cbBomon.Text, cbMakhoa.Text);
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     //Mo button them xoa sua
